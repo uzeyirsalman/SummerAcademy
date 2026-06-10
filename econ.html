@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ECON101: Economics 101 Syllabus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Premium Stylesheet (Warm Nordic Light Mode Default with Dracula Dark Mode overrides) -->
+  <style>
+    :root {
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      
+      /* WARM NORDIC LIGHT MODE */
+      --color-bg: #faf8f5;
+      --color-primary: #c2410c;      /* Popping Terracotta */
+      --color-secondary: #d97706;    /* Warm Amber */
+      --color-accent: #15803d;       /* Forest Green */
+      --color-warning: #b91c1c;      /* Crimson */
+      --color-text: #334155;         /* Slate text */
+      --color-card-bg: #ffffff;      /* Pure white cards */
+      --color-card-border: #e2e8f0;  /* Slate border */
+      --color-shadow: rgba(0, 0, 0, 0.04);
+      --color-gradient-start: #b91c1c;
+      --color-gradient-end: #d97706;
+    }
+
+    body.theme-dark {
+      /* DRACULA DARK MODE OVERRIDES */
+      --color-bg: #0b0c10;
+      --color-primary: #3b82f6;      /* Electric Blue */
+      --color-secondary: #8b5cf6;    /* Neon Purple */
+      --color-accent: #10b981;       /* Emerald */
+      --color-warning: #fbbf24;      /* Amber Yellow */
+      --color-text: #e2e8f0;         /* Soft white text */
+      --color-card-bg: rgba(255, 255, 255, 0.03);
+      --color-card-border: rgba(255, 255, 255, 0.08);
+      --color-shadow: rgba(0, 0, 0, 0.3);
+      --color-gradient-start: #3b82f6;
+      --color-gradient-end: #8b5cf6;
+    }
+
+    * {
+      box-sizing: border-box;
+      transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Floating Theme Toggle */
+    .theme-toggle-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--color-card-border);
+      background: var(--color-card-bg);
+      color: var(--color-primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 15px var(--color-shadow);
+      backdrop-filter: blur(10px);
+    }
+    .theme-toggle-btn:hover {
+      transform: scale(1.1);
+      background: var(--color-primary);
+      color: #ffffff;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      flex-grow: 1;
+    }
+
+    /* Header Navigation / Back Button */
+    .nav-header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .btn-back {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 10px 20px;
+      border: 1px solid var(--color-card-border);
+      background: var(--color-card-bg);
+      color: var(--color-text);
+      border-radius: 30px;
+      box-shadow: 0 2px 8px var(--color-shadow);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-back:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+      transform: translateX(-4px);
+    }
+
+    /* Welcome Banner */
+    .welcome-card {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-card-border);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 8px 30px var(--color-shadow);
+      text-align: center;
+      position: relative;
+    }
+
+    .welcome-card h1 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 3rem;
+      background: linear-gradient(135deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0 0 10px 0;
+      letter-spacing: -0.03em;
+    }
+
+    .welcome-card p {
+      font-size: 1.15rem;
+      opacity: 0.85;
+      margin: 0 auto !important;
+      line-height: 1.5;
+      max-width: 800px;
+    }
+
+    .course-meta-pills {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .badge-ready { background: rgba(21, 128, 61, 0.1); color: var(--color-accent); border: 1px solid rgba(21, 128, 61, 0.2); }
+    .badge-soon { background: rgba(217, 119, 6, 0.1); color: var(--color-secondary); border: 1px solid rgba(217, 119, 6, 0.2); }
+    .badge-info { background: rgba(59, 130, 246, 0.1); color: var(--color-primary); border: 1px solid rgba(59, 130, 246, 0.2); }
+
+    /* Grid layout */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+    }
+    @media (max-width: 900px) {
+      .grid-3 { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .grid-3 { grid-template-columns: 1fr; }
+    }
+
+    /* Course Cards */
+    .lesson-card {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-card-border);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 30px var(--color-shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 320px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lesson-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+      opacity: 0.8;
+    }
+
+    .lesson-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .lesson-num {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .lesson-icon {
+      font-size: 1.4rem;
+      color: var(--color-secondary);
+    }
+
+    .lesson-card h2 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.35rem;
+      margin: 10px 0;
+      color: var(--color-text);
+      line-height: 1.2;
+    }
+
+    .lesson-summary {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      opacity: 0.85;
+      flex-grow: 1;
+    }
+
+    /* Lab Badge */
+    .lab-badge {
+      background: rgba(0, 0, 0, 0.02);
+      border: 1px dashed var(--color-card-border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 0.75rem;
+      text-align: left;
+    }
+    
+    .lab-badge strong {
+      color: var(--color-primary);
+      display: block;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 2px;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.85rem;
+      opacity: 0.6;
+      border-top: 1px solid var(--color-card-border);
+      padding-top: 20px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Theme Toggle Button -->
+  <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+
+  <div class="container">
+    
+    <!-- Header Navigation -->
+    <div class="nav-header">
+      <a href="./index.html" class="btn-back">
+        <i class="fa-solid fa-chevron-left"></i> Back to Dashboard
+      </a>
+    </div>
+
+    <!-- Welcome Header Banner -->
+    <div class="welcome-card">
+      <h1>ECON101: Economics 101</h1>
+      <p>A structured 6-week curriculum for academic-achieving teenagers. Deconstruct how financial markets manage scarcity, calculate the magic math of compounding growth, build active personal cash flow budgets, audit debt instruments, and trace the stock market.</p>
+      
+      <div class="course-meta-pills">
+        <span class="badge badge-soon">Coming Soon</span>
+        <span class="badge badge-info"><i class="fa-solid fa-calendar"></i> 6 Weeks</span>
+        <span class="badge badge-ready"><i class="fa-solid fa-users"></i> Parent-Led</span>
+      </div>
+    </div>
+
+    <!-- Syllabus Grid -->
+    <div class="grid-3">
+
+      <!-- Week 1 -->
+      <div class="lesson-card">
+        <div class="card-top">
+          <div class="lesson-header-row">
+            <span class="lesson-num">Week 1</span>
+            <i class="fa-solid fa-scale-balanced lesson-icon"></i>
+          </div>
+          <h2>Scarcity & Markets</h2>
+          <p class="lesson-summary">Deconstruct how societies manage limited resources to fulfill unlimited wants. Explore supply and demand interactions, equilibrium price signals, and opportunity cost tradeoffs.</p>
+        </div>
+        <div class="lab-badge">
+          <strong>Hands-On Lab</strong>
+          The Market Simulation Game (trading commodities to find the market price).
+        </div>
+      </div>
+
+      <!-- Week 2 -->
+      <div class="lesson-card">
+        <div class="card-top">
+          <div class="lesson-header-row">
+            <span class="lesson-num">Week 2</span>
+            <i class="fa-solid fa-chart-line lesson-icon"></i>
+          </div>
+          <h2>The Magic of Compounding</h2>
+          <p class="lesson-summary">Master the mathematical superpower of compounding returns. Explore the impacts of inflation, distinguish real vs. nominal growth, and calculate exponential interest curves.</p>
+        </div>
+        <div class="lab-badge">
+          <strong>Hands-On Lab</strong>
+          Spec out growth models mapping $100 deposits over 10, 20, and 40 years.
+        </div>
+      </div>
+
+      <!-- Week 3 -->
+      <div class="lesson-card">
+        <div class="card-top">
+          <div class="lesson-header-row">
+            <span class="lesson-num">Week 3</span>
+            <i class="fa-solid fa-wallet lesson-icon"></i>
+          </div>
+          <h2>Budgeting & Cash Flow</h2>
+          <p class="lesson-summary">Take command of personal cash flows. Classify fixed vs. variable expenses, evaluate revenue generation strategies, and design automated personal saving metrics.</p>
+        </div>
+        <div class="lab-badge">
+          <strong>Hands-On Lab</strong>
+          Design and format a functional spreadsheet tracker managing teen expenses.
+        </div>
+      </div>
+
+      <!-- Week 4 -->
+      <div class="lesson-card">
+        <div class="card-top">
+          <div class="lesson-header-row">
+            <span class="lesson-num">Week 4</span>
+            <i class="fa-solid fa-credit-card lesson-icon"></i>
+          </div>
+          <h2>Deconstructing Credit</h2>
+          <p class="lesson-summary">Demystify credit scores, interest rate amortization, credit card agreements, borrow economics, and the mathematical mechanics of compounding debt traps.</p>
+        </div>
+        <div class="lab-badge">
+          <strong>Hands-On Lab</strong>
+          Audit three mock credit agreements to calculate the true cost of repayment.
+        </div>
+      </div>
+
+      <!-- Week 5 -->
+      <div class="lesson-card">
+        <div class="card-top">
+          <div class="lesson-header-row">
+            <span class="lesson-num">Week 5</span>
+            <i class="fa-solid fa-arrow-trend-up lesson-icon"></i>
+          </div>
+          <h2>The Global Stock Market</h2>
+          <p class="lesson-summary">Explore public corporate equity. Deconstruct stock pricing models, index funding configurations (like the S&P 500), and the architecture of stock market exchanges.</p>
+        </div>
+        <div class="lab-badge">
+          <strong>Hands-On Lab</strong>
+          Build an equity allocation portfolio and trace stock valuations over time.
+        </div>
+      </div>
+
+      <!-- Week 6 -->
+      <div class="lesson-card">
+        <div class="card-top">
+          <div class="lesson-header-row">
+            <span class="lesson-num">Week 6</span>
+            <i class="fa-solid fa-globe lesson-icon"></i>
+          </div>
+          <h2>Trade & Global Economy</h2>
+          <p class="lesson-summary">Analyze economic cooperation. Deconstruct comparative advantage, the mechanics of imports and exports, tariffs, and the fluctuations of global currency exchange rates.</p>
+        </div>
+        <div class="lab-badge">
+          <strong>Hands-On Lab</strong>
+          The Import-Export Negotiation Challenge (trading resource packages with tariff rules).
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      &copy; 2026 Dad's Summer Academy. Built for collaborative learning.
+    </div>
+
+  </div>
+
+  <!-- Javascript Core -->
+  <script>
+    // Theme Toggle Controls
+    const toggleBtn = document.getElementById('theme-toggle');
+    const icon = toggleBtn.querySelector('i');
+
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('theme-dark');
+      if (document.body.classList.contains('theme-dark')) {
+        icon.className = 'fa-solid fa-sun';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        icon.className = 'fa-solid fa-moon';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // Apply saved theme preference on load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.classList.add('theme-dark');
+      icon.className = 'fa-solid fa-sun';
+    } else {
+      icon.className = 'fa-solid fa-moon';
+    }
+  </script>
+</body>
+</html>

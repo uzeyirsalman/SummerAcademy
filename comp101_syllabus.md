@@ -40,33 +40,33 @@ To run this course smoothly, you will need a few simple preparations. Here is th
 
 Click on any lesson below to jump directly to its complete lesson plan:
 
-1.  **[Lesson 1: Under the Hood](file:///curriculum/comp101/lesson_01_under_the_hood.md)**
+1.  **[Lesson 1: Under the Hood](./curriculum/comp101/lesson_01_under_the_hood.md)**
     *   *Concept*: CPU, RAM, storage, and motherboard.
     *   *Lab*: The $1,000 Custom PC Build project (Gaming, Video Editing, or Schoolwork specs).
-2.  **[Lesson 2: Files, Folders & The Cloud](file:///curriculum/comp101/lesson_02_files_folders_cloud.md)**
+2.  **[Lesson 2: Files, Folders & The Cloud](./curriculum/comp101/lesson_02_files_folders_cloud.md)**
     *   *Concept*: Extensions, directories, cloud architecture, and data center calculations.
     *   *Lab*: Chaotic file folder organization challenge + energy footprint analysis of the cloud.
-3.  **[Lesson 3: How the Internet Actually Works](file:///curriculum/comp101/lesson_03_internet_plumbing.md)**
+3.  **[Lesson 3: How the Internet Actually Works](./curriculum/comp101/lesson_03_internet_plumbing.md)**
     *   *Concept*: IP addresses, DNS servers, packets, and routing.
     *   *Lab*: Command-line mapping (`ping`, `nslookup`, `tracert`) of a web request's global route.
-4.  **[Lesson 4: The History of Work: Local to Collaborative](file:///curriculum/comp101/lesson_04_collaboration_evolution.md)**
+4.  **[Lesson 4: The History of Work: Local to Collaborative](./curriculum/comp101/lesson_04_collaboration_evolution.md)**
     *   *Concept*: Floppy disks, email attachments, local files vs. live database-backed cloud syncing.
     *   *Lab*: A timed "collaborative chaos" writing race comparing email vs. Google Docs.
-5.  **[Lesson 5: Document Design & Presentations](file:///curriculum/comp101/lesson_05_visual_communication.md)**
+5.  **[Lesson 5: Document Design & Presentations](./curriculum/comp101/lesson_05_visual_communication.md)**
     *   *Concept*: Visual hierarchy, white space, typography, and "brief vs. slide deck" formats.
     *   *Lab*: Distilling a dense, boring text brief into a punchy, professional 5-slide visual deck.
-6.  **[Lesson 6: Spreadsheet Mastery](file:///curriculum/comp101/lesson_06_spreadsheet_mastery.md)**
+6.  **[Lesson 6: Spreadsheet Mastery](./curriculum/comp101/lesson_06_spreadsheet_mastery.md)**
     *   *Concept*: Cells, formulas (SUM, AVERAGE, IF, XLOOKUP), relative vs. absolute cell referencing.
     *   *Lab*: Building an automated, formula-driven personal budget tracker from scratch.
-7.  **[Lesson 7: Cybersecurity & Digital Hygiene](file:///curriculum/comp101/lesson_07_cybersecurity_hygiene.md)**
+7.  **[Lesson 7: Cybersecurity & Digital Hygiene](./curriculum/comp101/lesson_07_cybersecurity_hygiene.md)**
     *   *Concept*: Entropy (passwords), multi-factor authentication (MFA), phishing vectors, and end-to-end encryption.
     *   *Lab*: The Socratic "Hack My Account" Audit—identifying vulnerabilities in mock online behaviors.
-8.  **[Lesson 8: Mobile & Platforms](file:///curriculum/comp101/lesson_08_mobile_platforms.md)**
+8.  **[Lesson 8: Mobile & Platforms](./curriculum/comp101/lesson_08_mobile_platforms.md)**
     *   *Concept*: Native apps vs. Web apps, tracking permissions, cookies, and app monetization.
     *   *Lab*: A full phone privacy audit—reviewing permissions, background data usage, and ad profiles.
-9.  **[Lesson 9: AI as a Bicycle for the Mind](file:///curriculum/comp101/lesson_09_ai_bicycle.md)**
+9.  **[Lesson 9: AI as a Bicycle for the Mind](./curriculum/comp101/lesson_09_ai_bicycle.md)**
     *   *Concept*: Transformers, training data, tokenization, hallucinations, and prompt engineering.
     *   *Lab*: The AI Fact-Checking Audit—generating an information brief with an LLM and verifying every line.
-10. **[Lesson 10: Tech Troubleshooting](file:///curriculum/comp101/lesson_10_troubleshooting_lab.md)**
+10. **[Lesson 10: Tech Troubleshooting](./curriculum/comp101/lesson_10_troubleshooting_lab.md)**
     *   *Concept*: The diagnostic loop, error codes, logs, and isolation of variables.
     *   *Lab*: The "Fix the Broken PC" escape-room style lab (solving network, browser, and OS glitches).
