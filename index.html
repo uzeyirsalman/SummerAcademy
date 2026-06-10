@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>SummerAcademy: COMP101 Computer Literacy - Summer Presentation</title>
+  <title>SummerAcademy: COMP101 Computer Literacy Presentation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/dracula.min.css" id="theme">
 
-  <!-- Premium Custom styling -->
+  <!-- Custom Styling System -->
   <style>
     :root {
       --font-heading: 'Outfit', sans-serif;
@@ -58,26 +58,26 @@
     }
 
     .reveal h2 {
-      font-size: 1.8em !important;
+      font-size: 1.6em !important;
       color: #ffffff !important;
-      margin-bottom: 20px !important;
+      margin-bottom: 15px !important;
       border-bottom: none !important;
     }
 
     .reveal h3 {
-      font-size: 1.3em !important;
+      font-size: 1.1em !important;
       color: var(--color-primary) !important;
     }
 
-    /* Glassmorphism Cards */
+    /* Cards */
     .card {
       background: var(--color-card-bg);
       border: 1px solid var(--color-card-border);
       border-radius: 16px;
-      padding: 30px !important;
+      padding: 24px !important;
       backdrop-filter: blur(12px);
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-      margin: 15px 0 !important;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+      margin: 10px 0 !important;
       text-align: left;
     }
 
@@ -88,28 +88,29 @@
       gap: 12px;
     }
 
-    /* Column Grids */
+    /* Grids */
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 16px;
     }
 
     .grid-3 {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 15px;
+      gap: 12px;
     }
 
-    /* Custom Badges & Highlights */
+    /* Badges */
     .badge {
       display: inline-block;
-      padding: 6px 12px;
+      padding: 4px 10px;
       border-radius: 9999px;
-      font-size: 0.5em !important;
+      font-size: 0.45em !important;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      margin-bottom: 15px !important;
     }
     .badge-blue { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
     .badge-purple { background: rgba(139, 92, 246, 0.15); color: #a78bfa; border: 1px solid rgba(139, 92, 246, 0.3); }
@@ -120,57 +121,65 @@
     .highlight-purple { color: #a78bfa; font-weight: 600; }
     .highlight-green { color: #34d399; font-weight: 600; }
 
-    /* Code blocks */
     code {
       font-family: 'Courier New', Courier, monospace !important;
-      background: rgba(0, 0, 0, 0.3) !important;
-      padding: 2px 8px !important;
+      background: rgba(0, 0, 0, 0.4) !important;
+      padding: 2px 6px !important;
       border-radius: 4px;
       color: #f43f5e !important;
-      font-size: 0.85em !important;
+      font-size: 0.8em !important;
     }
 
     pre code {
       display: block !important;
-      padding: 15px !important;
+      padding: 12px !important;
       overflow-x: auto;
       color: #e2e8f0 !important;
       border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     ul, ol {
-      font-size: 0.8em !important;
+      font-size: 0.75em !important;
       line-height: 1.4 !important;
-      margin-left: 40px !important;
-      margin-bottom: 20px !important;
+      margin-left: 30px !important;
+      margin-bottom: 15px !important;
     }
 
     li {
-      margin-bottom: 8px !important;
+      margin-bottom: 6px !important;
     }
 
     .slide-subtitle {
-      font-size: 0.9em !important;
+      font-size: 0.85em !important;
       color: #94a3b8 !important;
-      margin-bottom: 30px !important;
+      margin-bottom: 20px !important;
     }
 
-    /* Reveal Navigation Hint Box */
     .nav-box {
       border: 1px dashed rgba(255, 255, 255, 0.2);
       border-radius: 8px;
-      padding: 10px;
-      font-size: 0.5em !important;
+      padding: 8px;
+      font-size: 0.45em !important;
       background: rgba(255, 255, 255, 0.02);
       max-width: 300px;
-      margin: 20px auto 0 auto !important;
+      margin: 15px auto 0 auto !important;
     }
 
-    /* Speaker Notes Styling Override */
-    .reveal .notes {
-      font-family: var(--font-body);
-      font-size: 1.1em;
-      line-height: 1.5;
+    /* Comparison Table Styling */
+    table {
+      font-size: 0.65em !important;
+      border-collapse: collapse;
+      width: 100%;
+      margin: 10px 0 !important;
+    }
+    th, td {
+      border: 1px solid var(--color-card-border);
+      padding: 8px 12px !important;
+      text-align: left;
+    }
+    th {
+      background: rgba(255, 255, 255, 0.05);
+      font-weight: 600;
     }
   </style>
 </head>
@@ -180,26 +189,23 @@
 
       <!-- ================== COVER SLIDE ================== -->
       <section>
-        <span class="badge badge-purple">Summer Camp 2026</span>
+        <span class="badge badge-purple">SummerAcademy</span>
         <h1>COMP101</h1>
         <p class="slide-subtitle">Computer Literacy Masterclass for Teenagers</p>
         <div class="card" style="max-width: 600px; margin: 0 auto !important; text-align: center;">
-          <p style="font-size: 0.8em; margin: 0;">Collaborative, Parent-Led Learning</p>
+          <p style="font-size: 0.75em; margin: 0;">Collaborative, Parent-Led Learning</p>
           <div class="nav-box">
             <p style="margin: 0;"><i class="fa-solid fa-arrows-left-right"></i> Move between Lessons (Left/Right)</p>
             <p style="margin: 0; margin-top: 5px;"><i class="fa-solid fa-arrows-up-down"></i> Explore current Lesson (Up/Down)</p>
-            <p style="margin: 0; margin-top: 5px; color: #fbbf24;"><i class="fa-solid fa-keyboard"></i> Press <strong>S</strong> on your keyboard to open Speaker Notes</p>
+            <p style="margin: 0; margin-top: 5px; color: #fbbf24;"><i class="fa-solid fa-keyboard"></i> Press <strong>S</strong> to open your Speaker Notes</p>
           </div>
         </div>
         
         <aside class="notes">
           <h3>Welcome, Teacher!</h3>
-          <p>This is your presentation hub. Here is how to use it:</p>
-          <ul>
-            <li>Cast/project this main browser screen onto a TV or shared monitor for the kids.</li>
-            <li>On your own laptop, press <strong>S</strong>. This opens the <strong>Speaker Notes window</strong>. Keep this window visible only to you! It contains all your teaching scripts, analogies, questions to ask, and answer keys.</li>
-            <li>Let's get started! Use the right arrow key to move to Lesson 1.</li>
-          </ul>
+          <p>This is your lesson presentation deck. Ensure your laptop is facing you and your secondary screen (cast/projected) is facing the kids.</p>
+          <p><strong>Step 1:</strong> Press <strong>S</strong> right now to keep this notes window open on your laptop.</p>
+          <p><strong>Step 2:</strong> Use the Right Arrow key to move to Lesson 1 cover.</p>
         </aside>
       </section>
 
@@ -213,108 +219,279 @@
           <div class="card">
             <h3><i class="fa-solid fa-microchip highlight-blue"></i> Key Objectives</h3>
             <ul>
-              <li>Understand the role of CPU, RAM, and Storage (SSD/HDD).</li>
-              <li>Learn how components interact to run a program.</li>
-              <li>Settle the difference between volatile and non-volatile memory.</li>
+              <li>Identify and define the core hardware components of a PC.</li>
+              <li>Understand the flow of data: Input, Processing, Storage, and Output.</li>
+              <li>Learn how specs (GHz, cores, cache, volatile memory) dictate speed.</li>
             </ul>
           </div>
           <p style="font-size: 0.5em; color: #94a3b8;">Press <i class="fa-solid fa-arrow-down"></i> to enter the lesson.</p>
           
           <aside class="notes">
-            <h3>Lesson 1: Intro</h3>
-            <p>Introduce the subject: Computers are in everything, but how do they actually process information? Today, we go under the metal cover.</p>
-            <p><strong>Teaching Tip</strong>: Ask them to list all the things in the room that have a computer inside (phones, smart bulbs, microwave). Tell them they all share the same basic architecture.</p>
-            <p>Press Down to explain the concepts using the Kitchen Analogy.</p>
+            <h3>Lesson 1: Introduction</h3>
+            <p>Introduce the subject. Explain that computers aren't magic boxes; they are composed of physical devices performing basic electrical operations rapidly.</p>
+            <p>Go down to discuss the general architecture.</p>
           </aside>
         </section>
 
-        <!-- Slide 1.2: The Kitchen Analogy -->
+        <!-- Slide 1.2: General System Architecture -->
         <section>
-          <h2>The Computer Kitchen</h2>
+          <h2>System Architecture Flow</h2>
+          <p class="slide-subtitle">How a computer interacts with the outside world</p>
           <div class="grid-2">
             <div class="card">
-              <h3><i class="fa-solid fa-user-tie highlight-blue"></i> The Chef (CPU)</h3>
-              <p style="font-size: 0.75em; margin: 0;">Does the actual thinking and processing. Multi-cores are like adding extra arms to chop, stir, and cook at once.</p>
+              <h3><i class="fa-solid fa-arrow-right-to-bracket highlight-blue"></i> 1. Input & Output</h3>
+              <p style="font-size: 0.7em; margin: 0; line-height: 1.4;">
+                • **Inputs:** Keyboards, mice, cameras, sensors converting actions to binary bits.<br>
+                • **Outputs:** Screens, speakers, printers converting bits back into visual/audio forms.
+              </p>
             </div>
             <div class="card">
-              <h3><i class="fa-solid fa-table highlight-purple"></i> The Countertop (RAM)</h3>
-              <p style="font-size: 0.75em; margin: 0;">Fast, temporary workspace. Everything active is kept here. Volatile—wiped clean when the kitchen closes.</p>
-            </div>
-            <div class="card">
-              <h3><i class="fa-solid fa-box-open highlight-green"></i> The Pantry (Storage)</h3>
-              <p style="font-size: 0.75em; margin: 0;">Huge long-term storage (SSD/HDD) holding all files and programs. Non-volatile. Slower to fetch ingredients from.</p>
-            </div>
-            <div class="card">
-              <h3><i class="fa-solid fa-person-circle-check highlight-blue"></i> Assistant Chef (GPU)</h3>
-              <p style="font-size: 0.75em; margin: 0;">Specialized worker dedicated entirely to drawing visual elements and complex graphics (gaming & 3D).</p>
+              <h3><i class="fa-solid fa-gears highlight-purple"></i> 2. Processing & Storage</h3>
+              <p style="font-size: 0.7em; margin: 0; line-height: 1.4;">
+                • **Processing:** The CPU running electrical gates to execute software instructions.<br>
+                • **Storage:** Holding data when active (RAM) and saving it long-term (SSD/HDD).
+              </p>
             </div>
           </div>
-
+          
           <aside class="notes">
-            <h3>The Kitchen Story (Script)</h3>
-            <p>Tell the kids: "Imagine you are running a busy restaurant kitchen."</p>
-            <ul>
-              <li><strong>The Chef is the CPU:</strong> The chef does all the chopping and cooking. A chef with a clock speed of 4 GHz does 4 billion actions per second. 8 cores mean the chef has 8 arms to work simultaneously.</li>
-              <li><strong>The Counter is RAM:</strong> When the chef makes a salad, they lay the tomatoes and lettuce on the counter because it's fast to grab. If the counter is tiny, the chef must keep running back to the pantry, slowing everything down. At night, the counter is wiped clean.</li>
-              <li><strong>The Pantry is Storage (SSD/HDD):</strong> It holds 100 bags of flour. It survives power shutdowns. HDD is a slow pantry at the end of a long hallway; SSD is a cabinet right next to the chef.</li>
-            </ul>
-            <p><strong>Ask them:</strong> "If we have a fast Chef but a tiny counter, what happens?" (The chef bottlenecks because they have to swap ingredients back and forth to the pantry).</p>
+            <h3>Socratic Prompt</h3>
+            <p>Ask: "When you move your mouse, how does the computer know where to draw the cursor?"</p>
+            <p>Explain: The mouse coordinates are inputs (e.g. Move +10 X, -5 Y). The processor calculates the new coordinates, and sends instructions to the display adapter (output) to illuminate different pixels.</p>
           </aside>
         </section>
 
-        <!-- Slide 1.3: Lab Activity -->
+        <!-- Slide 1.3: The CPU (The Chef) -->
         <section>
-          <h2>Lab: The $1,000 Custom PC</h2>
-          <span class="badge badge-yellow">Project Time</span>
-          <p style="font-size: 0.8em; margin-bottom: 20px;">Open <a href="https://pcpartpicker.com/" target="_blank">PCPartPicker.com</a>. Choose a client profile and build a compatible PC under $1,000.</p>
+          <h2>The CPU (Central Processing Unit)</h2>
+          <p class="slide-subtitle">The brain that executes the instructions</p>
           <div class="grid-3">
             <div class="card" style="padding: 15px !important;">
-              <h4 style="margin: 0; font-size: 0.85em;"><i class="fa-solid fa-gamepad highlight-blue"></i> Gamer (Ethan)</h4>
-              <p style="font-size: 0.6em; margin-top: 10px; line-height: 1.3;">Needs smooth frame rates. Spend 35-40% of the budget on the <strong>GPU</strong>. Decent mid-range CPU.</p>
+              <h4 style="margin: 0; font-size: 0.85em; color: #60a5fa;"><i class="fa-solid fa-bolt"></i> Clock Speed</h4>
+              <p style="font-size: 0.6em; margin-top: 10px; line-height: 1.3;">Measured in <strong>Gigahertz (GHz)</strong>. Represents processing cycles per second. A 4.0 GHz CPU performs <strong>4 billion cycles</strong> per second.</p>
             </div>
             <div class="card" style="padding: 15px !important;">
-              <h4 style="margin: 0; font-size: 0.85em;"><i class="fa-solid fa-video highlight-purple"></i> Creator (Maya)</h4>
-              <p style="font-size: 0.6em; margin-top: 10px; line-height: 1.3;">Edits 4K videos. Prioritize a multi-core <strong>CPU</strong>, at least <strong>32GB RAM</strong>, and a fast <strong>2TB+ SSD</strong>.</p>
+              <h4 style="margin: 0; font-size: 0.85em; color: #a78bfa;"><i class="fa-solid fa-network-wired"></i> Core Counts</h4>
+              <p style="font-size: 0.6em; margin-top: 10px; line-height: 1.3;">Separate physical processing units. Single-core is 1 worker; multi-core (8, 12, 16) allows running multiple tasks concurrently.</p>
             </div>
             <div class="card" style="padding: 15px !important;">
-              <h4 style="margin: 0; font-size: 0.85em;"><i class="fa-solid fa-code highlight-green"></i> Coder (Sarah)</h4>
-              <p style="font-size: 0.6em; margin-top: 10px; line-height: 1.3;">Needs speed and multitasking. Integrated graphics is fine. Focus on a high-end **CPU**, **32GB RAM**, and a premium **SSD**.</p>
+              <h4 style="margin: 0; font-size: 0.85em; color: #34d399;"><i class="fa-solid fa-box-archive"></i> CPU Cache</h4>
+              <p style="font-size: 0.6em; margin-top: 10px; line-height: 1.3;">Ultra-fast memory built directly on the CPU chip (L1, L2, L3). Holds the next immediate instructions, saving trips to RAM.</p>
+            </div>
+          </div>
+          
+          <aside class="notes">
+            <h3>The Chef Analogy</h3>
+            <p><strong>The Chef is the CPU.</strong></p>
+            <ul>
+              <li><strong>GHz Clock speed:</strong> How fast the chef can chop or stir. (4 billion movements per second).</li>
+              <li><strong>Cores:</strong> How many arms or helper chefs there are. An 8-core CPU is like an 8-armed chef who can do 8 recipes at once.</li>
+              <li><strong>Cache:</strong> A small spice rack right above the chef's head. Holds the ingredients they need right this second so they don't have to turn around.</li>
+            </ul>
+          </aside>
+        </section>
+
+        <!-- Slide 1.4: RAM (The Countertop) -->
+        <section>
+          <h2>RAM (Random Access Memory)</h2>
+          <p class="slide-subtitle">The computer's temporary active workspace</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-gauge-high highlight-blue"></i> Speed & Capacity</h3>
+              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">
+                • **Speeds:** Measured in MegaTransfers (e.g. DDR5 5600 MT/s). Faster speeds feed the CPU data quicker.<br>
+                • **Capacity:** Measured in Gigabytes (GB). 8GB is basic; 16GB is gaming standard; 32GB+ is multitasking powerhouse.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-triangle-exclamation highlight-purple"></i> Volatility</h3>
+              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">
+                • **Active workspace:** When you boot Windows or open Discord, the files are loaded from storage into RAM.<br>
+                • **Volatile:** Requires constant power. If power cuts off, the electrical charges drain and all RAM data vanishes instantly.
+              </p>
             </div>
           </div>
 
           <aside class="notes">
-            <h3>Lab Guidance</h3>
-            <p>Instruct the kids to select <strong>one</strong> of the clients above. Help them launch PCPartPicker.</p>
-            <p><strong>Rules:</strong></p>
-            <ol>
-              <li>Budget is exactly $1,000.</li>
-              <li>Must select CPU, Motherboard, RAM, Storage (SSD), Case, PSU, and GPU (if needed).</li>
-              <li>PCPartPicker must show "Compatibility: No issues or incompatibilities found" in green at the top.</li>
-            </ol>
-            <p>Let them debate components. Have them justify why they chose a specific motherboard socket or memory speed.</p>
+            <h3>The Countertop Analogy</h3>
+            <p><strong>RAM is the Kitchen Countertop.</strong></p>
+            <ul>
+              <li>When the chef is making cookies, they lay out flour, sugar, and baking sheets on the counter because it's fast to grab.</li>
+              <li>If the counter is too small, they run out of space and have to pack ingredients back into the pantry, slowing down cooking.</li>
+              <li>At night, the kitchen closes and the counter is wiped completely clean (Volatile).</li>
+            </ul>
           </aside>
         </section>
 
-        <!-- Slide 1.4: Quiz -->
+        <!-- Slide 1.5: Storage (The Pantry) -->
         <section>
-          <h2>Lesson 1 Check-In</h2>
+          <h2>SSD vs. HDD (Storage)</h2>
+          <p class="slide-subtitle">Where files live when the power is off</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Specification</th>
+                <th>HDD (Hard Disk Drive)</th>
+                <th>SSD (Solid State Drive)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Technology</strong></td>
+                <td>Spinning magnetic platters & moving read-heads.</td>
+                <td>NAND Flash microchips (no moving parts).</td>
+              </tr>
+              <tr>
+                <td><strong>Speed</strong></td>
+                <td>Slower (~100-150 MB/s). High seek latency.</td>
+                <td>Fast (~3,500-7,000 MB/s for PCIe NVMe).</td>
+              </tr>
+              <tr>
+                <td><strong>Durability</strong></td>
+                <td>Fragile. Dropping it can damage platters.</td>
+                <td>High. Shockproof, silent, uses less power.</td>
+              </tr>
+              <tr>
+                <td><strong>Use Case</strong></td>
+                <td>Cheap bulk storage (backups, archival data).</td>
+                <td>OS drive, games, applications, active files.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <aside class="notes">
+            <h3>Pantry Analogy</h3>
+            <p><strong>Storage is the Pantry.</strong> Holds cookbooks and flour long-term. Retains data without power (Non-volatile).</p>
+            <ul>
+              <li><strong>HDD:</strong> A pantry at the end of a long, dark hallway. The chef has to walk down the hall, turn a physical dial to open the door, and search. Takes time (latency).</li>
+              <li><strong>SSD:</strong> A modern drawer organizer right under the counter. The chef pulls it open and grabs the spice instantly.</li>
+            </ul>
+          </aside>
+        </section>
+
+        <!-- Slide 1.6: Motherboard & PSU -->
+        <section>
+          <h2>Motherboard & Power Delivery</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-road highlight-blue"></i> The Motherboard</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                The central circuit board that houses the CPU and connects all hardware.<br>
+                • **Sockets:** Physical interfaces (e.g. AM5, LGA1700) matching specific CPUs.<br>
+                • **PCIe Slots:** High-speed expansion channels for GPUs and NVMe SSDs.<br>
+                • **Bus lines:** Trace lines that route binary signals between components.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-plug highlight-purple"></i> The PSU & Cooling</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **Power Supply (PSU):** Converts high voltage AC wall current into low voltage DC power (12V, 5V, 3.3V) needed by components.<br>
+                • **Thermal Management:** Processors do math by moving electrical current through gates, generating heat. Heatsinks, fans, and liquid coolers dissipate heat to prevent thermal throttling.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Key Points</h3>
+            <p><strong>Motherboard is the floor/wiring:</strong> Connects the pantry, countertops, and chef. If a bus lane is damaged, components can't communicate.</p>
+            <p><strong>PSU is the power plug:</strong> High voltage AC is dangerous; the PSU regulates it. A bad PSU can fry all other components.</p>
+            <p><strong>Cooling:</strong> If a CPU gets too hot, it slows down its clock cycles to protect itself from melting. This is called thermal throttling.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 1.7: The GPU (The Artist) -->
+        <section>
+          <h2>The GPU (Graphics Processing Unit)</h2>
+          <p class="slide-subtitle">Serial vs. Parallel Processing</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-user-gear highlight-blue"></i> CPU: Sequential</h3>
+              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">
+                Designed with a few powerful cores (4 to 16) optimized for **serial processing** (running one complex instruction set after another very fast).
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-users-gear highlight-purple"></i> GPU: Parallel</h3>
+              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">
+                Designed with thousands of small, specialized cores optimized for **parallel processing** (doing millions of simple math operations, like calculating pixel colors or AI vectors, all at once).
+              </p>
+            </div>
+          </div>
+          <p style="font-size: 0.65em; text-align: left; margin-top: 15px;">**VRAM (Video RAM):** Dedicated high-speed memory on the graphics card holding textures and frame data for immediate GPU rendering.</p>
+
+          <aside class="notes">
+            <h3>Assistant Chef Analogy</h3>
+            <p>If the head chef (CPU) had to decorate 2 million tiny cakes (pixels on a screen) at the same time, they couldn't serve any main courses. So they hire a specialized pastry helper (the GPU) with 2,000 tiny hands to decorate the cakes in parallel.</p>
+            <p>Ask: "Why do AI programs run on GPUs instead of CPUs?" (AI model math is composed of massive matrix multiplications—millions of simple addition/multiplication steps that can be run in parallel much faster on a GPU).</p>
+          </aside>
+        </section>
+
+        <!-- Slide 1.8: Discussion Flow -->
+        <section>
+          <h2>Lesson 1 Discussion</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-comments highlight-yellow"></i> Socratic Scenarios</h3>
+            <ol>
+              <li>You buy a game. Your CPU and GPU are very fast, but your computer only has 4GB of RAM. The game recommends 16GB. What will the gameplay feel like, and why?</li>
+              <li>A laptop advertisement says: "1TB HDD! Core i7 CPU! Ultra-fast!" What is the hidden trap in this specification?</li>
+            </ol>
+          </div>
+
+          <aside class="notes">
+            <h3>Discussion Guidelines</h3>
+            <ol>
+              <li><strong>RAM Bottleneck:</strong> The game will stutter heavily. The CPU will have to constantly write temporary game files back to the slow storage drive (HDD/SSD) and wait for them to load because there's not enough room on the RAM countertop. This is called disk swapping or thrashing.</li>
+              <li><strong>The slow HDD trap:</strong> Even though the CPU (i7) is very fast, booting the computer and opening programs will feel sluggish because the HDD is slow at loading files. The CPU will spend most of its time waiting for the spinning disk platters to fetch data. Adding a cheap SSD would make the machine feel 10x faster.</li>
+            </ol>
+          </aside>
+        </section>
+
+        <!-- Slide 1.9: Lab Activity -->
+        <section>
+          <h2>Lab: The $1,000 PC Build</h2>
+          <span class="badge badge-yellow">Project Task</span>
+          <p style="font-size: 0.75em; text-align: left; margin-bottom: 20px;">Open <a href="https://pcpartpicker.com/" target="_blank">PCPartPicker.com</a>. Choose a client profile. Spec out a fully compatible PC system under a strict **$1,000 USD** budget limit:</p>
+          <div class="grid-3">
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.8em; color: #60a5fa;"><i class="fa-solid fa-gamepad"></i> Client A: Ethan (Gamer)</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">Wants high frame rates in 3D games. Allocate 35-45% of budget to the **GPU**. Balance with mid-range CPU.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.8em; color: #a78bfa;"><i class="fa-solid fa-video"></i> Client B: Maya (Creator)</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">Edits 4K video and renders 3D files. Prioritize a multi-core **CPU**, **32GB RAM**, and a large **SSD**.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.8em; color: #34d399;"><i class="fa-solid fa-code"></i> Client C: Sarah (Student)</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">Multitasks and writes code. Skip the GPU (use integrated graphics). Prioritize premium **CPU**, **32GB RAM**, and silent cooling.</p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Lab Execution</h3>
+            <p>Ensure the kids select only one client. Watch them budget. If they overspend on the CPU, remind them they won't fit a GPU for gaming. Guide them on compatibility warnings (e.g. DDR4 RAM won't fit a DDR5 motherboard slot, or a CPU socket doesn't match the motherboard chipset).</p>
+          </aside>
+        </section>
+
+        <!-- Slide 1.10: Lesson Quiz -->
+        <section>
+          <h2>Lesson 1 Quiz</h2>
           <div class="card">
             <h3><i class="fa-solid fa-circle-question highlight-blue"></i> Questions</h3>
             <ol>
-              <li>If you open 20 Chrome tabs and the system lags, which hardware part is full?</li>
-              <li>What is the main physical difference between an HDD and an SSD?</li>
-              <li>What does "volatile" mean in reference to memory?</li>
+              <li>Which component holds the files of a game while you are playing it? Which component holds them when the PC is turned off?</li>
+              <li>What does 3.2 GHz represent?</li>
+              <li>True or False: If you rename a file from `document.docx` to `document.mp3`, the CPU will play it as a song.</li>
             </ol>
           </div>
 
           <aside class="notes">
-            <h3>Quiz Answer Key</h3>
+            <h3>Quiz Answers</h3>
             <ol>
-              <li><strong>RAM</strong>: The kitchen countertop has run out of space. The computer has to swap data to the slower storage drive.</li>
-              <li><strong>Moving Parts vs. Flash Chips</strong>: An HDD has spinning platters and read heads (moving parts); an SSD uses microchips (flash memory) and has no moving parts, making it 5-10x faster.</li>
-              <li><strong>Temporary</strong>: It means data is lost when power is turned off (like RAM). Non-volatile (SSD/HDD) retains data without power.</li>
+              <li>RAM holds files while playing (active workspace); SSD/HDD holds files when turned off (storage).</li>
+              <li>Clock speed: 3.2 billion processing cycles/operations per second.</li>
+              <li><strong>False:</strong> The file extension is just a label. The underlying binary format is still text data; an audio program will fail to decode it.</li>
             </ol>
-            <p>Once answered, hit the Right Arrow key to move to Lesson 2.</p>
+            <p>Swipe Right for Lesson 2.</p>
           </aside>
         </section>
       </section>
@@ -329,124 +506,232 @@
           <div class="card">
             <h3><i class="fa-solid fa-folder-tree highlight-purple"></i> Key Objectives</h3>
             <ul>
-              <li>Learn how file extensions govern file behavior.</li>
-              <li>Master paths: Absolute vs. Relative address routing.</li>
-              <li>Understand virtualization, the cloud, and data center footprints.</li>
+              <li>Understand file headers, extensions, and directory paths.</li>
+              <li>Learn to manipulate directories using the Command Line Interface (CLI).</li>
+              <li>Explain virtualization, server nodes, and the physical footprint of the cloud.</li>
             </ul>
           </div>
           
           <aside class="notes">
             <h3>Lesson 2 Intro</h3>
-            <p>In this lesson, we study how computers structure files and where they go when stored in "the cloud". We will also practice moving files using the CLI (Command Line Interface).</p>
-            <p>Press Down to explain file paths and cloud basics.</p>
+            <p>We take file systems for granted in visual interfaces. In this lesson, we explore how data is organized, how directories form branches, and how we interact with them via code (CLI) and in cloud server nodes.</p>
+            <p>Press Down to learn about extensions and headers.</p>
           </aside>
         </section>
 
-        <!-- Slide 2.2: Files & Cloud Concepts -->
+        <!-- Slide 2.2: File Types & Decoders -->
         <section>
-          <h2>Paths, Extensions, & The Cloud</h2>
+          <h2>File Formats & Headers</h2>
+          <p class="slide-subtitle">How computers identify data types</p>
           <div class="grid-2">
             <div class="card">
-              <h3><i class="fa-solid fa-file-code highlight-blue"></i> Extensions & Paths</h3>
-              <ul>
-                <li><strong>Extensions:</strong> `.exe` vs `.jpg` labels that tell the OS which decoder to use.</li>
-                <li><strong>Absolute Path:</strong> Full location from root (`C:\Users\Docs\file.txt`).</li>
-                <li><strong>Relative Path:</strong> Location relative to current spot (`Docs\file.txt`).</li>
-              </ul>
+              <h3><i class="fa-solid fa-file-signature highlight-blue"></i> 1. The File Header</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                The first few bytes of any file contain a hidden code (the **magic number** or header). For example, a PNG file always starts with the bytes `89 50 4E 47`. The OS reads this header to confirm the file type regardless of its name.
+              </p>
             </div>
             <div class="card">
-              <h3><i class="fa-solid fa-server highlight-purple"></i> Cloud & Virtualization</h3>
-              <ul>
-                <li><strong>The Cloud:</strong> Simply "someone else's computer" in a data center.</li>
-                <li><strong>Virtualization:</strong> Splitting one physical server into dozens of independent "Virtual Machines" (VMs). Saves massive power.</li>
-              </ul>
+              <h3><i class="fa-solid fa-file-lines highlight-purple"></i> 2. File Decoders</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **Binary files** (like `.exe`, `.png`, `.mp3`) store data in packed machine bytes. They require specific decoders to open.<br>
+                • **Text files** (like `.txt`, `.csv`, `.py`) store raw characters encoded in ASCII or UTF-8 and can be read by any text editor.
+              </p>
             </div>
           </div>
 
           <aside class="notes">
-            <h3>Teaching Details</h3>
-            <p><strong>Filing Cabinet Analogy:</strong> Storing a file locally is putting paper in a drawer in your room. The file path is drawer -> folder -> page. Storing in the cloud is mailing that paper to a massive secure warehouse with robotic arms (servers) that fetch it when requested.</p>
-            <p><strong>Ask them:</strong> "If I rename song.mp3 to song.docx, does it play?" (No, MS Word will load the binary music code and display pages of random gibberish symbols because it can't decode audio).</p>
+            <h3>Explanation</h3>
+            <p>Explain that file extensions (.jpg, .mp4) are labels for the OS, but the true file identity is written in its header bytes. If you delete the extension, the file is still intact, but the OS won't know which program to assign it to until it scans the header.</p>
           </aside>
         </section>
 
-        <!-- Slide 2.3: Lab Part 1 -->
+        <!-- Slide 2.3: Directory Trees & Paths -->
         <section>
-          <h2>Lab Part 1: CLI Folder Rescue</h2>
-          <span class="badge badge-yellow">Activity</span>
-          <p style="font-size: 0.85em; text-align: left;">Run the setup script from the lesson guide in PowerShell to create `messy_folder`. Now, organize it using <strong>only the command line</strong>:</p>
-          <div class="card">
-            <h3><i class="fa-solid fa-terminal highlight-green"></i> Useful Commands</h3>
-            <div style="font-size: 0.7em; line-height: 1.4; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-              <div>`cd <path>`: Change directory</div>
-              <div>`mkdir <name>`: Create new folder</div>
-              <div>`ls` or `dir`: List files in folder</div>
-              <div>`mv <file> <folder>`: Move file</div>
+          <h2>Directory Trees & Paths</h2>
+          <p class="slide-subtitle">Mapping locations on storage devices</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-diamond-turn-right highlight-blue"></i> Absolute Paths</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                The full address starting from the drive root.<br>
+                • **Windows:** `C:\Apps\SummerAcademy\curriculum\comp101\lesson_01.md`<br>
+                • **Linux/macOS:** `/var/www/index.html`
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-route highlight-purple"></i> Relative Paths</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                The address relative to your **current working directory** (Cwd).<br>
+                • If you are currently in `C:\Apps\SummerAcademy\`, the relative path is:<br>
+                `curriculum\comp101\lesson_01.md`
+              </p>
             </div>
           </div>
-          <p style="font-size: 0.6em; text-align: left;">Organize the downloads into three folders: <code>Documents</code>, <code>Images</code>, and <code>Installers</code> based on file extensions.</p>
+          <p style="font-size: 0.65em; text-align: left; margin-top: 15px;">**Folder Hierarchy:** Root directories branch into parent folders, which contain child subfolders and terminal files.</p>
 
           <aside class="notes">
-            <h3>CLI Lab Guide</h3>
-            <p>Paste the setup script from `lesson_02_files_folders_cloud.md` into PowerShell to create the messy files. Then sit back and guide them:</p>
+            <h3>Pathing Metaphor</h3>
+            <p><strong>Absolute path</strong> is a GPS coordinate or mailing address (e.g. 1600 Pennsylvania Ave, Washington DC). It works from anywhere.</p>
+            <p><strong>Relative path</strong> is a direction from where you are (e.g. "turn left, go down two blocks, third house"). It only works if you are in the correct starting spot.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 2.4: Command Line Interface (CLI) -->
+        <section>
+          <h2>The Command Line (CLI)</h2>
+          <p class="slide-subtitle">Talking to the operating system using code</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-desktop highlight-blue"></i> GUI vs. CLI</h3>
+              <p style="font-size: 0.75em; line-height: 1.4; margin: 0;">
+                • **GUI (Graphical User Interface):** Point and click with a mouse. Slow for batch tasks.<br>
+                • **CLI (Command Line Interface):** Typing text instructions. Fast, automatable, and essential for servers.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-list highlight-purple"></i> Essential Shell Commands</h3>
+              <ul style="font-size: 0.65em !important; line-height: 1.3;">
+                <li>`cd <path>`: Change directory (move to folder).</li>
+                <li>`ls` or `dir`: List files in the current folder.</li>
+                <li>`mkdir <name>`: Make a new directory folder.</li>
+                <li>`mv <file> <dest>`: Move/Rename a file.</li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>CLI Introduction</h3>
+            <p>Explain that before screens had mouse cursors (pre-1980s), the CLI was the only way to use a computer. Developers and network administrators still use it because typing commands is much faster than clicking through 10 folders.</p>
+            <p>Show them the dot notation: <code>.</code> means current directory; <code>..</code> means parent directory. (e.g. <code>cd ..</code> moves up one level).</p>
+          </aside>
+        </section>
+
+        <!-- Slide 2.5: Virtualization & Hypervisors -->
+        <section>
+          <h2>The Cloud: Virtualization</h2>
+          <p class="slide-subtitle">How servers are split into virtual pieces</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-network-wired highlight-blue"></i> Physical Nodes</h3>
+              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">
+                Data centers contain rows of physical server units (nodes). These are massive racks of CPUs, RAM, and hard drives, but buying a physical server for every user is expensive and wasteful.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-layer-group highlight-purple"></i> The Hypervisor</h3>
+              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">
+                A virtualization software layer that splits a physical server's resources. It hosts multiple independent **Virtual Machines (VMs)**, sharing the same physical CPU/RAM securely.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Virtualization Analogy</h3>
+            <p>Explain virtualization like an apartment building. Instead of building 50 single houses (physical servers) for 50 people, you build one large apartment complex (physical hardware) and partition it into 50 rooms (VMs). Each tenant has their own door and keys, but they share the same physical foundation and plumbing.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 2.6: The Physical Footprint of the Cloud -->
+        <section>
+          <h2>Data Centers Under the Hood</h2>
+          <p class="slide-subtitle">The physical infrastructure of the internet</p>
+          <div class="grid-3">
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.8em; color: #60a5fa;"><i class="fa-solid fa-wind"></i> HVAC Cooling</h4>
+              <p style="font-size: 0.55em; margin-top: 10px; line-height: 1.3;">Thousands of processors create massive heat. Giant chiller units and airflow vents run continuously to prevent hardware failures.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.8em; color: #a78bfa;"><i class="fa-solid fa-battery-three-quarters"></i> Redundant Power</h4>
+              <p style="font-size: 0.55em; margin-top: 10px; line-height: 1.3;">To prevent data loss, facilities have banks of batteries (UPS) and diesel generators that start in milliseconds if the grid fails.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.8em; color: #34d399;"><i class="fa-solid fa-shield-halved"></i> Data Security</h4>
+              <p style="font-size: 0.55em; margin-top: 10px; line-height: 1.3;">Biometric access controls, perimeter cages, and hard drive shredders to destroy decommissioned data.</p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Datacenter Realities</h3>
+            <p>Explain that data centers consume huge amounts of green energy. Tech companies locate data centers in cold climates (like Iceland or Sweden) to reduce electricity bills by using cold air from outside for natural cooling.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 2.7: Discussion & Fermi Math -->
+        <section>
+          <h2>Discussion & Datacenter Math</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-comments highlight-yellow"></i> Discussion</h3>
+              <p style="font-size: 0.6em; line-height: 1.3; margin: 0;">
+                If a file deleted from your Recycle Bin on your local computer is gone, why is a photo deleted from Instagram sometimes still accessible?
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-calculator highlight-blue"></i> Fermi Math Recall</h3>
+              <p style="font-size: 0.6em; line-height: 1.3; margin: 0;">
+                If a 50,000-server data center draws <strong>25 MW</strong> of electricity at any second, and a family home uses <strong>1.2 kW</strong>, how many houses' worth of power does the data center consume?
+                <br><br>
+                <em>Formula:</em> $25,000,000 \text{ Watts} \div 1,200 \text{ Watts}$
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Answers</h3>
             <ol>
-              <li>Have them navigate with: <code>cd C:\Apps\SummerAcademy\curriculum\comp101\messy_folder</code></li>
-              <li>View the mess with: <code>ls</code></li>
-              <li>Make folders: <code>mkdir Documents, Images, Installers</code></li>
-              <li>Move the files (e.g. <code>mv *.jpg Images</code> or move one by one). Let them type and make typos. Explain why tab-completion is a lifesaver!</li>
+              <li><strong>Cloud redundancy:</strong> When you upload to the cloud, files are duplicated across multiple geographic servers (data replication) to prevent loss if a hard drive crashes. Deleting a photo sends a deletion request, but caches and index tables take time to clean up, or the company keeps archival records.</li>
+              <li><strong>Fermi Math Answer:</strong> ~20,833 homes. A medium-sized town's worth of power is spent just for one datacenter!</li>
             </ol>
           </aside>
         </section>
 
-        <!-- Slide 2.4: Lab Part 2 -->
+        <!-- Slide 2.8: Lab Activity -->
         <section>
-          <h2>Lab Part 2: Datacenter Math</h2>
+          <h2>Lab: CLI Folder Rescue</h2>
+          <span class="badge badge-yellow">Activity</span>
           <div class="card">
-            <h3><i class="fa-solid fa-calculator highlight-blue"></i> Fermi Estimation Challenge</h3>
-            <ul>
-              <li><strong>Premise:</strong> A modern data center holds 50,000 servers.</li>
-              <li>Each server consumes <strong>500 Watts</strong> of electricity.</li>
-              <li><strong>Calculate:</strong> What is the power draw of the facility in Megawatts (MW)?</li>
-              <li><strong>Comparison:</strong> If an average house uses <strong>1.2 kW</strong>, how many homes' worth of electricity does this data center devour?</li>
-            </ul>
+            <h3><i class="fa-solid fa-terminal highlight-green"></i> The CLI Mission</h3>
+            <ol style="font-size: 0.7em !important; line-height: 1.3 !important;">
+              <li>Run the setup script from the lesson guide in **PowerShell** to generate your messy folder.</li>
+              <li>Use <code>cd C:\Apps\SummerAcademy\curriculum\comp101\messy_folder</code> to move inside it.</li>
+              <li>Run <code>ls</code> to inspect the unsorted files.</li>
+              <li>Create folders using <code>mkdir Documents</code>, <code>mkdir Images</code>, and <code>mkdir Installers</code>.</li>
+              <li>Move the files: Use <code>mv</code> to sort files (e.g. <code>mv *.jpg Images</code> or move individually).</li>
+            </ol>
           </div>
 
           <aside class="notes">
-            <h3>Datacenter Math Answers</h3>
-            <ul>
-              <li><strong>Total Watts:</strong> 50,000 servers * 500 Watts = 25,000,000 Watts.</li>
-              <li><strong>Conversion to MW:</strong> 25,000,000 Watts = 25,000 kW = 25 Megawatts (MW).</li>
-              <li><strong>Comparison:</strong> 25,000 kW / 1.2 kW = 20,833 homes.</li>
-            </ul>
-            <p>Point out: That's a medium-sized town's worth of power just for one datacenter holding photos and videos!</p>
+            <h3>Lab Execution</h3>
+            <p>Ensure the kids copy the setup script from `lesson_02_files_folders_cloud.md` and run it in PowerShell. Then walk them through organizing it.</p>
+            <p><strong>Tip:</strong> If they get stuck, show them that typing <code>mv homework</code> and hitting the <strong>TAB</strong> key completes the name automatically. Tab-completion prevents typos.</p>
           </aside>
         </section>
 
-        <!-- Slide 2.5: Quiz -->
+        <!-- Slide 2.9: Lesson 2 Quiz -->
         <section>
-          <h2>Lesson 2 Check-In</h2>
+          <h2>Lesson 2 Quiz</h2>
           <div class="card">
             <h3><i class="fa-solid fa-circle-question highlight-purple"></i> Questions</h3>
             <ol>
-              <li>What is the command to create a new folder in PowerShell?</li>
-              <li>What is the difference between an Absolute Path and a Relative Path?</li>
-              <li>True or False: The Cloud is a wireless space in the sky where data floats.</li>
+              <li>What is the difference between a text file (`.txt`) and a binary file (`.exe`)?</li>
+              <li>If you are working in `C:\Apps\`, what is the *relative path* to `C:\Apps\SummerAcademy\index.html`?</li>
+              <li>Why do cloud providers replicate (copy) your files onto multiple physical servers?</li>
             </ol>
           </div>
 
           <aside class="notes">
             <h3>Quiz Answers</h3>
             <ol>
-              <li><strong>mkdir</strong> (make directory).</li>
-              <li><strong>Absolute:</strong> complete address starting from the root (like C:\). <strong>Relative:</strong> address starting from where you currently are.</li>
-              <li><strong>False:</strong> The cloud is made of physical, energy-intensive warehouses with real computers, fiber optic cables, and air conditioning.</li>
+              <li><strong>Text file:</strong> Contains plain characters readable by any text software. <strong>Binary file:</strong> Contains machine-compiled code bytes and requires specific software decoders to execute.</li>
+              <li><code>SummerAcademy\index.html</code> (relative address from the starting point).</li>
+              <li><strong>Redundancy/Fault Tolerance:</strong> If a physical server experiences a power outage, fire, or hard drive crash, your file is immediately loaded from another server copy without service interruption.</li>
             </ol>
-            <p>Move Right for Lesson 3.</p>
+            <p>Swipe Right for Lesson 3.</p>
           </aside>
         </section>
       </section>
 
-      <!-- ================== LESSON 3: INTERNET PLUMBING ================== -->
+      <!-- ================== LESSON 3: HOW THE INTERNET WORKS ================== -->
       <section>
         <!-- Slide 3.1: Cover -->
         <section>
@@ -454,270 +739,573 @@
           <h2>How the Internet Works</h2>
           <p class="slide-subtitle">Packets, DNS, and the Global Network Pipeline</p>
           <div class="card">
-            <h3><i class="fa-solid fa-globe highlight-green"></i> Key Objectives</h3>
+            <h3><i class="fa-solid fa-route highlight-green"></i> Key Objectives</h3>
             <ul>
-              <li>Understand packet fragmentation and TCP/IP delivery.</li>
-              <li>Learn how DNS servers act as the "phonebook" of the web.</li>
-              <li>Use diagnostic tools to trace real packet routes across the globe.</li>
+              <li>Analyze packet switching and TCP/IP reliability protocols.</li>
+              <li>Understand the DNS hierarchy and caching mechanisms.</li>
+              <li>Trace network packets jumping between routers around the globe.</li>
             </ul>
           </div>
           
           <aside class="notes">
             <h3>Lesson 3 Intro</h3>
-            <p>Today we demystify how a website gets onto their screens. We'll trace the routing and look at submarine cables.</p>
-            <p>Press Down to discuss routing and the postcard analogy.</p>
+            <p>In this lesson, we demystify the network layers. How does a request leave our home router and return files from servers across the world in milliseconds?</p>
+            <p>Press Down to explain packet switching.</p>
           </aside>
         </section>
 
-        <!-- Slide 3.2: Packets & DNS Concepts -->
+        <!-- Slide 3.2: Packet Switching & TCP/IP -->
         <section>
-          <h2>The Global Pipeline</h2>
+          <h2>Packet Switching & TCP/IP</h2>
+          <p class="slide-subtitle">Slicing data for transmission</p>
           <div class="grid-2">
             <div class="card">
-              <h3><i class="fa-solid fa-envelope-open-text highlight-blue"></i> Packets & Routing</h3>
-              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">Files are sliced into <strong>packets</strong> (1500 bytes each) stamped with source & destination IPs. <strong>Routers</strong> act as traffic cops, forwarding them along different paths. Reassembled at the destination.</p>
+              <h3><i class="fa-solid fa-box-open highlight-blue"></i> Packet Fragmentation</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Files are broken into **packets** (usually ~1500 bytes). Each packet gets a header detailing:
+                <br>
+                • Source IP address.<br>
+                • Destination IP address.<br>
+                • Sequence number (e.g. "Packet 4 of 100").
+              </p>
             </div>
             <div class="card">
-              <h3><i class="fa-solid fa-address-book highlight-purple"></i> Domain Name System</h3>
-              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;"><strong>DNS</strong> translates human-friendly domain names (`google.com`) into computer-readable numerical IP addresses (`142.250.190.46`). Without DNS, names fail to load.</p>
+              <h3><i class="fa-solid fa-circle-check highlight-purple"></i> TCP/IP Protocol</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **IP (Internet Protocol):** Directs the packets to the correct numeric address.<br>
+                • **TCP (Transmission Control Protocol):** Guarantees delivery. It tracks sequence numbers, checks for corruption (checksums), and requests retransmission of lost packets.
+              </p>
             </div>
           </div>
 
           <aside class="notes">
-            <h3>Postcard Analogy (Script)</h3>
-            <p>Explain: "Imagine you want to mail a 100-page notebook to Tokyo, but the post office only accepts single postcards."</p>
-            <ul>
-              <li>You tear the pages out, put numbers on them, stamp them with the Tokyo address, and drop them in the mail.</li>
-              <li>They travel on different planes/trucks. Your friend receives them, sorts them by page number, and reassembles the notebook.</li>
-              <li>If page 45 is lost, your friend sends a card back: "Send page 45 again." That is TCP/IP.</li>
-            </ul>
-            <p><strong>Ask:</strong> "How do packets cross the Atlantic Ocean? Satellites?" (No! Undersea fiber-optic cables on the ocean floor carry light signals across oceans).</p>
+            <h3>Postcard Metaphor (Script)</h3>
+            <p>Explain: "Tear a 100-page notebook into 100 pages. Mail each page as a separate postcard to Tokyo. Each postcard travels in different trucks/planes. When your friend receives them, they reassemble them by page numbers."</p>
+            <p>If postcard 45 is lost, your friend sends a card back: "Send page 45 again." That is TCP/IP reliability.</p>
           </aside>
         </section>
 
-        <!-- Slide 3.3: Lab Activity -->
+        <!-- Slide 3.3: DNS Plumbing -->
         <section>
-          <h2>Lab: Tracing the Route</h2>
-          <span class="badge badge-yellow">Activity</span>
-          <p style="font-size: 0.8em; text-align: left;">Open PowerShell and run these diagnostic network utilities:</p>
-          <div class="card">
-            <h3><i class="fa-solid fa-terminal highlight-green"></i> Network Tools</h3>
-            <ul>
-              <li><strong>Lookup IP:</strong> <code>nslookup google.co.jp</code></li>
-              <li><strong>Test Latency:</strong> <code>ping google.co.jp</code> (look at the speed in milliseconds)</li>
-              <li><strong>Trace Route:</strong> <code>tracert www.u-tokyo.ac.jp</code></li>
-            </ul>
+          <h2>DNS: The Internet Phonebook</h2>
+          <p class="slide-subtitle">Translating names to numbers</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-magnifying-glass-location highlight-blue"></i> DNS Hierarchy</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                When you type `google.com`, your browser asks:
+                <br>
+                1. **Local Cache:** Checked first.<br>
+                2. **Recursive Resolver:** Queries root servers (`.`), Top-Level Domain (TLD) servers (`.com`), and finally the **Authoritative Nameserver** for `google.com` to fetch the IP.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-network-wired highlight-purple"></i> DNS Cache</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                To prevent millions of duplicate queries, computers and routers save (cache) lookup results for a specific period (TTL - Time to Live).
+              </p>
+            </div>
           </div>
-          <p style="font-size: 0.6em; text-align: left;">Analyze the hops. Look for airport codes (e.g. LHR, NRT) in the router names and lookup public IPs on <a href="https://ipinfo.io/" target="_blank">ipinfo.io</a>.</p>
 
           <aside class="notes">
-            <h3>Lab Instructions</h3>
-            <p>Guide the kids through running the commands. It's fascinating to see their packet bounce from their home router, through regional servers, then jump to submarine cables, and arrive in Tokyo in under 200 milliseconds.</p>
-            <p>Explain: Ping is round-trip time. Light in a fiber cable takes about 67ms just to cross the planet in a straight line, which shows how fast fiber connections are.</p>
+            <h3>DNS Plumbing Details</h3>
+            <p>Explain DNS like a lookup system. Root servers point resolver to .com servers. The .com server points to Google's name server, which returns the IP address <code>142.250.190.46</code>.</p>
+            <p>Ask: "What happens if a company changes their server IP but visitors still get the old IP?" (Their local cache is still holding the old record until the Time To Live expires).</p>
           </aside>
         </section>
 
-        <!-- Slide 3.4: Quiz -->
+        <!-- Slide 3.4: IP Routing & Undersea Cables -->
         <section>
-          <h2>Lesson 3 Check-In</h2>
+          <h2>IP Routing & Global Cables</h2>
+          <p class="slide-subtitle">The physical pathway of network packets</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-arrow-turn-up highlight-blue"></i> Routers & Hops</h3>
+              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">
+                Routers are nodes that forward data packets between networks. Each router transition is a **hop**. Routers use protocols (like BGP) to dynamically select the fastest available path.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-water highlight-purple"></i> Undersea Fiber Cables</h3>
+              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">
+                Packets don't travel through space to cross oceans. Over 95% of international traffic runs through fiber optic submarine cables laid on the seabed, carrying pulses of light.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Undersea Infrastructure</h3>
+            <p>Show them that packets physically travel. To access a European server, your data goes to a local hub, travels down a fiber cable on the seabed of the Atlantic Ocean, enters a coastal routing station, and arrives at its destination in less than 100 milliseconds.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 3.5: Client-Server & HTTP -->
+        <section>
+          <h2>Client-Server & HTTP</h2>
+          <p class="slide-subtitle">How programs communicate</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-paper-plane highlight-blue"></i> HTTP Request</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Your browser (Client) sends a request header to a server:<br>
+                <code>GET /index.html HTTP/1.1<br>Host: google.com</code>
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-reply highlight-purple"></i> HTTP Response</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                The server returns data and a **status code**:<br>
+                • **200 OK:** Request succeeded.<br>
+                • **404 Not Found:** File doesn't exist.<br>
+                • **500 Internal Server Error:** Server crashed.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Web Protocol</h3>
+            <p>Explain that HTTP is just a standard language for requests. Status codes tell the browser how to behave. 404 means the path is wrong; 500 means the server had a code glitch.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 3.6: Discussion -->
+        <section>
+          <h2>Lesson 3 Discussion</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-comments highlight-yellow"></i> Socratic Scenarios</h3>
+            <ol>
+              <li>When you load a website, the images load one by one, sometimes appearing out of order. Why does this happen based on packet switching?</li>
+              <li>A construction backhoe accidentally cuts a fiber cable underground in your city. Why doesn't the entire city's internet go down?</li>
+            </ol>
+          </div>
+
+          <aside class="notes">
+            <h3>Discussion Guidelines</h3>
+            <ol>
+              <li><strong>Out of order packets:</strong> Images are composed of thousands of packets. Since packets travel different routing pathways dynamically, some arrive faster than others. The browser displays whatever packets it has assembled first, or waits until all are reordered.</li>
+              <li><strong>Routing Redundancy:</strong> The internet is a mesh network. If one fiber path is severed, local routers instantly detect the link failure and reroute packets through other connections, keeping traffic flowing (though possibly slightly slower).</li>
+            </ol>
+          </aside>
+        </section>
+
+        <!-- Slide 3.7: Lab Activity -->
+        <section>
+          <h2>Lab: Tracing the Global Route</h2>
+          <span class="badge badge-yellow">Activity</span>
+          <p style="font-size: 0.85em; text-align: left;">Open **PowerShell** and run these commands to trace your data:</p>
+          <div class="card">
+            <h3><i class="fa-solid fa-terminal highlight-green"></i> Commands</h3>
+            <ul>
+              <li>Find the IP address of Google Japan:<br>
+                <code>nslookup google.co.jp</code></li>
+              <li>Ping Google Japan to test latency:<br>
+                <code>ping google.co.jp</code></li>
+              <li>Trace every router hop between your home and Tokyo University:<br>
+                <code>tracert www.u-tokyo.ac.jp</code></li>
+            </ul>
+          </div>
+
+          <aside class="notes">
+            <h3>Lab Execution</h3>
+            <p>Let the kids run these commands. Show them how to analyze the <code>tracert</code> rows.</p>
+            <p>Point out the delay (ms). If it jumps from 15ms to 120ms between hop 7 and 8, explain that the hop represents crossing the physical ocean cable.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 3.8: Lesson 3 Quiz -->
+        <section>
+          <h2>Lesson 3 Quiz</h2>
           <div class="card">
             <h3><i class="fa-solid fa-circle-question highlight-green"></i> Questions</h3>
             <ol>
-              <li>What system translates website names to numerical IP addresses?</li>
-              <li>What happens if this system goes offline? Can you still reach sites?</li>
-              <li>If a gaming server ping is 250ms, is that better or worse than 20ms?</li>
+              <li>Why does the internet split data into packets instead of sending a file in one solid stream?</li>
+              <li>What protocol is responsible for requesting the resending of a lost packet?</li>
+              <li>How fast does light travel in fiber optic cables?</li>
             </ol>
           </div>
 
           <aside class="notes">
             <h3>Quiz Answers</h3>
             <ol>
-              <li><strong>DNS</strong> (Domain Name System).</li>
-              <li><strong>Yes:</strong> If you know the exact IP address, you can type it into the browser bar and it will load. Only name translation is broken.</li>
-              <li><strong>Worse:</strong> 250ms means a quarter of a second lag. 20ms is much faster, meaning actions feel instantaneous.</li>
+              <li>To allow multiple devices to share the same cables at once, and to avoid resending large files if a small glitch occurs.</li>
+              <li><strong>TCP</strong> (Transmission Control Protocol).</li>
+              <li>Roughly 200,000 kilometers per second (about 2/3 the speed of light in a vacuum, due to refraction index of silica glass).</li>
             </ol>
-            <p>Move Right for Lesson 4.</p>
+            <p>Swipe Right for Lesson 4.</p>
           </aside>
         </section>
       </section>
 
-      <!-- ================== LESSON 4: COLLABORATION EVOLUTION ================== -->
+      <!-- ================== LESSON 4: COLLABORATION ================== -->
       <section>
         <!-- Slide 4.1: Cover -->
         <section>
           <span class="badge badge-purple">Lesson 4</span>
-          <h2>The History of Work</h2>
-          <p class="slide-subtitle">From Floppy Disks to Real-Time Cloud Syncing</p>
+          <h2>Collaboration Evolution</h2>
+          <p class="slide-subtitle">The History of Work: Local to Collaborative</p>
           <div class="card">
             <h3><i class="fa-solid fa-users highlight-purple"></i> Key Objectives</h3>
             <ul>
-              <li>Contrast the local file era with modern database syncing.</li>
-              <li>Understand version renaming problems and merge conflicts.</li>
-              <li>Learn how servers sync multiple typists using algorithms.</li>
+              <li>Trace the transition from floppy-disk office suites to cloud databases.</li>
+              <li>Explain conflict resolution algorithms: OT vs. CRDT.</li>
+              <li>Understand the concept of version control and git repositories.</li>
             </ul>
           </div>
           
           <aside class="notes">
             <h3>Lesson 4 Intro</h3>
-            <p>Let's talk about how software has changed how people collaborate. We went from floppy disk exchange to typing in the same cell at the same time.</p>
-            <p>Press Down to look at history and how syncing works.</p>
+            <p>How we work has evolved dramatically. Today, we look at the software architecture of collaboration—how Google Docs keeps cursors synced and how programmers use Git to edit code together.</p>
+            <p>Press Down to explain the Desktop Era.</p>
           </aside>
         </section>
 
-        <!-- Slide 4.2: Local vs. Cloud Syncing -->
+        <!-- Slide 4.2: The Desktop Era -->
         <section>
-          <h2>How Syncing Works</h2>
+          <h2>The Desktop Era</h2>
+          <p class="slide-subtitle">Local locks and versioning friction</p>
           <div class="grid-2">
             <div class="card">
-              <h3><i class="fa-solid fa-floppy-disk highlight-blue"></i> The Desktop Era</h3>
-              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">Files saved to local hard drives. Collaborating meant emailing files. Created naming chaos like: `report_final_v2_edit_DAD.docx`. If two people edited separately, merging was manual.</p>
+              <h3><i class="fa-solid fa-floppy-disk highlight-blue"></i> Local File Locking</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                In early Microsoft Office days, when a file was opened from a local shared folder, the OS locked it as **Read-Only** for other users. Only one person could edit at a time.
+              </p>
             </div>
             <div class="card">
-              <h3><i class="fa-solid fa-cloud-arrow-up highlight-purple"></i> The Collaboration Era</h3>
-              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">Master file lives on a cloud database. Keystrokes are sent as tiny data updates. Algorithms like <strong>Operational Transformation (OT)</strong> referee conflicts, shifting letters so edits do not overwrite.</p>
+              <h3><i class="fa-solid fa-envelope highlight-purple"></i> Attachment Chaos</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                To collaborate, users emailed files. If three managers edited the attachment separately, the creator had to copy-paste the edits back into a master copy, resulting in:
+                <br><code>report_final_v2_edit_JD.docx</code>
+              </p>
             </div>
           </div>
 
           <aside class="notes">
-            <h3>Blackboard Analogy (Script)</h3>
-            <p>Explain: "In the old days, I wrote on a page in a notebook and handed it to you. While you had the notebook, I couldn't write. That is local file saving."</p>
-            <p>"Today, we use Google Docs. It’s like standing in front of a giant blackboard with chalk. We can both write and erase at the same time. The server coordinates where our hands are so we don't scribble on the exact same spot."</p>
+            <h3>History Context</h3>
+            <p>Explain how floppy disks were physically run across offices to share files. This was called Sneakernet. Collaboration was slow and versioning was error-prone.</p>
           </aside>
         </section>
 
-        <!-- Slide 4.3: Lab Activity -->
+        <!-- Slide 4.3: Real-Time Syncing (OT vs. CRDT) -->
+        <section>
+          <h2>Under the Cloud: Syncing</h2>
+          <p class="slide-subtitle">How databases keep screens identical</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-shuffle highlight-blue"></i> Operational Transformation (OT)</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Used by Google Docs. A central server acts as a referee. When two edits arrive at the same index simultaneously, the server shifts one edit to the right so both appear correctly.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-code-fork highlight-purple"></i> CRDTs</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Conflict-free Replicated Data Types. Used in Apple Notes/Figma. Every character has a unique ID. Edits can be merged mathematically in any order without a central server referee.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Tech Explanation</h3>
+            <p>If you and a friend edit a document at the same time: You type "A" at index 5. Your friend types "B" at index 5. Without OT, whichever request arrives second overwrites the first. With OT, the server transforms the second index: You get "AB" or "BA" and both characters appear.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 4.4: Version Control Systems -->
+        <section>
+          <h2>Version Control (Git)</h2>
+          <p class="slide-subtitle">Collaboration systems for programmers</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-database highlight-blue"></i> Commits & History</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Git doesn't overwrite files; it tracks **snapshots** (commits) of code changes. A programmer commits code with a message explaining what changed. You can roll back to any commit in history.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-code-branch highlight-purple"></i> Branches & Merging</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Developers copy code onto a **branch** to work on a feature. When finished, they **merge** their branch back to the master branch. Conflicts are resolved line-by-line.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Programming Collaboration</h3>
+            <p>Explain that Git is the foundation of the modern software industry. Without Git, hundreds of developers could not write code on the same software simultaneously.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 4.5: Discussion -->
+        <section>
+          <h2>Lesson 4 Discussion</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-comments highlight-yellow"></i> Socratic Scenarios</h3>
+            <ol>
+              <li>You edit a shared cloud document while offline on a plane. A teammate edits the same document online. When your laptop reconnects, how does the system merge the changes?</li>
+              <li>Why is a Git history (which lists every change ever made) safer than just saving over the same file daily?</li>
+            </ol>
+          </div>
+
+          <aside class="notes">
+            <h3>Discussion Guidelines</h3>
+            <ol>
+              <li><strong>Offline Merge:</strong> The system will try to sync. If you edited different paragraphs, the server will append both. If you edited the exact same line, it triggers a "merge conflict" and asks you to select which version to save.</li>
+              <li><strong>Safe rollback:</strong> If a developer writes a bug that breaks the app, they can simply search the commit history, identify the exact commit that broke the code, and restore the previous working snapshot in one command.</li>
+            </ol>
+          </aside>
+        </section>
+
+        <!-- Slide 4.6: Lab Activity -->
         <section>
           <h2>Lab: Collaboration Battle</h2>
           <span class="badge badge-yellow">Challenge</span>
+          <p style="font-size: 0.85em; text-align: left;">Write stories using two different eras of collaboration:</p>
           <div class="grid-2">
             <div class="card" style="padding: 15px !important;">
-              <h4 style="margin: 0; font-size: 0.85em;"><i class="fa-solid fa-envelope highlight-blue"></i> Battle 1: Email Versioning</h4>
-              <p style="font-size: 0.6em; margin-top: 10px; line-height: 1.3;">Write a story. Parent writes paragraph 1, emails it. Teens write paragraph 2, email it back. Meanwhile, parent writes paragraph 3 separately. Try to combine them without copy-paste errors!</p>
+              <h4 style="margin: 0; font-size: 0.85em; color: #60a5fa;"><i class="fa-solid fa-envelope"></i> Era 1: The Email Way</h4>
+              <p style="font-size: 0.55em; margin-top: 10px; line-height: 1.3;">Parent writes paragraph 1, saves to file, emails it. Teens edit, save to new file, email it back. Parent edits their own copy simultaneously. Try merging them into one story without losing data!</p>
             </div>
             <div class="card" style="padding: 15px !important;">
-              <h4 style="margin: 0; font-size: 0.85em;"><i class="fa-solid fa-cloud highlight-purple"></i> Battle 2: Cloud Syncing</h4>
-              <p style="font-size: 0.6em; margin-top: 10px; line-height: 1.3;">Open one shared Google Doc. Set a timer for 3 minutes. Both write and edit at the exact same time: Parent does paragraphs 1 & 3; Teens do 2 & 4. Edit each other's typos live!</p>
+              <h4 style="margin: 0; font-size: 0.85em; color: #a78bfa;"><i class="fa-solid fa-cloud"></i> Era 2: The Cloud Way</h4>
+              <p style="font-size: 0.55em; margin-top: 10px; line-height: 1.3;">Open one shared Google Doc. Set a timer for 3 minutes. Both write and correct each other's paragraphs simultaneously. Witness how cursors interact.</p>
             </div>
           </div>
 
           <aside class="notes">
             <h3>Lab Guidance</h3>
-            <p>This is a fun activity that demonstrates the friction of the old way of working. Let them feel the frustration of renaming files and trying to merge two people's edits into one document.</p>
-            <p>In Part 2, watch the latency of cursors. Point out how fast updates sync.</p>
+            <p>Make sure they experience the friction of version-merging in Era 1, contrasted with the speed of real-time editing in Era 2.</p>
           </aside>
         </section>
 
-        <!-- Slide 4.4: Quiz -->
+        <!-- Slide 4.7: Lesson 4 Quiz -->
         <section>
-          <h2>Lesson 4 Check-In</h2>
+          <h2>Lesson 4 Quiz</h2>
           <div class="card">
             <h3><i class="fa-solid fa-circle-question highlight-purple"></i> Questions</h3>
             <ol>
-              <li>What is a "merge conflict"?</li>
-              <li>Where is the master file stored when using Google Docs or Notion?</li>
-              <li>Why do heavy applications like video games or 3D modeling software still run locally rather than in the cloud?</li>
+              <li>What does a file "lock" do?</li>
+              <li>What is the name of the database sync algorithm used by Google Docs?</li>
+              <li>What is a Git "commit"?</li>
             </ol>
           </div>
 
           <aside class="notes">
             <h3>Quiz Answers</h3>
             <ol>
-              <li><strong>Merge Conflict:</strong> When two people edit the exact same line of a file separately, and the computer cannot determine which edit is the correct one, requiring a human to choose.</li>
-              <li><strong>Cloud Server:</strong> Stored in a database on a data center, not on the user's hard drive.</li>
-              <li><strong>Performance/Latency:</strong> They require 100% of local CPU, GPU, and RAM power to render frames instantly. Network lag would make real-time interaction laggy and unresponsive.</li>
+              <li>Blocks other users from editing a file while you have it open, preventing overwrite errors.</li>
+              <li><strong>Operational Transformation (OT)</strong>.</li>
+              <li>A saved snapshot/version of code changes in a Git repository.</li>
             </ol>
-            <p>Move Right for Lesson 5.</p>
+            <p>Swipe Right for Lesson 5.</p>
           </aside>
         </section>
       </section>
 
-      <!-- ================== LESSON 5: DOCUMENT DESIGN ================== -->
+      <!-- ================== LESSON 5: DESIGN ================== -->
       <section>
         <!-- Slide 5.1: Cover -->
         <section>
           <span class="badge badge-blue">Lesson 5</span>
           <h2>Visual Communication</h2>
-          <p class="slide-subtitle">Principles of Clear Layout: Briefs vs. Slide Decks</p>
+          <p class="slide-subtitle">Document Design & Presentations: Typography, Hierarchy, and Whitespace</p>
           <div class="card">
             <h3><i class="fa-solid fa-pen-nib highlight-blue"></i> Key Objectives</h3>
             <ul>
-              <li>Understand visual hierarchy and typography (Serif vs. Sans-Serif).</li>
-              <li>Learn the proper use of negative (white) space.</li>
-              <li>Distinguish between a presentation slide deck and a written brief.</li>
+              <li>Identify Serif vs. Sans-Serif fonts and spacing metrics.</li>
+              <li>Master visual hierarchy: heading scale and F-shaped reading layouts.</li>
+              <li>Contrast slide presentation layouts (Billboard Test) with written briefs.</li>
             </ul>
           </div>
           
           <aside class="notes">
             <h3>Lesson 5 Intro</h3>
-            <p>Today is about design as a form of logic. How do we present information so that a reader's brain processes it with the least amount of effort (cognitive load)?</p>
-            <p>Press Down to discuss typography and layouts.</p>
+            <p>Design is not decoration; design is communication logic. Today we study how to layout documents and slides to direct attention and reduce cognitive load.</p>
+            <p>Press Down to study typography.</p>
           </aside>
         </section>
 
-        <!-- Slide 5.2: Design Principles -->
+        <!-- Slide 5.2: Typography Rules -->
         <section>
-          <h2>Visual Hierarchy</h2>
+          <h2>Typography & Readability</h2>
+          <p class="slide-subtitle">Serif vs. Sans-Serif fonts</p>
           <div class="grid-2">
             <div class="card">
-              <h3><i class="fa-solid fa-font highlight-blue"></i> Typography & Space</h3>
-              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;"><strong>Serif:</strong> Has decorative feet (Georgia, Times). Best for print books. <strong>Sans-serif:</strong> Clean (Arial, Inter). Best for digital slides. Never use more than 2 font families. Use <strong>negative space</strong> so the eyes can breathe.</p>
+              <h3><span style="font-family: 'Times New Roman', Times, serif;">Georgia / Serif</span></h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Have small feet (serifs) at the ends of letters.<br>
+                • **Best for:** Long printed books, newspapers, and print layout. The serifs guide the eye along lines of text.
+              </p>
             </div>
             <div class="card">
-              <h3><i class="fa-solid fa-display highlight-purple"></i> Brief vs. Slide Deck</h3>
-              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;"><strong>Written Brief:</strong> Meant to be read alone. High density, full paragraphs, structured text. <strong>Slide Deck:</strong> Supports a live speaker. Highly visual, low text density (billboard test). Never read paragraphs off a slide.</p>
+              <h3><span style="font-family: Arial, Helvetica, sans-serif;">Arial / Sans-Serif</span></h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Flat, clean letters without feet (sans).<br>
+                • **Best for:** High-resolution digital screens, presentation titles, and minimal interface layouts.
+              </p>
+            </div>
+          </div>
+          <p style="font-size: 0.6em; text-align: left; margin-top: 15px;">**Line Spacing (Leading):** Text lines should have ~1.4 to 1.5 line-height. Too tight or too loose exhausts the reader's brain.</p>
+
+          <aside class="notes">
+            <h3>Typography Rule</h3>
+            <p>Enforce the <strong>Rule of Two</strong>: use one Sans-serif font for headers (bold, punchy) and one Serif or readable Sans-serif for body text. Never use decorative fonts (like Comic Sans or papyrus) for professional documents.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 5.3: Layout & Hierarchy -->
+        <section>
+          <h2>Layout & Visual Hierarchy</h2>
+          <p class="slide-subtitle">Directing the eye of the reader</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-eye highlight-blue"></i> The F-Pattern</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Digital readers do not read word-by-word. They scan in an **F-shape**: across the top header, down the left margin, across the first subheading, and down. Use headings to capture scanning eyes.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-compress highlight-purple"></i> Visual Contrast</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Direct attention by scaling element size (e.g. Title 32px vs. Body 14px) and weight (Bold vs Light). The most important item must be visually distinct.
+              </p>
             </div>
           </div>
 
           <aside class="notes">
-            <h3>The Billboard Test (Script)</h3>
-            <p>Explain: "Imagine driving at 60 mph. You see a billboard. If it has 3 paragraphs of small text, do you read it?" (No, you'd crash!).</p>
-            <p>"A slide deck is a billboard. The audience should scan the slide in 3 seconds, get the point, and look back at you. If they are reading your slide, they are not listening to you."</p>
+            <h3>Visual Hierarchy</h3>
+            <p>If everything is bold, nothing is bold. Hierarchy is about contrast. If you want a key number to stand out, make it huge and put it next to simple text.</p>
           </aside>
         </section>
 
-        <!-- Slide 5.3: Lab Activity -->
+        <!-- Slide 5.4: Whitespace & Cognitive Load -->
+        <section>
+          <h2>The Power of Whitespace</h2>
+          <p class="slide-subtitle">Giving content room to breathe</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-maximize highlight-blue"></i> Negative Space</h3>
+              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">
+                Whitespace (empty space around layout cards or margins) is not wasted space. It isolates components, groups related items, and prevents visual clutter.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-brain highlight-purple"></i> Cognitive Overload</h3>
+              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">
+                When a page is packed with dense paragraphs, different colors, and icons, the viewer's brain experiences overload. They lose focus and stop reading.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Whitespace Discussion</h3>
+            <p>Look at Google's homepage. It is mostly blank whitespace with a single search bar in the center. Compare it to Yahoo in the 2000s (hundreds of links, ads, news items). Google succeeded partly because its interface had almost zero cognitive load.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 5.5: Slides vs. Written Briefs -->
+        <section>
+          <h2>Slide Deck vs. Written Brief</h2>
+          <p class="slide-subtitle">Choose the correct format for the context</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Format Type</th>
+                <th>Written Brief (Document)</th>
+                <th>Presentation (Slide Deck)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Purpose</strong></td>
+                <td>To be read independently by individuals.</td>
+                <td>To support a live speaker presenting ideas.</td>
+              </tr>
+              <tr>
+                <td><strong>Text Density</strong></td>
+                <td>High. Full sentences, details, tables.</td>
+                <td>Low. <strong>Max 15 words</strong> per slide. Billboards.</td>
+              </tr>
+              <tr>
+                <td><strong>Role of Speaker</strong></td>
+                <td>Not present (file stands alone).</td>
+                <td>Critical (slides are incomplete without speaker).</td>
+              </tr>
+              <tr>
+                <td><strong>Structure</strong></td>
+                <td>Headings, paragraphs, index.</td>
+                <td>Visuals, massive numbers, key statements.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <aside class="notes">
+            <h3>Slide Rule</h3>
+            <p>Remind them of the **Billboard Test**. Slides are visual anchors. If you read your slides word-for-word, the presentation is a failure. You could have just emailed them a document.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 5.6: Discussion -->
+        <section>
+          <h2>Lesson 5 Discussion</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-comments highlight-yellow"></i> Socratic Scenarios</h3>
+            <ol>
+              <li>You are presenting to your class. You put a slide on screen with 8 lines of text and start reading it. What is your class actually doing?</li>
+              <li>Why do newspapers print text in narrow columns rather than stretching the sentences across the entire page?</li>
+            </ol>
+          </div>
+
+          <aside class="notes">
+            <h3>Discussion Guidelines</h3>
+            <ol>
+              <li><strong>Split Attention:</strong> The class is reading the slide faster than you can speak it. Since they are reading, they stop listening to your voice. They get bored because your speech is redundant.</li>
+              <li><strong>Optimal Line Length:</strong> If a line of text is too wide (more than 70-80 characters), the reader's eye has trouble finding the start of the next line when scanning back to the left margin. Narrow columns make scanning fast and effortless.</li>
+            </ol>
+          </aside>
+        </section>
+
+        <!-- Slide 5.7: Lab Activity -->
         <section>
           <h2>Lab: The Voyager 1 Redesign</h2>
-          <span class="badge badge-yellow">Challenge</span>
-          <p style="font-size: 0.8em; text-align: left;">Read the boring wall of text about <strong>Voyager 1</strong> in the lesson guide. Complete two tasks:</p>
+          <span class="badge badge-yellow">Project Task</span>
+          <p style="font-size: 0.75em; text-align: left; margin-bottom: 20px;">Copy the raw Voyager 1 text block from your guide. Perform two redesign tasks:</p>
           <div class="grid-2">
             <div class="card" style="padding: 15px !important;">
-              <h4 style="margin: 0; font-size: 0.85em;"><i class="fa-solid fa-file-lines highlight-blue"></i> Task 1: The Brief</h4>
-              <p style="font-size: 0.6em; margin-top: 10px; line-height: 1.3;">Format it on a single page with a title, subheadings, bullet points for key stats, and bold text for crucial terms. Make it scan-friendly.</p>
+              <h4 style="margin: 0; font-size: 0.85em; color: #60a5fa;"><i class="fa-solid fa-file-invoice"></i> Task 1: The Brief</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">Use a word document. Add a visual title, section headers, bullet lists, and **bold** terms to make it scan-friendly.</p>
             </div>
             <div class="card" style="padding: 15px !important;">
-              <h4 style="margin: 0; font-size: 0.85em;"><i class="fa-solid fa-play highlight-purple"></i> Task 2: The Deck</h4>
-              <p style="font-size: 0.6em; margin-top: 10px; line-height: 1.3;">Turn the same information into a 5-slide deck. **Strict rule:** maximum of **15 words** per slide! Use massive numbers and image concepts.</p>
+              <h4 style="margin: 0; font-size: 0.85em; color: #a78bfa;"><i class="fa-solid fa-play"></i> Task 2: The Deck</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">Create a 5-slide presentation. Enforce a **15-word maximum** per slide. Use large dates, distances, and graphics.</p>
             </div>
           </div>
 
           <aside class="notes">
             <h3>Lab Guidance</h3>
-            <p>This is a great practical design lesson. Let them copy the text from `lesson_05_visual_communication.md`.</p>
-            <p>For the deck, enforce the 15-word limit strictly! If they write "Voyager 1 was launched on Sept 5, 1977 and is currently 15 billion miles away," they will run out of words. Teach them to write: "1977" (huge text) and "Launch Date" (small text), then verbally explain the rest. This forces them to act as presenters.</p>
+            <p>Let the kids run Task 1 and Task 2. Once done, let them stand up and present the 5-slide deck to you. Note how they explain the story verbally instead of reading.</p>
           </aside>
         </section>
 
-        <!-- Slide 5.4: Quiz -->
+        <!-- Slide 5.8: Lesson 5 Quiz -->
         <section>
-          <h2>Lesson 5 Check-In</h2>
+          <h2>Lesson 5 Quiz</h2>
           <div class="card">
             <h3><i class="fa-solid fa-circle-question highlight-blue"></i> Questions</h3>
             <ol>
-              <li>What is the difference between a Serif and a Sans-Serif font?</li>
-              <li>What is "cognitive load"?</li>
-              <li>True or False: A slide deck should contain every word you plan to say so the audience can follow along.</li>
+              <li>Is Georgia a Serif or Sans-Serif font?</li>
+              <li>What is the F-shaped reading pattern?</li>
+              <li>What is the maximum number of words recommended on a presentation slide?</li>
             </ol>
           </div>
 
           <aside class="notes">
             <h3>Quiz Answers</h3>
             <ol>
-              <li><strong>Serif</strong> has decorative feet at the ends of letters (good for print books). <strong>Sans-Serif</strong> is flat and clean (good for digital screens).</li>
-              <li><strong>Cognitive Load:</strong> The mental effort required to process information. Crowded slides or messy layouts increase cognitive load, making readers lose focus.</li>
-              <li><strong>False:</strong> Slides should be visual billboards. The speaker provides the details; slides only anchor the main point.</li>
+              <li>Serif (it has the small feet).</li>
+              <li>The natural scanning pathway of digital readers: reading the top, down the left margin, scanning subheaders, and ignoring the right-side blocks.</li>
+              <li>15 words (billboard test).</li>
             </ol>
-            <p>Move Right for Lesson 6.</p>
+            <p>Swipe Right for Lesson 6.</p>
           </aside>
         </section>
       </section>
@@ -732,93 +1320,203 @@
           <div class="card">
             <h3><i class="fa-solid fa-table highlight-purple"></i> Key Objectives</h3>
             <ul>
-              <li>Understand columns, rows, cell grids, and data types.</li>
-              <li>Distinguish between relative (`A1`) and absolute (`$A$1`) cell references.</li>
-              <li>Write logical functions: `SUM`, `AVERAGE`, `IF`, and `XLOOKUP`.</li>
+              <li>Understand data cells, row records, and column field logic.</li>
+              <li>Master relative cell offsets vs. absolute dollar-sign cell locking.</li>
+              <li>Write data aggregation functions and database lookup formulas.</li>
             </ul>
           </div>
           
           <aside class="notes">
             <h3>Lesson 6 Intro</h3>
-            <p>Spreadsheets are the ultimate everyday programming tool. We will teach them how cells connect, and the crucial concept of locking cells with dollar signs.</p>
-            <p>Press Down to discuss relative vs. absolute references.</p>
+            <p>Spreadsheets are the software tool that run modern business. Understanding how data grids operate and how formulas recalculate dynamically is the first step of coding.</p>
+            <p>Press Down to study grid data logic.</p>
           </aside>
         </section>
 
-        <!-- Slide 6.2: Cell References & Functions -->
+        <!-- Slide 6.2: Grid Data Logic -->
         <section>
-          <h2>Formulas & Cell Referencing</h2>
+          <h2>Spreadsheet Data Architecture</h2>
+          <p class="slide-subtitle">Grids of columns and rows</p>
           <div class="grid-2">
             <div class="card">
-              <h3><i class="fa-solid fa-dollar-sign highlight-blue"></i> Relative vs. Absolute</h3>
-              <ul>
-                <li><strong>Relative (`A1`):</strong> When copied or dragged, the reference shifts relative to the direction.</li>
-                <li><strong>Absolute (`$A$1`):</strong> Dollar signs lock the cell. It will never change when copied. Used for fixed rates/goals.</li>
+              <h3><i class="fa-solid fa-table-cells highlight-blue"></i> Cells & Coordinates</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Every box in a sheet has a coordinate based on its Column letter and Row number (e.g. `B4`). Cells contain different **Data Types**: Text strings, numeric integers, currencies, dates, or boolean logical flags.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-database highlight-purple"></i> Records & Fields</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                To build clean data tables:<br>
+                • **Columns (Fields):** represent attributes of the data (e.g., Date, Category, Price).<br>
+                • **Rows (Records):** represent a single transaction item. Never merge cells inside data lists.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Grid Logic</h3>
+            <p>Explain that spreadsheets are just databases with a visual interface. Keeping your columns consistent (e.g., only putting numbers in the "Amount" column) is essential for formulas to work.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 6.3: Relative vs. Absolute -->
+        <section>
+          <h2>Locking Cells: Relative vs. Absolute</h2>
+          <p class="slide-subtitle">Relative offsets vs. fixed coordinates</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3>`A1` : Relative</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Points to a cell relative to the formula's position. If cell `B1` has `=A1` and you copy/drag B1 down into `B2`, the formula shifts dynamically to `=A2`.
+              </p>
+            </div>
+            <div class="card">
+              <h3>`$A$1` : Absolute</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                The dollar signs lock the reference. If you write `=$A$1` in `B1` and drag it down into `B2`, the reference remains fixed to `A1`. Used for constant rates.
+              </p>
+            </div>
+          </div>
+          <p style="font-size: 0.65em; text-align: left; margin-top: 15px;">*Shortcut:* Press **F4** while editing a formula in Excel/Sheets to toggle dollar signs automatically.</p>
+
+          <aside class="notes">
+            <h3>F4 locking</h3>
+            <p>Emphasize this slide. Absolute vs. Relative is the biggest stumbling block for spreadsheet beginners. If they don't lock cells, copying formulas down will result in shifting calculations and incorrect results.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 6.4: Aggregation Functions -->
+        <section>
+          <h2>Aggregation Functions</h2>
+          <p class="slide-subtitle">Processing lists of numbers</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-calculator highlight-blue"></i> Standard Functions</h3>
+              <ul style="font-size: 0.65em !important; line-height: 1.3;">
+                <li><code>=SUM(D2:D100)</code>: Adds all numbers in range.</li>
+                <li><code>=AVERAGE(D2:D100)</code>: Returns mean of range.</li>
+                <li><code>=COUNT(D2:D100)</code>: Counts numeric entries.</li>
               </ul>
             </div>
             <div class="card">
-              <h3><i class="fa-solid fa-code highlight-purple"></i> Core Functions</h3>
-              <ul>
-                <li>`SUM(range)`: Adds values.</li>
-                <li>`IF(logical_test, true_val, false_val)`: Basic decision maker.</li>
-                <li>`XLOOKUP(search, range, return_range)`: Searches a grid for a matching row value.</li>
+              <h3><i class="fa-solid fa-filter highlight-purple"></i> Conditional Aggregations</h3>
+              <ul style="font-size: 0.65em !important; line-height: 1.3;">
+                <li><code>=SUMIF(B2:B100, "Food", D2:D100)</code>: Sums D values only if corresponding B cell is "Food".</li>
+                <li><code>=COUNTIF(B2:B100, ">50")</code>: Counts cells higher than 50.</li>
               </ul>
             </div>
           </div>
 
           <aside class="notes">
-            <h3>Teaching Points</h3>
-            <p><strong>The Magic Calculator Analogy:</strong> Traditional calculators are static. If you change a number, you recalculate the total. A spreadsheet is a living network. If cell A1 changes, everything referencing A1 updates immediately.</p>
-            <p><strong>Locking explanation:</strong> If tax rate is in Z1 (5%), and you calculate tax for 10 items in column A. If you write <code>=A1*Z1</code> and drag down, it shifts to <code>=A2*Z2</code> (Z2 is blank!). You must write <code>=A1*$Z$1</code> to lock the tax cell.</p>
+            <h3>Conditional Math</h3>
+            <p>Show them that <code>SUMIF</code> combines a filter step with an addition step. This is useful for budget dashboards where you want to sum categories automatically.</p>
           </aside>
         </section>
 
-        <!-- Slide 6.3: Lab Activity -->
+        <!-- Slide 6.5: Logical Functions -->
+        <section>
+          <h2>Conditionals: `IF` statements</h2>
+          <p class="slide-subtitle">Making calculations make decisions</p>
+          <div class="card">
+            <h3><code>=IF(logical_test, value_if_true, value_if_false)</code></h3>
+            <p style="font-size: 0.7em; line-height: 1.4; margin-top: 10px;">
+              Evaluates a condition and returns different values depending on the result.
+              <br><br>
+              • **Basic IF:** <code>=IF(B7 >= 0.20, "Goal Met!", "Save More!")</code><br>
+              • **Nested IF:** <code>=IF(A1 > 90, "Grade A", IF(A1 > 80, "Grade B", "Grade C"))</code>
+            </p>
+          </div>
+
+          <aside class="notes">
+            <h3>Logical Branching</h3>
+            <p>Explain that <code>IF</code> functions work like road forks. The computer checks if the statement is true and routes the cell output accordingly. This is basic logical programming.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 6.6: Lookup Functions -->
+        <section>
+          <h2>Lookup Functions: `XLOOKUP`</h2>
+          <p class="slide-subtitle">Connecting tables of data</p>
+          <div class="card">
+            <h3><code>=XLOOKUP(search_value, lookup_array, return_array)</code></h3>
+            <p style="font-size: 0.7em; line-height: 1.4; margin-top: 10px;">
+              Searches a column for a target item and returns the value on the same row in another column.
+              <br><br>
+              • **Example:** You have a product barcode in cell `A2`. You want to find its price in a separate catalog table (Barcode in `Y:Y`, Price in `Z:Z`):
+              <br>
+              <code>=XLOOKUP(A2, Y:Y, Z:Z)</code>
+            </p>
+          </div>
+
+          <aside class="notes">
+            <h3>Data Linking</h3>
+            <p>Lookup functions allow you to relate tables together. Instead of copy-pasting prices or customer names into every single transaction row, you just write a lookup formula that fetches details from a master catalog table automatically.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 6.7: Discussion -->
+        <section>
+          <h2>Lesson 6 Discussion</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-comments highlight-yellow"></i> Socratic Scenarios</h3>
+            <ol>
+              <li>You calculate your average expenses. In the column, one cell has a typo: it says `"ten dollars"` instead of the number `10`. What will happen to the `=SUM` and `=AVERAGE` functions?</li>
+              <li>A business owner types product prices directly into all their invoices. If prices increase by 10%, what must they do? How would referencing help?</li>
+            </ol>
+          </div>
+
+          <aside class="notes">
+            <h3>Discussion Guidelines</h3>
+            <ol>
+              <li><strong>Data Type error:</strong> Excel/Sheets will ignore the text string `"ten dollars"` in the <code>SUM</code> range, resulting in a total that is 10 dollars short. The <code>AVERAGE</code> will be calculated incorrectly because the denominator (count) won't include that row.</li>
+              <li><strong>Hardcoding vs Referencing:</strong> Hardcoding requires manually editing every invoice formula. If they reference a master product price catalog table using <code>XLOOKUP</code>, they only have to change the price once in the catalog, and all invoices update instantly.</li>
+            </ol>
+          </aside>
+        </section>
+
+        <!-- Slide 6.8: Lab Activity -->
         <section>
           <h2>Lab: The Teen Budget Tracker</h2>
-          <span class="badge badge-yellow">Project Time</span>
-          <p style="font-size: 0.8em; text-align: left;">Build a two-tab budget tracker in Google Sheets or Excel:</p>
+          <span class="badge badge-yellow">Project Task</span>
+          <p style="font-size: 0.8em; text-align: left; margin-bottom: 20px;">Open Google Sheets. Build a two-tab dynamic budget system:</p>
           <div class="grid-2">
             <div class="card" style="padding: 15px !important;">
-              <h4 style="margin: 0; font-size: 0.85em;"><i class="fa-solid fa-list-check highlight-blue"></i> Tab 1: Transactions</h4>
-              <p style="font-size: 0.6em; margin-top: 10px; line-height: 1.3;">Log transactions with: Date, Category (Income, Food, Games, Clothes, Savings), Description, and Amount.</p>
+              <h4 style="margin: 0; font-size: 0.85em; color: #60a5fa;"><i class="fa-solid fa-list-check"></i> Tab 1: Transactions</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">Create columns: Date, Category (Income, Food, Games, Clothes, Savings), Description, and Amount. Enter 8 sample transactions.</p>
             </div>
             <div class="card" style="padding: 15px !important;">
-              <h4 style="margin: 0; font-size: 0.85em;"><i class="fa-solid fa-chart-pie highlight-purple"></i> Tab 2: Dashboard</h4>
-              <p style="font-size: 0.6em; margin-top: 10px; line-height: 1.3;">Automate with formulas:<br>
-              • `=SUMIF(Category, "Income", Amount)`<br>
-              • `=IF(SavingsRate >= $B$1, "Goal Met!", "Keep Saving!")`<br>
-              Add a pie chart showing expenses.</p>
+              <h4 style="margin: 0; font-size: 0.85em; color: #a78bfa;"><i class="fa-solid fa-chart-pie"></i> Tab 2: Dashboard</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">Write formulas for Total Income, Expenses, and Savings. Add Savings Goal % in `B1`. Use `=IF` with absolute reference `B7 >= $B$1` for goal status. Add spending chart.</p>
             </div>
           </div>
 
           <aside class="notes">
             <h3>Lab Guidance</h3>
-            <p>Open Google Sheets with them. Show them how to rename tabs at the bottom. Enforce no manual typing of totals. Everything must use formulas!</p>
-            <p>Let them add a transaction and witness the dashboard update automatically.</p>
+            <p>Ensure the kids construct this from scratch. Guide them on writing references across sheets (e.g. <code>Transactions!D:D</code>). Verify that the F4 lock is placed on the goal status cell.</p>
           </aside>
         </section>
 
-        <!-- Slide 6.4: Quiz -->
+        <!-- Slide 6.9: Lesson 6 Quiz -->
         <section>
-          <h2>Lesson 6 Check-In</h2>
+          <h2>Lesson 6 Quiz</h2>
           <div class="card">
-            <h3><i class="fa-solid fa-circle-question highlight-purple"></i> Questions</h3>
+            <h3><i class="fa-solid fa-circle-question highlight-blue"></i> Questions</h3>
             <ol>
-              <li>What character must every spreadsheet formula begin with?</li>
-              <li>If cell B5 contains `=A5` and you drag/copy B5 down into B6, what does B6 become?</li>
-              <li>How do you lock cell D3 in a formula so it never shifts when copied?</li>
+              <li>What is the difference between relative referencing `A1` and absolute referencing `$A$1`?</li>
+              <li>What does `SUMIF` do?</li>
+              <li>What error happens if you try to divide a number by zero or empty cells?</li>
             </ol>
           </div>
 
           <aside class="notes">
             <h3>Quiz Answers</h3>
             <ol>
-              <li>The equals sign (<code>=</code>).</li>
-              <li><code>=A6</code> (relative reference shifts down).</li>
-              <li>Write it with dollar signs: <code>$D$3</code>.</li>
+              <li>Relative shifts when copied; absolute is locked to the exact coordinates.</li>
+              <li>Adds up numbers in a range only if corresponding cells in another range match a criteria.</li>
+              <li>It returns a division error: <code>#DIV/0!</code>.</li>
             </ol>
-            <p>Move Right for Lesson 7.</p>
+            <p>Swipe Right for Lesson 7.</p>
           </aside>
         </section>
       </section>
@@ -828,96 +1526,229 @@
         <!-- Slide 7.1: Cover -->
         <section>
           <span class="badge badge-green">Lesson 7</span>
-          <h2>Cybersecurity & Digital Hygiene</h2>
+          <h2>Cybersecurity & Hygiene</h2>
           <p class="slide-subtitle">Securing Your Digital Life: Passwords, Phishing, and Privacy</p>
           <div class="card">
             <h3><i class="fa-solid fa-shield-halved highlight-green"></i> Key Objectives</h3>
             <ul>
-              <li>Understand password entropy (length beats complexity).</li>
-              <li>Learn multi-factor authentication (MFA) methods and risks.</li>
-              <li>Identify phishing indicators and social engineering tactics.</li>
+              <li>Calculate password entropy and learn cracking algorithms.</li>
+              <li>Identify multi-factor authentication (MFA) styles and vulnerabilities.</li>
+              <li>Analyze phishing mechanisms and understand end-to-end encryption.</li>
             </ul>
           </div>
           
           <aside class="notes">
             <h3>Lesson 7 Intro</h3>
-            <p>Today is a critical safety lesson. Teens are targets for account hijacking. We'll look at password entropy math and how social engineering bypasses tech blocks.</p>
-            <p>Press Down to explain passwords and MFA.</p>
+            <p>Cybersecurity is about defense. We look at the mathematics of passwords, the weak links in authentication (like SMS), and how social engineering bypasses tech walls.</p>
+            <p>Press Down to study entropy math.</p>
           </aside>
         </section>
 
-        <!-- Slide 7.2: Cybersecurity Concepts -->
+        <!-- Slide 7.2: Password Entropy Math -->
         <section>
-          <h2>Entropy, MFA, & E2EE</h2>
+          <h2>The Math of Passwords</h2>
+          <p class="slide-subtitle">Entropy and search combinations</p>
           <div class="grid-2">
             <div class="card">
-              <h3><i class="fa-solid fa-key highlight-blue"></i> Password Entropy</h3>
-              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">Entropy measures randomness. Length is far more secure than complexity. A passphrase like `apple-window-shoe-yellow` is vastly harder for a script to brute-force than `P@$$w0rd!`.</p>
+              <h3><i class="fa-solid fa-calculator highlight-blue"></i> Brute-Force Math</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                If a password has length $L$ and character set size $C$, the combinations are $C^L$.
+                <br>
+                • Adding 1 character increases combinations **exponentially** ($C^{L+1}$).<br>
+                • Adding symbols only increases character set size **linearly** ($C+10$).
+              </p>
             </div>
             <div class="card">
-              <h3><i class="fa-solid fa-lock-open highlight-purple"></i> MFA & Encryption</h3>
-              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;"><strong>MFA:</strong> Combines factors (something you know + have + are). SMS codes can be hijacked (SIM swap); app authenticators are safer. <strong>E2EE:</strong> Scrambled on device, keys only held by sender/receiver.</p>
+              <h3><i class="fa-solid fa-check highlight-green"></i> Passphrases beat Complexity</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • `P@$$w0rd1!` has symbols, but is short (10 chars) and human-patterned. Cracked in minutes.<br>
+                • `apple-window-shoe-yellow` is long (26 chars), random, and has massive entropy. Takes trillions of years to brute-force.
+              </p>
             </div>
           </div>
 
           <aside class="notes">
-            <h3>Castle Analogy (Script)</h3>
-            <p>Explain: "Your password is the key to a castle. If you choose Dragon123, a thief standing outside can guess it in seconds. A long passphrase is like a complex combination lock."</p>
-            <p>"But what if the thief dresses as a castle guard and says 'Verify your identity by whispering the key through the keyhole'? If you give it to them, password strength doesn't save you. That is phishing. To block this, we add a second lock: a finger scanner or a physical dial you carry (MFA)."</p>
+            <h3>Entropy Explanation</h3>
+            <p>Explain that cracking programs don't guess one character at a time. They run dictionary attacks and pattern guessing. Length is the ultimate defense. A passphrase made of 4 simple random words is easier to remember for you, but virtually impossible for a computer to guess.</p>
           </aside>
         </section>
 
-        <!-- Slide 7.3: Lab Activity -->
+        <!-- Slide 7.3: The Authentication Spectrum -->
         <section>
-          <h2>Lab: The Security Audit</h2>
-          <span class="badge badge-yellow">Challenge</span>
-          <p style="font-size: 0.75em; text-align: left;">Analyze the three client profiles in the lesson guide. Identify security leaks and write a fix plan:</p>
-          <div class="grid-3" style="font-size: 0.6em; line-height: 1.3;">
+          <h2>The MFA Spectrum</h2>
+          <p class="slide-subtitle">Something you Know, Have, and Are</p>
+          <div class="grid-3">
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.8em; color: #f59e0b;"><i class="fa-solid fa-comment-sms"></i> 1. SMS MFA (Weak)</h4>
+              <p style="font-size: 0.55em; margin-top: 10px; line-height: 1.3;">Codes texted to your phone. Vulnerable to **SIM Swapping** (hackers tricking carrier to move your number to their SIM).</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.8em; color: #3b82f6;"><i class="fa-solid fa-key"></i> 2. App MFA (Strong)</h4>
+              <p style="font-size: 0.55em; margin-top: 10px; line-height: 1.3;">Authenticator apps (Google/Bitwarden) generate time-based codes locally (TOTP). No network transmission required.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.8em; color: #10b981;"><i class="fa-solid fa-fingerprint"></i> 3. Passkeys (Ideal)</h4>
+              <p style="font-size: 0.55em; margin-top: 10px; line-height: 1.3;">Uses cryptography (FIDO2) linked to device biometrics. Immune to phishing because keys only match the real domain name.</p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>MFA Comparison</h3>
+            <p>Explain that SMS MFA is better than nothing, but SIM Swapping has allowed hackers to compromise high-profile accounts. App MFA is local, making it immune to SIM swaps. Passkeys are the future because they bind directly to the web address (cannot be phished).</p>
+          </aside>
+        </section>
+
+        <!-- Slide 7.4: Phishing & Social Engineering -->
+        <section>
+          <h2>Phishing & Social Engineering</h2>
+          <p class="slide-subtitle">Bypassing security by tricking humans</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-mask highlight-blue"></i> Social Engineering</h3>
+              <p style="font-size: 0.75em; line-height: 1.4; margin: 0;">
+                Manipulating psychological triggers:<br>
+                • **Urgency:** "Act within 24 hours!"<br>
+                • **Authority:** "Official Netflix Support."<br>
+                • **Fear:** "Your banking account is locked."
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-link highlight-purple"></i> Verification Checklist</h3>
+              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">
+                • **Check Sender Domain:** Is it `netflix.com` or `netflix-billing-support.net`?<br>
+                • **Hover check:** Hover over links before clicking to check their destination URL.<br>
+                • **Never share codes:** Support will never ask for your 2FA code.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Phishing Scenarios</h3>
+            <p>Remind them that hackers don't always look for code bugs to break in. They look for human vulnerabilities because tricking a person into typing their password is much easier.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 7.5: Encryption: Symmetric vs. Asymmetric -->
+        <section>
+          <h2>End-to-End Encryption (E2EE)</h2>
+          <p class="slide-subtitle">Symmetric vs. Asymmetric cryptography</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3>Symmetric Cryptography</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Uses the **same key** to encrypt and decrypt the message. Both parties must share this secret key safely. If intercepted in transit, the lock is broken.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Asymmetric Cryptography</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Uses two keys: a public key (anyone can lock) and a private key (only you can unlock). E2EE tools (WhatsApp/Signal) encrypt messages with the receiver's public key, ensuring only their private key can decrypt them.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>E2EE Analogy</h3>
+            <p>Imagine your friend sends you a padlock (Public Key). Anyone can click the lock closed. Your friend keeps the physical key (Private Key). You put a letter in a box, close the padlock, and mail it. Even if the mail carrier intercepts it, they can't open it because only your friend holds the key.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 7.6: Privacy & Ad Tracking -->
+        <section>
+          <h2>Trackers & Privacy</h2>
+          <p class="slide-subtitle">How companies watch your moves</p>
+          <div class="grid-3">
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.8em; color: #60a5fa;"><i class="fa-solid fa-cookie-bite"></i> Cookies</h4>
+              <p style="font-size: 0.55em; margin-top: 10px; line-height: 1.3;">Small text files saved in your browser by websites. First-party cookies remember logins; third-party cookies track you across sites.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.8em; color: #a78bfa;"><i class="fa-solid fa-fingerprint"></i> Device Fingerprinting</h4>
+              <p style="font-size: 0.55em; margin-top: 10px; line-height: 1.3;">Combining browser version, OS, screen size, and plugins to create a unique ID to identify your machine without cookies.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.8em; color: #34d399;"><i class="fa-solid fa-store"></i> Data Brokers</h4>
+              <p style="font-size: 0.55em; margin-top: 10px; line-height: 1.3;">Companies that buy and compile data from apps, retail cards, and web histories to sell profiles to advertisers.</p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Privacy Issues</h3>
+            <p>Explain that tracking is how the free internet is funded, but it has created a massive surveillance industry. Using ad blockers, denying cookies, and deleting tracking IDs helps you regain privacy control.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 7.7: Discussion -->
+        <section>
+          <h2>Lesson 7 Discussion</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-comments highlight-yellow"></i> Socratic Scenarios</h3>
+            <ol>
+              <li>If Apple or WhatsApp uses End-to-End Encryption (E2EE), does that mean the FBI or police can never read your messages from their servers?</li>
+              <li>A website requires your password to be: exactly 8 characters, with 1 uppercase, 1 number, and 1 symbol. Why is this rule actually bad for security?</li>
+            </ol>
+          </div>
+
+          <aside class="notes">
+            <h3>Discussion Guidelines</h3>
+            <ol>
+              <li><strong>E2EE Interception:</strong> Correct. The company servers only hold the encrypted scrambled bytes; they do not hold your private keys. They cannot decrypt them. The only way is to access the physical phone, backup logs (if unencrypted), or bypass security at the endpoint.</li>
+              <li><strong>Complexity constraints:</strong> Forcing exactly 8 characters limits entropy. The total combinations are tiny compared to a 20-character passphrase. Furthermore, humans follow identical patterns (like capitalizing the first letter and putting "1!" at the end), which hacking programs exploit.</li>
+            </ol>
+          </aside>
+        </section>
+
+        <!-- Slide 7.8: Lab Activity -->
+        <section>
+          <h2>Lab: The Cybersecurity Audit</h2>
+          <span class="badge badge-yellow">Project Task</span>
+          <p style="font-size: 0.75em; text-align: left; margin-bottom: 20px;">Review the three client profiles in the lesson guide. Audit their security setups and write a repair plan:</p>
+          <div class="grid-3" style="font-size: 0.55em; line-height: 1.3;">
             <div class="card" style="padding: 15px !important;">
               <h4 style="margin: 0; font-size: 0.8em; color: #fbbf24;">Leo (Gamer)</h4>
-              Reuse of `LeoGamer2011` for all accounts. No 2FA. Clicked a Discord DM link for a free Steam game.
+              • Uses `LeoGamer2011` everywhere.<br>
+              • No 2FA enabled.<br>
+              • Clicked free Steam skins link in a Discord DM.
             </div>
             <div class="card" style="padding: 15px !important;">
               <h4 style="margin: 0; font-size: 0.8em; color: #fbbf24;">Sophia (Creator)</h4>
-              Random 16-character passwords with SMS 2FA. Posts daily public vlogs tagging her precise coffee shop location and home door.
+              • Password manager & SMS 2FA.<br>
+              • Daily public vlogs tagging coffee shop & front door.<br>
+              • School uniform visible.
             </div>
             <div class="card" style="padding: 15px !important;">
               <h4 style="margin: 0; font-size: 0.8em; color: #fbbf24;">Mr. Davis (Dad's Friend)</h4>
-              Got text from "Netflix-support" at `netflix-billing-update.net`. Typed password & credit card details.
+              • Received Netflix warning text.<br>
+              • Visited `netflix-billing-update.net`. Typed credit card.
             </div>
           </div>
 
           <aside class="notes">
             <h3>Lab Guidance</h3>
-            <p>Read the details from `lesson_07_cybersecurity_hygiene.md`. Let them dissect each case:</p>
-            <ul>
-              <li><strong>Leo:</strong> Credential stuffing risk. If one site gets hacked, hackers get all his accounts. Discord DM was a credential phishing attack. He should change passwords and install an authenticator.</li>
-              <li><strong>Sophia:</strong> Account security is good, but physical privacy is leaked. Strangers can figure out her school, home, and daily routine. She should hide school logos and turn off precise geotagging.</li>
-              <li><strong>Mr. Davis:</strong> Classic SMS phishing (Smishing). Urgency trick. He must call his bank immediately, change his password, and review card charges.</li>
-            </ul>
+            <p>Let the kids audit Leo, Sophia, and Mr. Davis. Once they finish their diagnostic sheets, check the answers against the key in the presenter notes.</p>
           </aside>
         </section>
 
-        <!-- Slide 7.4: Quiz -->
+        <!-- Slide 7.9: Lesson 7 Quiz -->
         <section>
-          <h2>Lesson 7 Check-In</h2>
+          <h2>Lesson 7 Quiz</h2>
           <div class="card">
-            <h3><i class="fa-solid fa-circle-question highlight-green"></i> Questions</h3>
+            <h3><i class="fa-solid fa-circle-question highlight-blue"></i> Questions</h3>
             <ol>
-              <li>Which password is harder to crack: `Pa$$w0rd123!` or `apple-window-shoe-yellow`?</li>
-              <li>What are the 3 factors of authentication?</li>
-              <li>What does End-to-End Encryption (E2EE) prevent?</li>
+              <li>Why is passphrase length more secure than password complexity?</li>
+              <li>What factor of authentication is a fingerprint?</li>
+              <li>What is a "SIM swap" attack?</li>
             </ol>
           </div>
 
           <aside class="notes">
             <h3>Quiz Answers</h3>
             <ol>
-              <li><code>apple-window-shoe-yellow</code>: Length increases combinations exponentially. Short passwords with complexity are guessed quickly by modern cracking software.</li>
-              <li><strong>Something you know</strong> (password), <strong>something you have</strong> (phone/key), and <strong>something you are</strong> (fingerprint/face).</li>
-              <li>Prevents intermediaries (ISPs, hackers on Wi-Fi, or the service provider itself) from reading message content.</li>
+              <li>Length increases combinations exponentially, while complexity only increases them linearly. Dictionary programs fail against random word combinations.</li>
+              <li>"Something you are" (Biometric).</li>
+              <li>When a hacker impersonates you, tricks your carrier into moving your phone number to their SIM card, and intercepts your SMS 2FA codes.</li>
             </ol>
-            <p>Move Right for Lesson 8.</p>
+            <p>Swipe Right for Lesson 8.</p>
           </aside>
         </section>
       </section>
@@ -932,84 +1763,181 @@
           <div class="card">
             <h3><i class="fa-solid fa-mobile-screen-button highlight-purple"></i> Key Objectives</h3>
             <ul>
-              <li>Compare native applications with web applications.</li>
-              <li>Understand the OS sandboxing model.</li>
-              <li>Learn how app tracking and Advertising IDs function.</li>
+              <li>Contrast Native compiled applications with Browser Web Apps.</li>
+              <li>Understand the OS Sandbox and Hardware API boundary.</li>
+              <li>Learn how ad platforms use Advertising IDs to track you.</li>
             </ul>
           </div>
           
           <aside class="notes">
             <h3>Lesson 8 Intro</h3>
-            <p>This is a highly practical lesson that deals with their own phones. They will audit what permissions their apps have in the background.</p>
-            <p>Press Down to explain sandboxing and permissions.</p>
+            <p>In this lesson, we study mobile security architectures. Why do apps request permissions, how does sandboxing work, and how can we audit our own smartphones?</p>
+            <p>Press Down to explain native vs web apps.</p>
           </aside>
         </section>
 
-        <!-- Slide 8.2: Mobile Ecosystems -->
+        <!-- Slide 8.2: App Execution Models -->
         <section>
-          <h2>Sandboxes & Tracking</h2>
+          <h2>Native vs. Web Applications</h2>
+          <p class="slide-subtitle">Where the code runs and what it can touch</p>
           <div class="grid-2">
             <div class="card">
-              <h3><i class="fa-solid fa-door-closed highlight-blue"></i> OS Sandboxing</h3>
-              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">Apps run inside an isolated **sandbox**. They cannot read other apps' data, photos, or location unless the OS prompts the user. This keeps malicious apps isolated.</p>
+              <h3>Native Applications</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Written specifically for the OS (Swift/Kotlin), compiled to machine code. Downloaded from store. Deep access to hardware features (GPS, camera, contacts) and run in the background.
+              </p>
             </div>
             <div class="card">
-              <h3><i class="fa-solid fa-bullseye highlight-purple"></i> Targeted Advertising</h3>
-              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">Free apps make money by tracking. They use your <strong>Advertising ID</strong> (IDFA on iOS) to link your behavior across different apps and sell user profiles to brokers.</p>
+              <h3>Web Applications</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Written in HTML/JS, run inside the browser. No download required. Highly restricted by the browser's sandbox. Cannot access contacts, files, or background services without API approval.
+              </p>
             </div>
           </div>
 
           <aside class="notes">
-            <h3>Hotel Analogy (Script)</h3>
-            <p>Explain: "Your phone is like a highly secure hotel. You are the owner. An app is a guest checking in."</p>
-            <p>"In the old days, guests got master keycards. They could look in your drawers (photos) and read your diary (contacts). In mobile sandbox hotels, guests are locked in their own rooms. If they want to use the camera, the front desk (OS) calls you and asks for permission."</p>
-            <p><strong>Ask:</strong> "Why does a calculator app want location permission?" (To track you and sell ads. Denying it won't break the calculator!).</p>
+            <h3>Comparison Details</h3>
+            <p>Explain that Native apps have faster performance because they run directly on the processor, but they have broader security risks. Web apps are safer because they are sandboxed inside the web browser.</p>
           </aside>
         </section>
 
-        <!-- Slide 8.3: Lab Activity -->
+        <!-- Slide 8.3: OS Sandboxing & APIs -->
         <section>
-          <h2>Lab: Smartphone Privacy Audit</h2>
+          <h2>Sandboxing & Hardware APIs</h2>
+          <p class="slide-subtitle">System borders that protect your data</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-door-closed highlight-blue"></i> Sandboxed Environment</h3>
+              <p style="font-size: 0.75em; line-height: 1.4; margin: 0;">
+                Mobile operating systems isolate apps. An app lives in its own "room". It cannot view or edit files belonging to other apps unless you grant permission.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-microchip highlight-purple"></i> Hardware APIs</h3>
+              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">
+                If an app wants to use the camera, check GPS coordinates, or scan Bluetooth, it must request access from the OS via **APIs** (Application Programming Interfaces).
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Hotel Metaphor</h3>
+            <p><strong>Mobile sandboxing is like a secure hotel.</strong> Apps are guests. In early desktop computing, apps got master keys to all rooms (could search all files). In sandbox hotels, guests are locked in their rooms. If they need to use the camera, they ask the front desk (OS) which prompts the owner (you) for approval.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 8.4: Platform Wars (iOS vs. Android) -->
+        <section>
+          <h2>iOS vs. Android Security</h2>
+          <p class="slide-subtitle">Different architectural philosophies</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3>iOS: Walled Garden</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Stricter Apple review process. Blocks app installation from outside the App Store by default (no sideloading). Less customization, but lower risk of downloading malware.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Android: Open Ecosystem</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Open-source foundation. Allows alternative app stores and direct installation of installation packages (`.apk`). Highly customizable, but higher risk of malware if download guidelines are ignored.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Security Trade-offs</h3>
+            <p>Explain that both platforms are highly secure, but use different philosophies. Apple prioritizes centralized control and security; Google prioritizes open customization and developer flexibility.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 8.5: App Tracking & Ad Profiles -->
+        <section>
+          <h2>App Tracking & Ad Profiles</h2>
+          <p class="slide-subtitle">How free applications make money</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-id-card highlight-blue"></i> Advertising ID</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                A unique ID assigned to your phone (IDFA on iOS, Ad ID on Android). Apps send this ID to ad networks, letting them track what you look at across different apps.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-chart-line highlight-purple"></i> Profile Compilation</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                If you look at shoes on Amazon, read about hiking on Reddit, and check the weather, trackers link these activities to your Ad ID to target you with sneaker ads.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>App Monetization</h3>
+            <p>Explain: *"If you aren't paying for the product, you are the product."* targeted ads are how free app makers monetize. iOS 14.5 introduced "App Tracking Transparency" (Ask App not to Track), which cost ad networks billions of dollars because users opted out.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 8.6: Discussion -->
+        <section>
+          <h2>Lesson 8 Discussion</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-comments highlight-yellow"></i> Socratic Scenarios</h3>
+            <ol>
+              <li>A free offline puzzle game requires Contacts, Camera, and Location permissions. What is the risk of allowing this, and will the game still work if you deny them?</li>
+              <li>Why are web browsers (like Chrome/Safari) the most secure applications on a computer, considering they load untrusted code from arbitrary websites?</li>
+            </ol>
+          </div>
+
+          <aside class="notes">
+            <h3>Discussion Guidelines</h3>
+            <ol>
+              <li><strong>Over-Permission risk:</strong> The game might be harvesting your contact book and location to sell to brokers. If you deny the permissions, the game will still run because the puzzle logic doesn't require these hardware interfaces. Always deny excess permissions.</li>
+              <li><strong>Browser Sandboxing:</strong> Browsers are highly hardened sandboxes. They execute javascript and render HTML inside restricted memory threads that cannot access your physical filesystem, launch system processes, or execute local code.</li>
+            </ol>
+          </aside>
+        </section>
+
+        <!-- Slide 8.7: Lab Activity -->
+        <section>
+          <h2>Lab: Phone Privacy Audit</h2>
           <span class="badge badge-yellow">Activity</span>
-          <p style="font-size: 0.85em; text-align: left;">Get your smartphone. Navigate through settings to audit permissions:</p>
+          <p style="font-size: 0.8em; text-align: left; margin-bottom: 15px;">Open settings on your phone to run a privacy audit:</p>
           <div class="grid-2">
             <div class="card" style="padding: 15px !important;">
-              <h4 style="margin: 0; font-size: 0.85em;"><i class="fa-solid fa-location-dot highlight-blue"></i> 1. Location & Camera</h4>
-              <p style="font-size: 0.6em; margin-top: 10px; line-height: 1.3;">Find apps with <strong>"Always Allow"</strong> location access. Switch to "While Using" or "Never." Turn off **"Precise Location"** for apps that don't need it. Check camera permissions.</p>
+              <h4 style="margin: 0; font-size: 0.85em; color: #60a5fa;"><i class="fa-solid fa-location-arrow"></i> 1. Location & Camera</h4>
+              <p style="font-size: 0.55em; margin-top: 10px; line-height: 1.3;">Find apps with **"Always Allow"** location access. Turn off **"Precise Location"** for non-maps apps. Check camera/mic apps list.</p>
             </div>
             <div class="card" style="padding: 15px !important;">
-              <h4 style="margin: 0; font-size: 0.85em;"><i class="fa-solid fa-gears highlight-purple"></i> 2. Tracking & Background</h4>
-              <p style="font-size: 0.6em; margin-top: 10px; line-height: 1.3;">Turn off **"Allow Apps to Request to Track"** (iOS) or **"Delete Advertising ID"** (Android). Turn off **Background App Refresh** for non-essential apps to save battery.</p>
+              <h4 style="margin: 0; font-size: 0.85em; color: #a78bfa;"><i class="fa-solid fa-toggle-off"></i> 2. Tracking & Background</h4>
+              <p style="font-size: 0.55em; margin-top: 10px; line-height: 1.3;">Disable **"Allow Apps to Request to Track"** (iOS) or **"Delete Advertising ID"** (Android). Turn off **Background App Refresh** to save battery.</p>
             </div>
           </div>
 
           <aside class="notes">
             <h3>Lab Guidance</h3>
-            <p>Let the kids audit their own phones. Direct them using the navigation paths in the lesson guide.</p>
-            <p>Discuss the results: How many apps had camera access? What did they change? They will be surprised by how much battery and data background app refresh consumes.</p>
+            <p>Guide the kids through their settings. Let them list which apps had location and camera access. Enforce turning off background refresh for shopping apps, retail accounts, and games.</p>
           </aside>
         </section>
 
-        <!-- Slide 8.4: Quiz -->
+        <!-- Slide 8.8: Lesson 8 Quiz -->
         <section>
-          <h2>Lesson 8 Check-In</h2>
+          <h2>Lesson 8 Quiz</h2>
           <div class="card">
-            <h3><i class="fa-solid fa-circle-question highlight-purple"></i> Questions</h3>
+            <h3><i class="fa-solid fa-circle-question highlight-blue"></i> Questions</h3>
             <ol>
-              <li>What is the difference between a Native App and a Web App?</li>
-              <li>What does a mobile operating system "sandbox" do?</li>
-              <li>What is an Advertising ID?</li>
+              <li>What does a mobile app sandbox do?</li>
+              <li>Why is sideloading apps (.apk files) on Android riskier than installing from the official Play Store?</li>
+              <li>What setting turns off background battery drain and data usage for closed apps?</li>
             </ol>
           </div>
 
           <aside class="notes">
             <h3>Quiz Answers</h3>
             <ol>
-              <li><strong>Native App:</strong> Downloaded, runs directly on hardware with deep API access. <strong>Web App:</strong> Runs inside browser sandbox, restricted hardware access.</li>
-              <li>Isolates apps so they cannot access system files or other apps' data without user approval.</li>
-              <li>A unique identifier code on your phone used by advertisers to track your activity across different apps to build a profile.</li>
+              <li>Restricts apps from accessing system files or other apps' memory spaces without permission.</li>
+              <li>Official stores scan apps for malware and verify developer signatures. Sideloaded files from websites bypass this verification layer.</li>
+              <li><strong>Background App Refresh</strong> (iOS) or **Background Data Limits** (Android).</li>
             </ol>
-            <p>Move Right for Lesson 9.</p>
+            <p>Swipe Right for Lesson 9.</p>
           </aside>
         </section>
       </section>
@@ -1024,82 +1952,205 @@
           <div class="card">
             <h3><i class="fa-solid fa-brain highlight-green"></i> Key Objectives</h3>
             <ul>
-              <li>Understand LLMs as autocomplete systems, not conscious minds.</li>
-              <li>Learn why AIs hallucinate (making up convincing details).</li>
-              <li>Master prompt engineering guidelines and rigorous verification.</li>
+              <li>Understand the next-token probability prediction model of LLMs.</li>
+              <li>Explore the tokenization process and explain why hallucinations occur.</li>
+              <li>Practice prompt engineering frameworks and verification techniques.</li>
             </ul>
           </div>
           
           <aside class="notes">
             <h3>Lesson 9 Intro</h3>
-            <p>AI is everywhere. But teens often treat it as a search engine or source of truth. We will teach them that LLMs are word-prediction systems, and how to verify their output.</p>
-            <p>Press Down to explain probability and tokenization.</p>
+            <p>AI is a daily tool for teens. Today we dismantle the illusion of AI consciousness. We'll show that AIs are probability predictors, and how to verify their output.</p>
+            <p>Press Down to explain next-token prediction.</p>
           </aside>
         </section>
 
-        <!-- Slide 9.2: LLM Probability & Prompting -->
+        <!-- Slide 9.2: How LLMs Work -->
         <section>
-          <h2>Probability & Prompting</h2>
+          <h2>Autocomplete at Scale</h2>
+          <p class="slide-subtitle">Next-token prediction mechanics</p>
           <div class="grid-2">
             <div class="card">
-              <h3><i class="fa-solid fa-arrow-right-to-bracket highlight-blue"></i> Predictors & Tokens</h3>
-              <p style="font-size: 0.75em; line-height: 1.4; margin: 0;">LLMs break text into numerical fragments called <strong>tokens</strong>. They look at your prompt and calculate the mathematical probability of the next token. They don't know "facts," only word patterns.</p>
+              <h3><i class="fa-solid fa-wave-square highlight-blue"></i> Probability Engines</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                LLMs do not lookup facts in databases. They calculate mathematical probability. Given your input, they check their weights (patterns from billions of training pages) to predict the most likely next word fragment.
+              </p>
             </div>
             <div class="card">
-              <h3><i class="fa-solid fa-sliders highlight-purple"></i> Prompt Engineering</h3>
-              <p style="font-size: 0.75em; line-height: 1.4; margin: 0;">Improve AI output by defining a **Role** (e.g. "Act as a math teacher"), setting clear **Constraints** (e.g. "Do not use jargon"), and asking it to **think step-by-step**.</p>
+              <h3><i class="fa-solid fa-database highlight-purple"></i> Training Data Limits</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                An AI only knows patterns in its training dataset. It cannot "reason" out new logical discoveries; it can only connect existing patterns it has indexed.
+              </p>
             </div>
           </div>
 
           <aside class="notes">
-            <h3>Autocomplete Analogy (Script)</h3>
-            <p>Explain: "When you text 'I am going to the...', your phone suggests words. It looks at your past typing and what millions of others wrote. LLMs do this on a massive scale."</p>
-            <p>"But does your phone's autocomplete know where you are actually going? No. It's just guessing. That's why AIs make things up. Confidently guessing a wrong word is called a **hallucination**."</p>
+            <h3>Autocomplete Metaphor (Script)</h3>
+            <p>Explain: "Open your phone, type 'I want to eat...', and check the word recommendations. It suggests 'pizza' or 'apple'. It doesn't know what you want; it calculates the most likely next word. LLMs are this model scaled up to massive computers."</p>
           </aside>
         </section>
 
-        <!-- Slide 9.3: Lab Activity -->
+        <!-- Slide 9.3: Tokenization Visualized -->
+        <section>
+          <h2>What is a Token?</h2>
+          <p class="slide-subtitle">How computers read characters</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-scissors highlight-blue"></i> Word Fragments</h3>
+              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">
+                AIs don't read words. Text is split into **tokens** (syllables or groups of letters).
+                <br>
+                • `Antigravity` is split into: `Anti` and `gravity`.
+                <br>
+                • 100 words represent ~130 tokens.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-hashtag highlight-purple"></i> Numeric Vectors</h3>
+              <p style="font-size: 0.75em; line-height: 1.4; margin: 0;">
+                Every token is mapped to a unique number. The model converts your text to numbers, performs high-dimensional geometry math, and outputs numeric tokens.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Tokenization</h3>
+            <p>Explain that because AIs read tokens, they sometimes struggle with word details (like counting how many letters are in a word, or reversing a word) because they don't see the letters—they only see the numeric token ID.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 9.4: The Hallucination Trap -->
+        <section>
+          <h2>Why AI Hallucinates</h2>
+          <p class="slide-subtitle">Plausible text vs. Verified facts</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-ghost highlight-blue"></i> Plausibility Priority</h3>
+              <p style="font-size: 0.75em; line-height: 1.4; margin: 0;">
+                The AI is trained to write sentences that *sound natural and correct*. It prioritizes grammatical flow and pattern matching over checking factual records.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-triangle-exclamation highlight-purple"></i> The Confident Lie</h3>
+              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">
+                If you prompt: "Tell me about the inventor X," the AI checks biography patterns and fills details. It doesn't halt to check if X is real; it just predicts the next word.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Hallucination Explanation</h3>
+            <p>This is key: AIs don't have a concept of truth. They have a concept of probability. If a lie has a high probability of sounding correct based on the context, the AI will output it with absolute confidence.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 9.5: Prompt Engineering Framework -->
+        <section>
+          <h2>Prompt Engineering</h2>
+          <p class="slide-subtitle">How to get accurate AI output</p>
+          <div class="card">
+            <h3><i class="fa-solid fa-sliders highlight-blue"></i> The Structured Prompt Model</h3>
+            <p style="font-size: 0.65em; line-height: 1.4; margin-top: 10px;">
+              • **Role:** "Act as a senior software developer."<br>
+              • **Context:** "I am writing a Python script to filter dates."<br>
+              • **Constraints:** "Do not use external libraries. Output only the code block."<br>
+              • **Chain of Thought:** "Explain your logic step-by-step before printing the code."
+            </p>
+          </div>
+          <p style="font-size: 0.65em; text-align: left; margin-top: 15px;">**Few-Shot Prompting:** Provide the AI with 2 or 3 examples of correct input-output formats in the prompt to set the pattern.</p>
+
+          <aside class="notes">
+            <h3>Prompting Tip</h3>
+            <p>Explain that "Chain of Thought" (asking the AI to think step-by-step) is a cheat code. It forces the AI to output its working steps. This guides the prediction probabilities, making the final answer much more accurate.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 9.6: Verification & Ethics -->
+        <section>
+          <h2>Bicycle for the Mind</h2>
+          <p class="slide-subtitle">Intellectual honesty and tool usage</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-person-biking highlight-blue"></i> Bicycle Analogy</h3>
+              <p style="font-size: 0.7em; line-height: 1.4; margin: 0;">
+                Steve Jobs called computers "a bicycle for the mind." A bike doesn't move on its own; you must pedal. But pedaling lets you travel farther and faster. AI is a bicycle—you must pedal it with your own brain.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-circle-exclamation highlight-purple"></i> The Verification Rule</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Never copy-paste AI-generated text without reading and checking facts. You are responsible for the final output. If the AI hallucinates, it is **your** mistake for not catching it.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Ethics Discussion</h3>
+            <p>If you submit an essay written by AI, you didn't learn, and you didn't train your own mind. It's like having someone else ride the bicycle for you while you sit on the bench. Use AI to brainstorm, outline, or explain hard concepts, but write the work yourself.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 9.7: Discussion -->
+        <section>
+          <h2>Lesson 9 Discussion</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-comments highlight-yellow"></i> Socratic Scenarios</h3>
+            <ol>
+              <li>If you ask an AI to write a review of a restaurant that opened yesterday, what will it do, and why?</li>
+              <li>Why do teachers want you to write essays ourselves instead of letting AI write them, even if the AI essay is grammatically perfect?</li>
+            </ol>
+          </div>
+
+          <aside class="notes">
+            <h3>Discussion Guidelines</h3>
+            <ol>
+              <li><strong>Real-time gap:</strong> If it's not connected to live search, it will hallucinate details because its training data set ended before the restaurant opened. Even if connected, it may merge data from other restaurants.</li>
+              <li><strong>Cognitive training:</strong> Writing is not just putting words on a page; writing is structural thinking. Formatting arguments and choosing words builds neural pathways for logical reasoning. Copy-pasting deprives you of this mental exercise.</li>
+            </ol>
+          </aside>
+        </section>
+
+        <!-- Slide 9.8: Lab Activity -->
         <section>
           <h2>Lab: Fact-Check the Machine</h2>
           <span class="badge badge-yellow">Challenge</span>
           <div class="grid-2">
             <div class="card" style="padding: 15px !important;">
-              <h4 style="margin: 0; font-size: 0.85em;"><i class="fa-solid fa-ghost highlight-blue"></i> Part 1: The Trap</h4>
-              <p style="font-size: 0.6em; margin-top: 10px; line-height: 1.3;">Ask an LLM to write a biography of "Sir Reginald Vance, inventor of the steam typewriter." Notice how confidently it creates fake dates and details.</p>
+              <h4 style="margin: 0; font-size: 0.85em; color: #60a5fa;"><i class="fa-solid fa-ghost"></i> Part A: The Trap</h4>
+              <p style="font-size: 0.55em; margin-top: 10px; line-height: 1.3;">Ask your LLM to write a biography of "Sir Reginald Vance, inventor of the steam typewriter." Notice how confidently it creates fake dates, achievements, and rivals.</p>
             </div>
             <div class="card" style="padding: 15px !important;">
-              <h4 style="margin: 0; font-size: 0.85em;"><i class="fa-solid fa-magnifying-glass highlight-purple"></i> Part 2: The Audit</h4>
-              <p style="font-size: 0.6em; margin-top: 10px; line-height: 1.3;">Ask the LLM to summarize the 1858 transatlantic cable project. Fact-check every name, date, and ship. Highlight correct facts in green, and errors in red.</p>
+              <h4 style="margin: 0; font-size: 0.85em; color: #a78bfa;"><i class="fa-solid fa-magnifying-glass"></i> Part B: The Audit</h4>
+              <p style="font-size: 0.55em; margin-top: 10px; line-height: 1.3;">Ask the LLM to summarize the 1858 transatlantic telegraph cable. Research using Google/Wikipedia. Verify names, ships, and dates. Highlight correct in green, errors in red.</p>
             </div>
           </div>
 
           <aside class="notes">
             <h3>Lab Guidance</h3>
-            <p>Provide them with access to Gemini, ChatGPT, or Claude. Let them see the hallucination in Part 1. Explain: because the prompt assumed the inventor was real, the AI predicted words matching a biography template.</p>
-            <p>In Part 2, let them research on Wikipedia or Google. Highlight that AI is a helper, but humans must remain the verification layer.</p>
+            <p>Ensure the kids complete both steps. Show them how the AI creates realistic-sounding narrative styles to hide the fact that it is hallucinating.</p>
           </aside>
         </section>
 
-        <!-- Slide 9.4: Quiz -->
+        <!-- Slide 9.9: Lesson 9 Quiz -->
         <section>
-          <h2>Lesson 9 Check-In</h2>
+          <h2>Lesson 9 Quiz</h2>
           <div class="card">
-            <h3><i class="fa-solid fa-circle-question highlight-green"></i> Questions</h3>
+            <h3><i class="fa-solid fa-circle-question highlight-blue"></i> Questions</h3>
             <ol>
-              <li>How does an LLM decide what word to write next?</li>
-              <li>What is an AI "hallucination"?</li>
-              <li>Why does asking an AI to "think step-by-step" make it better at math and logic?</li>
+              <li>What is a token?</li>
+              <li>Why does an AI generate false historical facts?</li>
+              <li>What are the 4 main components of a structured prompt?</li>
             </ol>
           </div>
 
           <aside class="notes">
             <h3>Quiz Answers</h3>
             <ol>
-              <li>By calculating the mathematical probability of the next word/token based on its training patterns.</li>
-              <li>When the AI model generates an answer that sounds confident and realistic but is factually false or made up.</li>
-              <li>It forces the model to generate the intermediate calculation tokens first, building a logical pathway to the answer rather than trying to guess the final number immediately.</li>
+              <li>A word fragment or character group converted to a number for the AI model to read.</li>
+              <li>Because it calculates word probabilities based on textual patterns, rather than querying a database of verified facts.</li>
+              <li>Role, Context, Constraints, and Chain of Thought (step-by-step instruction).</li>
             </ol>
-            <p>Move Right for Lesson 10.</p>
+            <p>Swipe Right for Lesson 10.</p>
           </aside>
         </section>
       </section>
@@ -1114,78 +2165,172 @@
           <div class="card">
             <h3><i class="fa-solid fa-wrench highlight-purple"></i> Key Objectives</h3>
             <ul>
-              <li>Learn the scientific troubleshooting loop.</li>
-              <li>Master isolation of variables (changing one thing at a time).</li>
-              <li>Use diagnostic tools to fix real network and system errors.</li>
+              <li>Master the scientific troubleshooting loop and logic.</li>
+              <li>Learn to isolate variables by altering one element at a time.</li>
+              <li>Apply terminal diagnostics to solve mock hardware and configuration glitches.</li>
             </ul>
           </div>
           
           <aside class="notes">
             <h3>Lesson 10 Intro</h3>
-            <p>This is the final exam! We will teach them the troubleshooting mindset, and then let them loose on a "broken" computer that you set up beforehand.</p>
-            <p>Press Down to explain isolation of variables.</p>
+            <p>Welcome to the final lesson. Troubleshooting is a core tech skill. Today we study the diagnostic loop, and then they will fix a real "broken" computer that you configured.</p>
+            <p>Press Down to explain the Diagnostic Loop.</p>
           </aside>
         </section>
 
-        <!-- Slide 10.2: Troubleshooting concepts -->
+        <!-- Slide 10.2: The Diagnostic Loop -->
         <section>
-          <h2>The Diagnostic Loop</h2>
+          <h2>The Scientific Method</h2>
+          <p class="slide-subtitle">Solving computer bugs step-by-step</p>
           <div class="card">
-            <h3><i class="fa-solid fa-rotate highlight-blue"></i> The Diagnostic Loop</h3>
-            <ol style="font-size: 0.75em !important; line-height: 1.3 !important;">
-              <li><strong>Symptom:</strong> Define exactly what is failing (read error codes!).</li>
-              <li><strong>Scope:</strong> Isolate scope (one site or all? this device or all?).</li>
-              <li><strong>Hypothesis:</strong> Formulate a testable guess of the root cause.</li>
-              <li><strong>Test:</strong> Change **one variable** at a time. Check if symptom resolves.</li>
-              <li><strong>Document:</strong> Understand the fix to build experience.</li>
+            <h3><i class="fa-solid fa-arrows-spin highlight-blue"></i> The Diagnostic Loop</h3>
+            <ol style="font-size: 0.7em !important; line-height: 1.3 !important;">
+              <li>**Symptom:** Define the problem. Read the exact error message.</li>
+              <li>**Scope:** Isolate. (Is it this program or all? this computer or all devices?).</li>
+              <li>**Hypothesis:** Formulate a testable guess of what is broken.</li>
+              <li>**Test:** Change **one variable** at a time. Check if the symptom changes.</li>
+              <li>**Document:** Remember the solution for the future.</li>
             </ol>
           </div>
 
           <aside class="notes">
-            <h3>Light Bulb Analogy (Script)</h3>
-            <p>Explain: "You walk in your bedroom, flip the switch, and it stays dark. What do you do?"</p>
-            <ul>
-              <li>If the hallway light is ON, house power is fine.</li>
-              <li>If you put the bulb in a working lamp and it lights up, the bulb is fine.</li>
-              <li>Therefore, the bedroom switch or wiring is broken.</li>
-              <li>If you immediately ran to the basement and flipped the main house breaker, you changed the wrong variable! That is bad troubleshooting.</li>
-            </ul>
+            <h3>Light Bulb Metaphor (Script)</h3>
+            <p>Explain: "You flip your bedroom light switch. Nothing happens. Do you run to the basement and flip the house breaker? No."</p>
+            <p>"First, you check if the hallway light is working (Scope). Next, you try a working bulb in the lamp (Bulb variable). If the bulb works elsewhere, then the room switch or wall wiring is broken. That is isolating variables."</p>
           </aside>
         </section>
 
-        <!-- Slide 10.3: Final Exam Lab -->
+        <!-- Slide 10.3: Network Diagnostics -->
         <section>
-          <h2>Lab: The "Broken PC" Exam</h2>
-          <span class="badge badge-yellow">Final Exam</span>
-          <p style="font-size: 0.75em; text-align: left;">The parent has disabled a few settings on this PC. You must diagnose and fix them using built-in system tools:</p>
-          <div class="grid-3" style="font-size: 0.55em; line-height: 1.3;">
-            <div class="card" style="padding: 15px !important;">
-              <h4 style="margin: 0; font-size: 0.85em; color: #fbbf24;">Glitch 1</h4>
-              Wi-Fi icon is missing or disabled. Diagnose using <strong>Device Manager</strong> network adapters.
+          <h2>Network Diagnostic Tools</h2>
+          <p class="slide-subtitle">Checking connection layers</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-terminal highlight-blue"></i> CLI Tools</h3>
+              <ul style="font-size: 0.65em !important; line-height: 1.3;">
+                <li><code>ipconfig /all</code>: Displays local IP address, gateway, and DNS server settings.</li>
+                <li><code>ping <IP></code>: Tests connectivity. (If `ping 8.8.8.8` works but `ping google.com` fails, DNS is broken!).</li>
+              </ul>
             </div>
-            <div class="card" style="padding: 15px !important;">
-              <h4 style="margin: 0; font-size: 0.85em; color: #fbbf24;">Glitch 2</h4>
-              Wi-Fi is connected, but websites fail to load. Ping `8.8.8.8` (works) vs `google.com` (fails). Fix in **DNS settings**.
-            </div>
-            <div class="card" style="padding: 15px !important;">
-              <h4 style="margin: 0; font-size: 0.85em; color: #fbbf24;">Glitch 3</h4>
-              Browser loads sites, but fonts are Comic Sans or layout is upside down. Find the hidden **Extension Manager** setting.
+            <div class="card">
+              <h3><i class="fa-solid fa-globe highlight-purple"></i> Browser DevTools</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Press **F12** (or right-click -> Inspect). Check the **Console** tab for code crashes, or the **Network** tab to see if assets (CSS/images) fail to load with 404 or block issues.
+              </p>
             </div>
           </div>
 
           <aside class="notes">
-            <h3>Final Exam Setup Guidance</h3>
-            <p>Refer to `lesson_10_troubleshooting_lab.md` to configure the glitches before they start. Let them work together. Avoid giving them the answer immediately. Encourage them to use command line tools like <code>ping</code> and check error codes.</p>
-            <p>Congratulations on completing the course!</p>
+            <h3>Command usage</h3>
+            <p>Show them how <code>ipconfig</code> reveals their local router address (Default Gateway). If their IP starts with <code>169.254.x.x</code>, explain that their computer failed to get an IP from the router (DHCP failure).</p>
           </aside>
         </section>
 
-        <!-- Slide 10.4: Final Review -->
+        <!-- Slide 10.4: Logs & Error Codes -->
+        <section>
+          <h2>Error Fingerprints</h2>
+          <p class="slide-subtitle">How to search for help effectively</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-bug highlight-blue"></i> Error Codes</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Computers output specific code footprints (e.g., `0x80070005` or `DNS_PROBE_FINISHED_NO_INTERNET`). These codes point to the exact failure point in the OS or network stack.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-magnifying-glass highlight-purple"></i> Search Strategies</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Don't search: "my network doesn't work." Search the exact code with terms:<br>
+                <code>"0x80070005" windows installer permission fix</code>
+                <br>
+                Filter results by recent date on Reddit or tech forums.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Troubleshooting Wisdom</h3>
+            <p>Explain that no developer knows everything. The best programmers are simply world-class searchers who know how to parse forum answers and match error codes to solutions.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 10.5: Device Manager & Task Manager -->
+        <section>
+          <h2>System Management Tools</h2>
+          <p class="slide-subtitle">Viewing hardware and active processes</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-microchip highlight-blue"></i> Device Manager</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Lists all physical hardware drivers. A yellow warning triangle indicates a driver conflict or hardware fault. You can disable, enable, or update device drivers here.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-list-check highlight-purple"></i> Task Manager</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Displays CPU, RAM, and disk utilization. You can identify which background app is hogging resources and force-terminate frozen programs (End Task).
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>System Controls</h3>
+            <p>Show them how to open Task Manager (Ctrl + Shift + Esc). This shows what is happening on the computer right now, letting you diagnose background issues.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 10.6: Discussion -->
+        <section>
+          <h2>Lesson 10 Discussion</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-comments highlight-yellow"></i> Socratic Scenarios</h3>
+            <ol>
+              <li>You try to open a game. It flashes a black box and closes immediately. You click it again, and nothing happens. What is your troubleshooting strategy?</li>
+              <li>You are trying to fix a network drop. You restart your router, change your DNS server IP, disable your antivirus, and reinstall Chrome all at once. It starts working. What was the problem?</li>
+            </ol>
+          </div>
+
+          <aside class="notes">
+            <h3>Discussion Guidelines</h3>
+            <ol>
+              <li><strong>Black box crash:</strong> Check Task Manager (the game might be stuck in a background loop). Inspect event viewer logs for the crash error code. Search the graphics card driver version.</li>
+              <li><strong>The Multi-change Trap:</strong> You have no idea which one fixed it! Furthermore, you may have opened security holes (antivirus) or messed up other settings unnecessarily. Always test **one change** at a time.</li>
+            </ol>
+          </aside>
+        </section>
+
+        <!-- Slide 10.7: Final Exam Lab -->
+        <section>
+          <h2>Lab: The Broken PC Escape Room</h2>
+          <span class="badge badge-yellow">Final Exam</span>
+          <p style="font-size: 0.75em; text-align: left; margin-bottom: 20px;">Your parent has disabled some settings on this computer. Diagnose and repair them:</p>
+          <div class="grid-3" style="font-size: 0.55em; line-height: 1.3;">
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.8em; color: #fbbf24;">Glitch 1: Wi-Fi Down</h4>
+              Symptom: No networks list. Use **Device Manager** to inspect the network adapter card driver.
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.8em; color: #fbbf24;">Glitch 2: DNS Error</h4>
+              Symptom: Connected, but site names fail. Ping `8.8.8.8` (works) vs `google.com` (fails). Reset **DNS Settings**.
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.8em; color: #fbbf24;">Glitch 3: Bad Browser</h4>
+              Symptom: Upside down images or Comic Sans. Locate and remove the rogue extension.
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Final Exam Setup</h3>
+            <p>Ensure you have configured the glitches as detailed in `lesson_10_troubleshooting_lab.md`. Let them struggle, discuss, and work together. Emphasize tracking symptoms before acting.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 10.8: Graduation -->
         <section>
           <h2>Course Complete! 🎉</h2>
           <div class="card" style="font-size: 0.75em; line-height: 1.4;">
             <h3><i class="fa-solid fa-award highlight-green"></i> COMP101 Key Takeaways</h3>
-            <p><strong>Hardware:</strong> Chef = CPU, Counter = RAM, Pantry = SSD.</p>
+            <p><strong>Hardware:</strong> CPU is the chef, RAM is the counter, SSD is the pantry.</p>
             <p><strong>Networking:</strong> DNS resolves domain names into IP packets.</p>
             <p><strong>Collaboration:</strong> Cloud databases sync keystrokes in real-time.</p>
             <p><strong>Security:</strong> Length beats complexity. App sandboxes require permissions.</p>
@@ -1207,9 +2352,8 @@
     Reveal.initialize({
       hash: true,
       slideNumber: 'c/t',
-      transition: 'slide', // none/fade/slide/convex/concave/zoom
+      transition: 'slide',
       plugins: [ RevealNotes ],
-      // Force presentation layout scale
       width: 1100,
       height: 700,
       margin: 0.05,
