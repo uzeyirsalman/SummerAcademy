@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SummerAcademy: Football for Beginners Presentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Reveal.js Core Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+  <!-- Use White as baseline theme, custom CSS overrides everything -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/white.min.css" id="theme">
+
+  <!-- Premium Custom styling -->
+  <style>
+    :root {
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      
+      /* DEFAULT: WARM NORDIC LIGHT MODE */
+      --color-bg: #faf8f5;
+      --color-primary: #c2410c;      /* Popping Terracotta */
+      --color-secondary: #d97706;    /* Warm Amber */
+      --color-accent: #15803d;       /* Forest Green */
+      --color-warning: #b91c1c;      /* Crimson */
+      --color-text: #334155;         /* Slate text */
+      --color-card-bg: #ffffff;      /* Pure white cards */
+      --color-card-border: #e2e8f0;  /* Slate border */
+      --color-shadow: rgba(0, 0, 0, 0.04);
+      --color-gradient-start: #b91c1c;
+      --color-gradient-end: #d97706;
+      
+      /* Code styling */
+      --color-code-bg: #f1f5f9;
+      --color-code-text: #b45309;
+      --color-pre-bg: #f8fafc;
+      --color-pre-border: #e2e8f0;
+      --color-pre-text: #334155;
+    }
+
+    body.theme-dark {
+      /* DRACULA DARK MODE OVERRIDES */
+      --color-bg: #0b0c10;
+      --color-primary: #3b82f6;      /* Electric Blue */
+      --color-secondary: #8b5cf6;    /* Neon Purple */
+      --color-accent: #10b981;       /* Emerald */
+      --color-warning: #fbbf24;      /* Amber Yellow */
+      --color-text: #e2e8f0;         /* Soft white text */
+      --color-card-bg: rgba(255, 255, 255, 0.03);
+      --color-card-border: rgba(255, 255, 255, 0.08);
+      --color-shadow: rgba(0, 0, 0, 0.3);
+      --color-gradient-start: #3b82f6;
+      --color-gradient-end: #8b5cf6;
+
+      /* Code styling */
+      --color-code-bg: rgba(0, 0, 0, 0.4);
+      --color-code-text: #f43f5e;
+      --color-pre-bg: rgba(0, 0, 0, 0.3);
+      --color-pre-border: rgba(255, 255, 255, 0.05);
+      --color-pre-text: #e2e8f0;
+    }
+
+    body {
+      background-color: var(--color-bg) !important;
+      font-family: var(--font-body) !important;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    .reveal-viewport {
+      background-color: var(--color-bg) !important;
+      transition: background-color 0.4s ease;
+    }
+
+    .reveal {
+      font-family: var(--font-body) !important;
+      color: var(--color-text) !important;
+    }
+
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+      font-family: var(--font-heading) !important;
+      text-transform: none !important;
+      font-weight: 700 !important;
+      letter-spacing: -0.02em !important;
+      transition: color 0.4s ease;
+    }
+
+    .reveal h1 {
+      font-size: 2.8em !important;
+      background: linear-gradient(135deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px !important;
+    }
+
+    .reveal h2 {
+      font-size: 1.6em !important;
+      color: var(--color-primary) !important;
+      margin-bottom: 15px !important;
+      border-bottom: none !important;
+    }
+
+    .reveal h3 {
+      font-size: 1.1em !important;
+      color: var(--color-primary) !important;
+    }
+
+    /* Floating Theme Toggle */
+    .theme-toggle-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--color-card-border);
+      background: var(--color-card-bg);
+      color: var(--color-primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 15px var(--color-shadow);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    .theme-toggle-btn:hover {
+      transform: scale(1.1);
+      background: var(--color-primary);
+      color: #ffffff;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-card-border);
+      border-radius: 16px;
+      padding: 24px !important;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px 0 var(--color-shadow);
+      margin: 10px 0 !important;
+      text-align: left;
+      transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card h3 {
+      margin-top: 0 !important;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--color-primary) !important;
+    }
+
+    /* Grids */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 0.45em !important;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 15px !important;
+    }
+    .badge-blue { background: rgba(194, 65, 12, 0.1); color: var(--color-primary); border: 1px solid rgba(194, 65, 12, 0.2); }
+    .badge-purple { background: rgba(217, 119, 6, 0.1); color: var(--color-secondary); border: 1px solid rgba(217, 119, 6, 0.2); }
+    .badge-green { background: rgba(21, 128, 61, 0.1); color: var(--color-accent); border: 1px solid rgba(21, 128, 61, 0.2); }
+    .badge-yellow { background: rgba(185, 28, 28, 0.1); color: var(--color-warning); border: 1px solid rgba(185, 28, 28, 0.2); }
+
+    .highlight-blue { color: var(--color-primary); font-weight: 600; }
+    .highlight-purple { color: var(--color-secondary); font-weight: 600; }
+    .highlight-green { color: var(--color-accent); font-weight: 600; }
+
+    code {
+      font-family: 'Courier New', Courier, monospace !important;
+      background: var(--color-code-bg) !important;
+      padding: 2px 6px !important;
+      border-radius: 4px;
+      color: var(--color-code-text) !important;
+      font-size: 0.8em !important;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    pre code {
+      display: block !important;
+      padding: 12px !important;
+      overflow-x: auto;
+      color: var(--color-pre-text) !important;
+      background: var(--color-pre-bg) !important;
+      border: 1px solid var(--color-pre-border);
+    }
+
+    ul, ol {
+      font-size: 0.75em !important;
+      line-height: 1.4 !important;
+      margin-left: 30px !important;
+      margin-bottom: 15px !important;
+    }
+
+    li {
+      margin-bottom: 6px !important;
+    }
+
+    .slide-subtitle {
+      font-size: 0.85em !important;
+      color: var(--color-text) !important;
+      opacity: 0.8;
+      margin-bottom: 20px !important;
+    }
+
+    .nav-box {
+      border: 1px dashed var(--color-card-border);
+      border-radius: 8px;
+      padding: 8px;
+      font-size: 0.45em !important;
+      background: rgba(0, 0, 0, 0.01);
+      max-width: 300px;
+      margin: 15px auto 0 auto !important;
+      color: var(--color-text);
+      opacity: 0.9;
+    }
+
+    /* Comparison Table Styling */
+    table {
+      font-size: 0.65em !important;
+      border-collapse: collapse;
+      width: 100%;
+      margin: 10px 0 !important;
+      border: 1px solid var(--color-card-border);
+    }
+    th, td {
+      border: 1px solid var(--color-card-border);
+      padding: 8px 12px !important;
+      text-align: left;
+      transition: border-color 0.4s ease;
+    }
+    th {
+      background: var(--color-pre-bg);
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+    td {
+      color: var(--color-text);
+    }
+
+    /* Syllabus Slide Styling */
+    .reveal .syllabus-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 20px !important;
+      width: 100% !important;
+      max-width: 1100px !important;
+      margin: 16px auto 0 auto !important;
+    }
+    .reveal .syllabus-card {
+      background: var(--color-card-bg) !important;
+      border: 1px solid var(--color-card-border) !important;
+      border-radius: 12px !important;
+      padding: 12px !important;
+      box-shadow: 0 4px 12px var(--color-shadow) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 6px !important;
+      position: relative !important;
+      overflow: hidden !important;
+      cursor: pointer !important;
+      text-decoration: none !important;
+      color: var(--color-text) !important;
+      text-align: left !important;
+      transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease !important;
+    }
+    .reveal .syllabus-card:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 8px 20px var(--color-shadow) !important;
+      border-color: var(--color-primary) !important;
+      background: rgba(255, 255, 255, 0.04) !important;
+    }
+    .reveal .syllabus-card::after {
+      content: '' !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 3px !important;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-secondary)) !important;
+      opacity: 0.85 !important;
+    }
+    .reveal .syllabus-card .card-header-row {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+    }
+    .reveal .syllabus-card .card-icon {
+      font-size: 1.1rem !important;
+      color: var(--color-secondary) !important;
+    }
+    .reveal .syllabus-card h3 {
+      font-family: var(--font-heading) !important;
+      font-weight: 700 !important;
+      font-size: 1.15rem !important;
+      margin: 0 !important;
+      color: var(--color-text) !important;
+      line-height: 1.2 !important;
+    }
+    .reveal .syllabus-card h3 span {
+      color: var(--color-primary) !important;
+      margin-right: 6px !important;
+    }
+    .reveal .syllabus-card .card-summary {
+      font-size: 0.8rem !important;
+      line-height: 1.4 !important;
+      margin: 0 !important;
+      opacity: 0.8 !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 2 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+    }
+    .reveal .syllabus-card .card-lab-tag {
+      font-size: 0.72rem !important;
+      font-weight: 600 !important;
+      color: var(--color-accent) !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 5px !important;
+      background: rgba(21, 128, 61, 0.06) !important;
+      padding: 3px 8px !important;
+      border-radius: 6px !important;
+      align-self: flex-start !important;
+    }
+    body.theme-dark .reveal .syllabus-card .card-lab-tag {
+      background: rgba(16, 185, 129, 0.1) !important;
+      color: var(--color-accent) !important;
+    }
+
+    /* Help Modal Overlay Styling */
+    .help-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .help-modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .help-modal-content {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-card-border);
+      border-radius: 20px;
+      padding: 30px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      position: relative;
+      text-align: left;
+    }
+    .help-close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      color: var(--color-text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      opacity: 0.7;
+    }
+    .help-close-btn:hover {
+      opacity: 1;
+      color: var(--color-primary);
+    }
+    .help-modal-content h2 {
+      font-family: var(--font-heading);
+      color: var(--color-primary);
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+    .help-instructions {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .help-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    .help-item i {
+      font-size: 1.3rem;
+      color: var(--color-secondary);
+      margin-top: 3px;
+    }
+    .help-item strong {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--color-text);
+      margin-bottom: 2px;
+    }
+    .help-item span {
+      font-size: 0.8rem;
+      color: var(--color-text);
+      opacity: 0.8;
+    }
+    
+    .help-toggle-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 80px;
+      z-index: 1000;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--color-card-border);
+      background: var(--color-card-bg);
+      color: var(--color-primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 15px var(--color-shadow);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    .help-toggle-btn:hover {
+      transform: scale(1.1);
+      background: var(--color-primary);
+      color: #ffffff;
+    }
+
+    /* Academy Home Button for Slide Deck */
+    .btn-deck-home {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--color-card-border);
+      background: var(--color-card-bg);
+      color: var(--color-primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 15px var(--color-shadow);
+      backdrop-filter: blur(10px);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn-deck-home:hover {
+      transform: scale(1.1);
+      background: var(--color-primary);
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Academy Home Button -->
+  <a href="./index.html" class="btn-deck-home" title="Back to Dashboard" aria-label="Back to Dashboard">
+    <i class="fa-solid fa-graduation-cap"></i>
+  </a>
+
+  <!-- Floating Theme Toggle Button -->
+  <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+
+  <!-- Floating Help Button -->
+  <button id="help-toggle" class="help-toggle-btn" aria-label="Toggle navigation guide">
+    <i class="fa-solid fa-question"></i>
+  </button>
+
+  <!-- Help Modal -->
+  <div id="help-modal" class="help-modal-overlay">
+    <div class="help-modal-content">
+      <button class="help-close-btn">&times;</button>
+      <h2>Academy Slide Navigation</h2>
+      <div class="help-instructions">
+        <div class="help-item">
+          <i class="fa-solid fa-arrows-left-right"></i>
+          <div>
+            <strong>Change Lessons</strong>
+            <span>Press Left/Right arrows to move between lessons.</span>
+          </div>
+        </div>
+        <div class="help-item">
+          <i class="fa-solid fa-arrows-up-down"></i>
+          <div>
+            <strong>Read Slides</strong>
+            <span>Press Up/Down arrows to read through the current lesson.</span>
+          </div>
+        </div>
+        <div class="help-item">
+          <i class="fa-solid fa-keyboard"></i>
+          <div>
+            <strong>Open Parent Notes</strong>
+            <span>Press the <strong>S</strong> key on your keyboard to open the Presenter script & quiz answers.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ================== COVER SLIDE (Syllabus Dashboard) ================== -->
+      <section style="height: 100%; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; padding-top: 10px;">
+        <header style="text-align: center; margin-bottom: 10px; width: 100%;">
+          <h1 style="font-size: 2.8rem !important; margin: 0 0 8px 0 !important; line-height: 1.1; font-family: var(--font-heading) !important; font-weight: 700 !important; letter-spacing: -0.03em !important; background: linear-gradient(135deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Football for Beginners</h1>
+          <p style="font-size: 1.05rem !important; opacity: 0.85; margin: 0 !important; line-height: 1.3;">A 10-lesson, parent-led introduction to the beautiful game, World Cup 2026, Les Bleus, tactical formations, and club culture.</p>
+        </header>
+
+        <!-- Compact Syllabus Grid of 10 Cards -->
+        <div class="syllabus-grid">
+          <!-- Lesson 1 -->
+          <a href="#/1" class="syllabus-card">
+            <div class="card-header-row">
+              <h3><span>1</span>The Beautiful Game</h3>
+              <i class="fa-solid fa-futbol card-icon"></i>
+            </div>
+            <p class="card-summary">Explore what football is, pitch lines/zones, the 4 positions, and basic match structures.</p>
+            <div class="card-lab-tag"><i class="fa-solid fa-flask"></i> Pitch Map Drawing</div>
+          </a>
+
+          <!-- Lesson 2 -->
+          <a href="#/2" class="syllabus-card">
+            <div class="card-header-row">
+              <h3><span>2</span>Rules You Must Know</h3>
+              <i class="fa-solid fa-scale-balanced card-icon"></i>
+            </div>
+            <p class="card-summary">Master the offside rule, fouls, set pieces, yellow/red bookings, VAR, and shootouts.</p>
+            <div class="card-lab-tag"><i class="fa-solid fa-flask"></i> Offside Decision Lab</div>
+          </a>
+
+          <!-- Lesson 3 -->
+          <a href="#/3" class="syllabus-card">
+            <div class="card-header-row">
+              <h3><span>3</span>World Cup Explained</h3>
+              <i class="fa-solid fa-trophy card-icon"></i>
+            </div>
+            <p class="card-summary">Study historic milestones, qualification rules, and the new 48-team 2026 expansion.</p>
+            <div class="card-lab-tag"><i class="fa-solid fa-flask"></i> Host Stadium Audit</div>
+          </a>
+
+          <!-- Lesson 4 -->
+          <a href="#/4" class="syllabus-card">
+            <div class="card-header-row">
+              <h3><span>4</span>Les Bleus — Your Team</h3>
+              <i class="fa-solid fa-flag card-icon"></i>
+            </div>
+            <p class="card-summary">Trace the history of French football from 1998, 2006 headbutt, to 2018/2022 heroics.</p>
+            <div class="card-lab-tag"><i class="fa-solid fa-flask"></i> Bleus Classic Review</div>
+          </a>
+
+          <!-- Lesson 5 -->
+          <a href="#/5" class="syllabus-card">
+            <div class="card-header-row">
+              <h3><span>5</span>Stars to Watch</h3>
+              <i class="fa-solid fa-star card-icon"></i>
+            </div>
+            <p class="card-summary">Study Kylian Mbappé's trajectory, key French youngsters, and active global superstars.</p>
+            <div class="card-lab-tag"><i class="fa-solid fa-flask"></i> Player Profile Cards</div>
+          </a>
+
+          <!-- Lesson 6 -->
+          <a href="#/6" class="syllabus-card">
+            <div class="card-header-row">
+              <h3><span>6</span>Know the Competition</h3>
+              <i class="fa-solid fa-globe card-icon"></i>
+            </div>
+            <p class="card-summary">Contrast Brazil, Argentina, Spain, England, Germany, and key dark horses.</p>
+            <div class="card-lab-tag"><i class="fa-solid fa-flask"></i> Contender Rank Model</div>
+          </a>
+
+          <!-- Lesson 7 -->
+          <a href="#/7" class="syllabus-card">
+            <div class="card-header-row">
+              <h3><span>7</span>Reading a Match</h3>
+              <i class="fa-solid fa-chalkboard card-icon"></i>
+            </div>
+            <p class="card-summary">Deconstruct formations (4-3-3, 4-4-2), high press tactics, parking the bus, and xG statistics.</p>
+            <div class="card-lab-tag"><i class="fa-solid fa-flask"></i> Tactic Board Analysis</div>
+          </a>
+
+          <!-- Lesson 8 -->
+          <a href="#/8" class="syllabus-card">
+            <div class="card-header-row">
+              <h3><span>8</span>Clubs and Leagues</h3>
+              <i class="fa-solid fa-shield-halved card-icon"></i>
+            </div>
+            <p class="card-summary">Contrast local league structures, Champions League, promotion systems, and club nicknames.</p>
+            <div class="card-lab-tag"><i class="fa-solid fa-flask"></i> Relegation Stakes Lab</div>
+          </a>
+
+          <!-- Lesson 9 -->
+          <a href="#/9" class="syllabus-card">
+            <div class="card-header-row">
+              <h3><span>9</span>Transfers & Money</h3>
+              <i class="fa-solid fa-money-bill-transfer card-icon"></i>
+            </div>
+            <p class="card-summary">Deconstruct transfer windows, agent negotiations, records, club revenue, and FFP rules.</p>
+            <div class="card-lab-tag"><i class="fa-solid fa-flask"></i> Negotiate R9 Contract</div>
+          </a>
+
+          <!-- Lesson 10 -->
+          <a href="#/10" class="syllabus-card">
+            <div class="card-header-row">
+              <h3><span>10</span>Legends & Fan Culture</h3>
+              <i class="fa-solid fa-crown card-icon"></i>
+            </div>
+            <p class="card-summary">Study historical greats (Pelé, Maradona, Cruyff), local derbies, ultras, and Ballon d'Or.</p>
+            <div class="card-lab-tag"><i class="fa-solid fa-flask"></i> Derby Rivalry Report</div>
+          </a>
+        </div>
+
+        <aside class="notes">
+          <h3>Welcome, Teacher!</h3>
+          <p>This is your lesson presentation deck. Ensure your laptop is facing you and your secondary screen (cast/projected) is facing the kids.</p>
+          <p><strong>Step 1:</strong> Press <strong>S</strong> right now to keep this notes window open on your laptop.</p>
+          <p><strong>Step 2:</strong> Click on any lesson card to jump straight to that lesson, or use Arrow keys to navigate.</p>
+        </aside>
+      </section>
+
+      <!-- ================== LESSON 1: THE BEAUTIFUL GAME ================== -->
+      <section>
+        <!-- Slide 1.1: Lesson Cover -->
+        <section>
+          <span class="badge badge-blue">Lesson 1</span>
+          <h2>The Beautiful Game</h2>
+          <p class="slide-subtitle">What is Football & System Basics</p>
+          <div class="card">
+            <h3><i class="fa-solid fa-futbol icon-accent"></i> Key Objectives</h3>
+            <ul>
+              <li>Understand why football is the world's most popular sport.</li>
+              <li>Learn the layout and key markings of a standard pitch.</li>
+              <li>Identify the four core player positions and match structures.</li>
+            </ul>
+          </div>
+          <p style="font-size: 0.5em; color: var(--color-text); opacity: 0.6;">Press <i class="fa-solid fa-arrow-down"></i> to enter the lesson.</p>
+          
+          <aside class="notes">
+            <h3>Lesson 1: Introduction</h3>
+            <p>Introduce the subject. Explain that football requires almost no gear (just a ball and feet) which is why it spread globally.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 1.2: The Pitch -->
+        <section>
+          <h2>The Pitch Geometry</h2>
+          <p class="slide-subtitle">Core boundaries of the rectangle field</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-vector-square icon-accent"></i> Key Areas</h3>
+              <p style="font-size: 0.65em; margin: 0; line-height: 1.4;">
+                • **Centre Circle:** Match kick-offs and post-goal restarts occur here.<br>
+                • **Penalty Box:** Defending fouls here result in penalty kicks. Goalkeepers can use hands here.<br>
+                • **Six-Yard Box:** Goal kicks are taken from here.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-crop-simple icon-accent"></i> Dimensions</h3>
+              <p style="font-size: 0.65em; margin: 0; line-height: 1.4;">
+                • Standard size is **105m long by 68m wide**.<br>
+                • Goal is **7.32m wide** and **2.44m high**.<br>
+                • Crossbar is the top horizontal beam; posts are the side vertical beams.
+              </p>
+            </div>
+          </div>
+          
+          <aside class="notes">
+            <h3>Teacher prompt</h3>
+            <p>Socratic: "Why is the penalty box so critical? What does it give the goalkeeper?" (Hand privileges, and penalty kick consequence for defensive fouls).</p>
+          </aside>
+        </section>
+
+        <!-- Slide 1.3: Four Positions -->
+        <section>
+          <h2>The Four Core Positions</h2>
+          <div class="grid-2">
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-primary);"><i class="fa-solid fa-hands"></i> Goalkeeper (GK)</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">Only player allowed to use hands, inside their box. Wears different jersey colors to stand out from referees and players.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-secondary);"><i class="fa-solid fa-shield-halved"></i> Defenders (DF)</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">Stops opposing attacks. Centre-backs block the middle; full-backs defend the sides and start counters.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-accent);"><i class="fa-solid fa-gears"></i> Midfielders (MF)</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">The engine room. Defensive "six" blocks threats; central "eight" connects lines; creative "ten" makes plays.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-warning);"><i class="fa-solid fa-forward"></i> Forwards (FW)</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">Striker "nine" leads the charge; wingers supply crosses from out wide. Kylian Mbappé attacks from the wide-left forward spot.</p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Ensure kids understand numbers: 6 is defensive mid, 8 is box-to-box, 10 is playmaker, 9 is main striker.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 1.4: Match Mechanics -->
+        <section>
+          <h2>How Match Time Works</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-clock icon-accent"></i> Time Blocks</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **90 minutes** total, split into two 45-minute halves.<br>
+                • **Injury Time (Stoppage Time):** Added by the referee to make up for injuries/subs (2-10 min).<br>
+                • **Knock-out Extra Time:** 2 periods of 15 minutes if tied in knockout rounds.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-futbol icon-accent"></i> Scoring</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • Goal scored when the **entire ball** crosses the **entire goal line**.<br>
+                • Checked instantly by goal-line sensors.<br>
+                • Tied knockout games after extra time are decided by a penalty shootout.
+              </p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Tell the story of how a ball can bounce back out but still count if it fully crossed the line.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 1.5: Lesson 1 Review -->
+        <section>
+          <h2>Lesson 1 Review</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-comments icon-accent"></i> Socratic Scenarios & Lab</h3>
+            <ol style="font-size: 0.6em !important;">
+              <li>A goalkeeper runs out of his penalty box to block a shot, and punches the ball away. What is the referee's call?</li>
+              <li>A ball hit the crossbar, bounced straight down onto the white line, and spun back into the goalie's hands. Does it count as a goal?</li>
+              <li>**Lab:** Sketch a pitch map with labels for the centre circle, penalty box, six-yard box, posts, and crossbar.</li>
+            </ol>
+          </div>
+          <aside class="notes">
+            <p>Answers: 1) Handballs outside the box are illegal for GK, resulting in a direct free kick (and likely a card). 2) No goal—it must cross the line completely.</p>
+          </aside>
+        </section>
+      </section>
+
+      <!-- ================== LESSON 2: RULES YOU MUST KNOW ================== -->
+      <section>
+        <!-- Slide 2.1: Cover -->
+        <section>
+          <span class="badge badge-purple">Lesson 2</span>
+          <h2>Rules You Must Know</h2>
+          <p class="slide-subtitle">Understanding Offsides, Fouls, Cards, and VAR</p>
+          <div class="card">
+            <h3><i class="fa-solid fa-scale-balanced icon-accent"></i> Key Objectives</h3>
+            <ul>
+              <li>Deconstruct the offside rule and VAR review procedures.</li>
+              <li>Differentiate between direct and indirect free kick fouls.</li>
+              <li>Understand the penalty shootout mechanics and bookings.</li>
+            </ul>
+          </div>
+          <aside class="notes">
+            <p>This is the most important rules lesson. Focus heavily on Offside as it is the most active debate in matches.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 2.2: The Offside Rule -->
+        <section>
+          <h2>The Offside Rule Demystified</h2>
+          <p class="slide-subtitle">Second-to-last defender boundary</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-circle-exclamation icon-accent"></i> 1. Offside Position</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                A player is in an offside position if they are in the **opponent's half** AND closer to the goal line than **both the ball and the second-to-last defender**.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-person-running icon-accent"></i> 2. Active Play Offense</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Being offside is only penalized if the player **actively participates** at the exact moment the ball is kicked forward by a teammate.
+              </p>
+            </div>
+          </div>
+          <p style="font-size: 0.65em; margin-top: 15px; text-align: left;">**VAR Freeze Line:** Checked to the millimeter. If any scoring body part (shoulder, knee, toe) is ahead of the defender at the kick moment, they are offside.</p>
+          <aside class="notes">
+            <p>Example: Mbappé stands behind the last defender. Midfielder kicks a pass. When kicked, Mbappé was past the line. Offside called.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 2.3: Fouls & Free Kicks -->
+        <section>
+          <h2>Fouls and Restarts</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-triangle-exclamation icon-accent"></i> Common Fouls</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • Tripping or pushing opponents.<br>
+                • Sliding tackles hitting the player before the ball.<br>
+                • Deliberately touching the ball with hand/arm (Handball).
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-arrow-rotate-left icon-accent"></i> Restarts</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **Direct Free Kick:** Can be shot directly into the net.<br>
+                • **Indirect Free Kick:** Must touch another player before crossing the goal line.<br>
+                • **Penalty Kick:** Awarded if a defender commits a foul inside their penalty box.
+              </p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Explain that free kicks let the attacking team take control back. A wall of defenders must stand 9.15m away.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 2.4: Set Pieces -->
+        <section>
+          <h2>Corner, Throw, and Goal Kicks</h2>
+          <div class="grid-3">
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-primary);"><i class="fa-solid fa-flag"></i> Corner Kick</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">If the defending team kicks the ball out over their own goal line, the attackers restart from the corner arc.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-secondary);"><i class="fa-solid fa-arrows-up-to-line"></i> Throw-In</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">If the ball goes out the long sides, play restarts by throwing with both hands from behind the head, feet on the ground.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-accent);"><i class="fa-solid fa-futbol"></i> Goal Kick</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">If attackers send the ball out over the opponent's goal line, the defenders restart from the six-yard box.</p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Crucial to emphasize that throw-in rules are strict: lifting a foot is a foul throw and switches possession.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 2.5: Yellow & Red Cards -->
+        <section>
+          <h2>Bookings & VAR Reviews</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-square icon-accent"></i> Bookings</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **Yellow Card:** Warning for serious fouls or time-wasting. Two yellows in a match = Red card send-off.<br>
+                • **Red Card:** Immediate ejection. Team plays short a player (10 men). Player banned next match.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-tv icon-accent"></i> VAR Scope</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Reviews only four critical scenarios:<br>
+                1. Goals and build-up offenses.<br>
+                2. Penalty awards.<br>
+                3. Direct Red Card incidents.<br>
+                4. Mistaken player identity.
+              </p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Tell the story of how VAR reviews slow down the game but fix clear and obvious errors.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 2.6: Penalties & Shootouts -->
+        <section>
+          <h2>Penalty Shootout Rules</h2>
+          <p class="slide-subtitle">Settling tied knockout matches</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-bullseye icon-accent"></i> Penalty Kick</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Shot from the penalty spot (11m). Only GK and kicker allowed inside the area. GK must keep feet on the goal line until kicked. Statistically scored ~75% of the time.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-list-ol icon-accent"></i> Shootout Structure</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • 5 players from each team alternate shots.<br>
+                • If tied after 5 rounds, shootout enters sudden death.<br>
+                • France has historic penalty woes (lost 2022 World Cup Final to Argentina on penalties).
+              </p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Ask: "How did Argentina beat France in 2022?" (Mbappé scored a hat-trick in the game, but Argentina won the shootout after France missed kicks).</p>
+          </aside>
+        </section>
+
+        <!-- Slide 2.7: Lesson 2 Review -->
+        <section>
+          <h2>Lesson 2 Review</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-circle-question icon-accent"></i> Socratic Scenarios</h3>
+            <ol style="font-size: 0.6em !important;">
+              <li>A player passes the ball forward to his striker. The striker was onside when the ball was passed, but ran past the last defender before catching the ball. Is he offside?</li>
+              <li>A defender slides in to tackle Mbappé inside the box, completely missing the ball and tripping Mbappé. What is the referee's decision?</li>
+              <li>True or False: If a player gets a yellow card in the first half and another in the second half, they can stay on the field.</li>
+              <li>**Lab:** Analyze a freeze frame (imaginary scenario) where a player's shoulder is past the defender but their feet are onside. Are they offside?</li>
+            </ol>
+          </div>
+          <aside class="notes">
+            <p>Answers: 1) Onside—offside is judged at the moment of the pass. 2) Penalty kick for France. 3) False—2 yellows = red card ejection. 4) Offside—shoulders can legally score.</p>
+          </aside>
+        </section>
+      </section>
+
+      <!-- ================== LESSON 3: THE WORLD CUP EXPLAINED ================== -->
+      <section>
+        <!-- Slide 3.1: Cover -->
+        <section>
+          <span class="badge badge-green">Lesson 3</span>
+          <h2>The World Cup</h2>
+          <p class="slide-subtitle">History, Qualifiers, and the 2026 Expansion</p>
+          <div class="card">
+            <h3><i class="fa-solid fa-trophy icon-accent"></i> Key Objectives</h3>
+            <ul>
+              <li>Detail the history of the FIFA World Cup since 1930.</li>
+              <li>Explain continental qualification systems.</li>
+              <li>Understand the expanded 48-team format for 2026.</li>
+            </ul>
+          </div>
+          <aside class="notes">
+            <p>Discuss the scale of the World Cup: 1.5 billion people watched the 2022 final.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 3.2: World Cup History -->
+        <section>
+          <h2>Historic Milestones</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Host</th>
+                <th>Significant Match / Milestone</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1930</strong></td>
+                <td>Uruguay</td>
+                <td>First World Cup. Uruguay hosted and won against Argentina. Only 13 teams.</td>
+              </tr>
+              <tr>
+                <td><strong>1950</strong></td>
+                <td>Brazil</td>
+                <td>"Maracanazo". Uruguay stunned hosts Brazil 2-1 in front of 200,000 in Rio.</td>
+              </tr>
+              <tr>
+                <td><strong>1970</strong></td>
+                <td>Mexico</td>
+                <td>Pelé's final tournament. Brazil played beautiful football, winning their 3rd title.</td>
+              </tr>
+              <tr>
+                <td><strong>2014</strong></td>
+                <td>Brazil</td>
+                <td>Germany destroyed hosts Brazil 7-1 in the semi-finals, shocking the world.</td>
+              </tr>
+              <tr>
+                <td><strong>2022</strong></td>
+                <td>Qatar</td>
+                <td>Messi's Argentina beat France on penalties in the greatest final ever.</td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="notes">
+            <p>Use the Brazil 7-1 game or the Maracanazo upset to show that football has dramatic, historical impacts on host nations.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 3.3: Qualification & Zones -->
+        <section>
+          <h2>Continental Qualifications</h2>
+          <p class="slide-subtitle">211 member countries competing to enter the tournament</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-earth-americas icon-accent"></i> How Zones Work</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Every region runs groups or leagues over 2 years:<br>
+                • **Europe (UEFA):** Groups, top teams qualify.<br>
+                • **South America (CONMEBOL):** Single league, top 6 qualify directly.<br>
+                • **Italy Shock:** Italy failed to qualify for both 2018 and 2022!
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-list-ol icon-accent"></i> 2026 Expansion</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **48 teams** compete (up from 32).<br>
+                • **Group Stage:** 12 groups of 4. Top 2 plus 8 best 3rd-place teams advance.<br>
+                • **Knockouts:** Starts at Round of 32 (adds one extra knockout round).
+              </p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Ask: "Why did FIFA expand to 48 teams?" (Allows more developing nations to play, increases global interest and revenue).</p>
+          </aside>
+        </section>
+
+        <!-- Slide 3.4: Host Cities & Records -->
+        <section>
+          <h2>2026 Co-Hosts & Records</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-map-location-dot icon-accent"></i> Triple Hosts</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • Co-hosted by **United States, Canada, and Mexico**.<br>
+                • First three-nation host setup.<br>
+                • Final will be at **MetLife Stadium** in New Jersey (82,500 seats).<br>
+                • Mexico is the first 3-time host (1970, 1986, 2026).
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-star icon-accent"></i> Key Records</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **Most Titles:** Brazil with 5 wins.<br>
+                • **Most Single-Cup Goals:** Just Fontaine (France)—13 goals in 1958.<br>
+                • **Most Overall Goals:** Miroslav Klose (Germany)—16 goals.<br>
+                • **Fastest Goal:** 11 seconds (Hakan Şükür, Turkey, 2002).
+              </p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Tell the students about Just Fontaine's 13-goal record, which has survived for 70 years because modern defenses are much tighter.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 3.5: Lesson 3 Review -->
+        <section>
+          <h2>Lesson 3 Review</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-circle-question icon-accent"></i> Socratic Scenarios</h3>
+            <ol style="font-size: 0.6em !important;">
+              <li>Which nation has won the most World Cup titles?</li>
+              <li>What is the expansion format for the 2026 World Cup? How many teams are entering?</li>
+              <li>Which three countries are hosting the 2026 World Cup? Where is the final being held?</li>
+              <li>**Lab:** Research the 16 host cities of the 2026 World Cup. Identify which cities are hosting matches in Canada and Mexico.</li>
+            </ol>
+          </div>
+          <aside class="notes">
+            <p>Answers: 1) Brazil (5). 2) 48 teams, 12 groups of 4, Round of 32 knockouts. 3) USA, Canada, Mexico. MetLife Stadium, NJ. 4) Canada: Vancouver, Toronto. Mexico: CDMX, Monterrey, Guadalajara.</p>
+          </aside>
+        </section>
+      </section>
+
+      <!-- ================== LESSON 4: LES BLEUS — YOUR TEAM ================== -->
+      <section>
+        <!-- Slide 4.1: Cover -->
+        <section>
+          <span class="badge badge-blue">Lesson 4</span>
+          <h2>Les Bleus — Your Team</h2>
+          <p class="slide-subtitle">History, Zidane's Era, and Deschamps' Tactics</p>
+          <div class="card">
+            <h3><i class="fa-solid fa-shirt icon-accent"></i> Key Objectives</h3>
+            <ul>
+              <li>Trace the milestones of the France National Team (Les Bleus).</li>
+              <li>Understand the cultural impact of the 1998 "Black, Blanc, Beur" win.</li>
+              <li>Analyze France's current 4-3-3 counter-attacking play style.</li>
+            </ul>
+          </div>
+          <aside class="notes">
+            <p>Explain that since the user is supporting France, this lesson gives them the complete history of their team.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 4.2: France World Cup History -->
+        <section>
+          <h2>The French Legacy</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-trophy icon-accent"></i> 1998 Champions</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • France hosted and won their first World Cup, beating Brazil 3-0 in the final.<br>
+                • **Zidane** scored two headers; **Thierry Henry** starred.<br>
+                • Celebrated as **"Black, Blanc, Beur"** (Black, White, Arab)—a symbol of multicultural unity.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-rotate icon-accent"></i> Peaks & Valleys</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **Euro 2000:** Won back-to-back.<br>
+                • **2002:** Humiliated—out in group stage without scoring.<br>
+                • **2006 Final:** Zidane's Panenka penalty, followed by the infamous headbutt red card on Materazzi. Lost to Italy.
+              </p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Zidane's headbutt is one of the most famous red cards in history. Discuss the drama of his last professional match.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 4.3: Modern Era & Style -->
+        <section>
+          <h2>2018 Victory & Current Style</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-star icon-accent"></i> 2018 & 2022 Qatar</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **2018 Champion:** Beating Croatia 4-2 in Russia. 19yo Mbappé scored in the final.<br>
+                • **2022 Final:** Mbappé scored a historic hat-trick to equalize 3-3, but lost to Argentina on penalties.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-shield icon-accent"></i> Tactical Profile</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • Managed by **Didier Deschamps** (1998 captain).<br>
+                • Play style: Defensive solidity combined with blistering **counter-attacks**.<br>
+                • Target: Absorb pressure, win the ball, and release Mbappé into open space.
+              </p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Socratic: "Why does France sit deep instead of attacking all the time?" (Saves energy, and draws opponents forward, leaving massive space behind them for Mbappé to sprint into).</p>
+          </aside>
+        </section>
+
+        <!-- Slide 4.4: Lesson 4 Review -->
+        <section>
+          <h2>Lesson 4 Review</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-circle-question icon-accent"></i> Socratic Scenarios</h3>
+            <ol style="font-size: 0.6em !important;">
+              <li>What is the nickname of the French National Team, and why? Where do they play home games?</li>
+              <li>What cultural term was used to describe the diverse 1998 French World Cup-winning squad?</li>
+              <li>Explain what happened in the 2006 World Cup Final involving Zinedine Zidane.</li>
+              <li>**Lab:** Compare France's 1998 starting lineup with their 2018 starting lineup. Which squad had more creative depth in midfield?</li>
+            </ol>
+          </div>
+          <aside class="notes">
+            <p>Answers: 1) Les Bleus, due to blue jerseys. Stade de France. 2) "Black, Blanc, Beur". 3) Zidane scored a Panenka, then headbutted Materazzi and got a red card. Italy won on penalties. 4) 1998 had Zidane/Deschamps; 2018 had Pogba/Kanté. Both highly balanced.</p>
+          </aside>
+        </section>
+      </section>
+
+      <!-- ================== LESSON 5: STARS TO WATCH ================== -->
+      <section>
+        <!-- Slide 5.1: Cover -->
+        <section>
+          <span class="badge badge-purple">Lesson 5</span>
+          <h2>Stars to Watch</h2>
+          <p class="slide-subtitle">Kylian Mbappé Deep Dive and Global Superstars</p>
+          <div class="card">
+            <h3><i class="fa-solid fa-star icon-accent"></i> Key Objectives</h3>
+            <ul>
+              <li>Analyze Kylian Mbappé's play style and career milestones.</li>
+              <li>Identify key French squad members in midfield and defense.</li>
+              <li>Review top global opponents like Vinicius Jr and Bellingham.</li>
+            </ul>
+          </div>
+          <aside class="notes">
+            <p>This slide introduces the players the students will watch on television. Real Madrid is the focal club here.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 5.2: Kylian Mbappé -->
+        <section>
+          <h2>Kylian Mbappé</h2>
+          <p class="slide-subtitle">The face of French football</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-bolt icon-accent"></i> Profile</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • Born in Bondy (Paris suburb) in 1998.<br>
+                • Made pro debut at 16, won 2018 World Cup at 19.<br>
+                • Transferred to **Real Madrid** in 2024.<br>
+                • Peak age (27) at the 2026 World Cup.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-gauge-high icon-accent"></i> Attributes</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • Blistering speed (one of the fastest sprint speeds in football).<br>
+                • Ice-cold finishing from the left wing.<br>
+                • Big-game clutch player: holds the record for most World Cup final goals (4 goals across 2018 and 2022).
+              </p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Tell the students to watch Mbappé's speed: when he pushes the ball past a defender, he runs around them with ease.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 5.3: France Midfield & Defense -->
+        <section>
+          <h2>France's Core Backbone</h2>
+          <div class="grid-3">
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-primary);"><i class="fa-solid fa-shield-halved"></i> William Saliba</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">Arsenal centre-back. One of the best defenders in the world. Known for extreme composure under pressure.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-secondary);"><i class="fa-solid fa-gears"></i> Aurélien Tchouaméni</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">Real Madrid defensive midfielder. Shields the defense and intercepts balls before starting counters.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-accent);"><i class="fa-solid fa-bolt"></i> Eduardo Camavinga</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">Real Madrid midfielder. Versatile, energetic, left-footed creator who covers massive ground.</p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>These three players form the defensive spine of France. If they play well, France rarely concedes.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 5.4: Global Opponents -->
+        <section>
+          <h2>Global Superstars to Watch</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Country</th>
+                <th>Club</th>
+                <th>Attributes / Why they are dangerous</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Vinicius Jr</strong></td>
+                <td>Brazil</td>
+                <td>Real Madrid</td>
+                <td>Explosive pace, incredible dribbling, cuts in from left.</td>
+              </tr>
+              <tr>
+                <td><strong>Jude Bellingham</strong></td>
+                <td>England</td>
+                <td>Real Madrid</td>
+                <td>Box-to-box powerhouse, highly physical, scores late goals.</td>
+              </tr>
+              <tr>
+                <td><strong>Lamine Yamal</strong></td>
+                <td>Spain</td>
+                <td>Barcelona</td>
+                <td>18yo prodigy, left-footed winger, creative genius.</td>
+              </tr>
+              <tr>
+                <td><strong>Rodri</strong></td>
+                <td>Spain</td>
+                <td>Manchester City</td>
+                <td>Ballon d'Or 2024 winner. Controls the tempo of the match.</td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="notes">
+            <p>Note: Erling Haaland is a superstar but Norway didn't qualify, so he won't be on the pitch.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 5.5: Lesson 5 Review -->
+        <section>
+          <h2>Lesson 5 Review</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-circle-question icon-accent"></i> Socratic Scenarios</h3>
+            <ol style="font-size: 0.6em !important;">
+              <li>Why is Kylian Mbappé considered a nightmare for full-backs? Mention his primary attributes.</li>
+              <li>Which club do Mbappé, Tchouaméni, Camavinga, Vinicius Jr, and Bellingham all play for?</li>
+              <li>How old is Lamine Yamal at this World Cup? What makes his career trajectory so unique?</li>
+              <li>**Lab:** Create a "Player Profile Card" for Vinicius Jr or Jude Bellingham, outlining their primary position, club, and key skill.</li>
+            </ol>
+          </div>
+          <aside class="notes">
+            <p>Answers: 1) His sprint speed, left-wing cuts, and cold finishing. 2) Real Madrid. 3) 18 years old. Youngest Euro final player/winner at 16. 4) Student sketches profile.</p>
+          </aside>
+        </section>
+      </section>
+
+      <!-- ================== LESSON 6: KNOW THE COMPETITION ================== -->
+      <section>
+        <!-- Slide 6.1: Cover -->
+        <section>
+          <span class="badge badge-green">Lesson 6</span>
+          <h2>Know the Competition</h2>
+          <p class="slide-subtitle">Brazil, Argentina, Spain, England, Germany, and Dark Horses</p>
+          <div class="card">
+            <h3><i class="fa-solid fa-globe icon-accent"></i> Key Objectives</h3>
+            <ul>
+              <li>Identify the historic strengths and playstyles of top national teams.</li>
+              <li>Explain the England trophy drought and the Messi legacy.</li>
+              <li>Spot potential dark horses like Morocco, Japan, and the USA.</li>
+            </ul>
+          </div>
+          <aside class="notes">
+            <p>This lesson maps out the global map of contenders France must defeat to win the trophy.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 6.2: South American Rivals -->
+        <section>
+          <h2>South American Contenders</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-futbol icon-accent"></i> Brazil (Canarinha)</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **Wins:** 5 World Cups (most ever).<br>
+                • **Style:** *Joga Bonito* (Play Beautifully)—flair, dribbling, attacking joy.<br>
+                • **Threat:** Vinicius Jr, Rodrygo.<br>
+                • **Weakness:** Defensive lapses and shootout anxiety.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-trophy icon-accent"></i> Argentina (Albiceleste)</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **Wins:** 3 World Cups (1978, 1986, 2022).<br>
+                • **Style:** High intensity, combativeness, creative number tens.<br>
+                • **Messi Factor:** 38yo Lionel Messi is the legend. Julian Álvarez leads the new striker line.
+              </p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Socratic: "Why is Brazil vs Argentina such an intense rivalry?" (Two football giants sharing the same continent, constantly fighting for dominance).</p>
+          </aside>
+        </section>
+
+        <!-- Slide 6.3: European Powerhouses -->
+        <section>
+          <h2>European Contenders</h2>
+          <div class="grid-3">
+            <div class="card" style="padding: 12px !important;">
+              <h4 style="margin: 0; font-size: 0.8em; color: var(--color-primary);"><i class="fa-solid fa-circle"></i> Spain (La Roja)</h4>
+              <p style="font-size: 0.5em; margin-top: 5px; line-height: 1.3;">Euro 2024 champions. Patient passing (*tiki-taka*) mixed with explosive young wingers (Lamine Yamal, Nico Williams).</p>
+            </div>
+            <div class="card" style="padding: 12px !important;">
+              <h4 style="margin: 0; font-size: 0.8em; color: var(--color-secondary);"><i class="fa-solid fa-shield-halved"></i> England (Three Lions)</h4>
+              <p style="font-size: 0.5em; margin-top: 5px; line-height: 1.3;">Invented the game, but only 1 win (1966). Constant pressure ("Football's coming home"). Led by Bellingham, Kane, Saka.</p>
+            </div>
+            <div class="card" style="padding: 12px !important;">
+              <h4 style="margin: 0; font-size: 0.8em; color: var(--color-accent);"><i class="fa-solid fa-award"></i> Germany & Portugal</h4>
+              <p style="font-size: 0.5em; margin-top: 5px; line-height: 1.3;">Germany: highly organized, led by Musiala/Wirtz. Portugal: stacked with talent; the 41yo Ronaldo question.</p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Mention that Spain is the most dangerous tactical threat right now since they won Euro 2024.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 6.4: Dark Horses & Upsets -->
+        <section>
+          <h2>Dark Horses & Upset Kings</h2>
+          <div class="grid-3">
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-primary);"><i class="fa-solid fa-star"></i> Morocco</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">First African semi-finalist in 2022. Defensive block and massive fans.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-secondary);"><i class="fa-solid fa-compass"></i> Japan</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">Tactical discipline. Beat Germany and Spain in 2022 on the counter.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-accent);"><i class="fa-solid fa-house-user"></i> USA</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">Co-hosts. Home field advantage combined with a fast, athletic squad.</p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Remind the class: Saudi Arabia beat Argentina in their 2022 opening match—upsets happen constantly.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 6.5: Lesson 6 Review -->
+        <section>
+          <h2>Lesson 6 Review</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-circle-question icon-accent"></i> Socratic Scenarios</h3>
+            <ol style="font-size: 0.6em !important;">
+              <li>What is the nickname of the Brazilian national team, and what style of play are they famous for?</li>
+              <li>Why is there constant "national anguish" around the England national team? When did they last win?</li>
+              <li>What is "tiki-taka" passing, and which team is famous for it?</li>
+              <li>**Lab:** Create a "Contender Tier List" ranking Brazil, Argentina, France, Spain, England, and Germany from strongest to weakest.</li>
+            </ol>
+          </div>
+          <aside class="notes">
+            <p>Answers: 1) Seleção. Joga Bonito (flair/attacking). 2) Invented the game but only won once (1966). 3) Patient, short passing; Spain. 4) Students group discussion.</p>
+          </aside>
+        </section>
+      </section>
+
+      <!-- ================== LESSON 7: READING A MATCH ================== -->
+      <section>
+        <!-- Slide 7.1: Cover -->
+        <section>
+          <span class="badge badge-blue">Lesson 7</span>
+          <h2>Reading a Match</h2>
+          <p class="slide-subtitle">Formations, Tactical Concepts, and expected Goals (xG)</p>
+          <div class="card">
+            <h3><i class="fa-solid fa-chalkboard icon-accent"></i> Key Objectives</h3>
+            <ul>
+              <li>Identify standard tactical shapes (4-3-3, 4-4-2, 3-5-2).</li>
+              <li>Understand pressing traps, high defensive lines, and deep blocks.</li>
+              <li>Explain expected Goals (xG) and PPDA statistics.</li>
+            </ul>
+          </div>
+          <aside class="notes">
+            <p>Teach the kids how to analyze the TV screen tactically instead of just chasing the ball with their eyes.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 7.2: Formations -->
+        <section>
+          <h2>Common Match Shapes</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-diagram-projector icon-accent"></i> Back 4 Formations</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **4-3-3:** France shape. Width via wide forwards. High attacking numbers.<br>
+                • **4-4-2:** Classic English shape. Two banks of four, two strikers. Solid but congested in midfield.<br>
+                • **4-2-3-1:** Standard modern shape. Two deep midfielders protect the back, three creators support one striker.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-shield icon-accent"></i> Back 3 Formations</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **3-5-2:** Three central defenders, two wing-backs covering the whole flank, three midfielders, two strikers.<br>
+                • **Transition:** Formations are flexible. A 4-3-3 in attack often shifts to a 4-5-1 when defending.
+              </p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Explain that wing-backs are hybrid defender-midfielders who must run the entire length of the field.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 7.3: Tactical Concepts -->
+        <section>
+          <h2>Core Tactical Terms</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-arrows-down-to-people icon-accent"></i> Defending Blocks</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **High Press:** Attackers aggressively tackle defenders near the opponent's goal to force errors.<br>
+                • **Parking the Bus:** Deep block defending, packing 10 men in the box. No spaces allowed.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-arrows-up-to-line icon-accent"></i> Lines & Counters</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **High Line:** Defenders push to the halfway circle, catching strikers offside. Risky if space is exploited.<br>
+                • **Counter-Attack:** Defending deep then launching fast long balls into space for forwards.
+              </p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Socratic: "What happens if a high press team gets tired?" (Defenders get isolated, and opponents pass right through them).</p>
+          </aside>
+        </section>
+
+        <!-- Slide 7.4: xG expected Goals -->
+        <section>
+          <h2>Decoded: expected Goals (xG)</h2>
+          <p class="slide-subtitle">Measuring the mathematical probability of a shot</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-chart-bar icon-accent"></i> What is xG?</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • Rating from **0.00 to 1.00** representing the chance of scoring.<br>
+                • Calculated from historical shot data (distance, angle, defenders, foot/head).<br>
+                • **0.70 xG:** High chance (e.g. penalty kick). Expect to score 7 out of 10 times.<br>
+                • **0.03 xG:** Speculative 30m shot. Expect to score 3 out of 100 times.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-calculator icon-accent"></i> Other Stats</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **xG Underperformance:** Creating good chances but failing to finish them.<br>
+                • **PPDA (Passes Allowed):** Measures press intensity. Lower number = more aggressive press.<br>
+                • **Parking the bus:** Deep defensive shield.
+              </p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Explain that xG helps commentators analyze matches objectively. A team might lose 1-0 but have an xG of 2.5 vs the opponent's 0.2.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 7.5: Lesson 7 Review -->
+        <section>
+          <h2>Lesson 7 Review</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-circle-question icon-accent"></i> Socratic Scenarios</h3>
+            <ol style="font-size: 0.6em !important;">
+              <li>Explain what a 4-3-3 formation looks like. How many midfielders are on the pitch?</li>
+              <li>A team has a low possession percentage (30%) but wins the game 3-0. What tactics did they likely use?</li>
+              <li>Striker shoots from the halfway line. What would the expected Goals (xG) rating of this shot look like, and why?</li>
+              <li>**Lab:** Watch a match highlight clip. Identify the defensive shape of both teams and calculate their approximate formation.</li>
+            </ol>
+          </div>
+          <aside class="notes">
+            <p>Answers: 1) 4 defenders, 3 midfielders, 3 forwards. 3 midfielders. 2) Counter-attacking deep block ("parking the bus"). 3) Extremely low (e.g., 0.01 xG) because of the distance. 4) Class exercises.</p>
+          </aside>
+        </section>
+      </section>
+
+      <!-- ================== LESSON 8: CLUBS AND LEAGUES ================== -->
+      <section>
+        <!-- Slide 8.1: Cover -->
+        <section>
+          <span class="badge badge-purple">Lesson 8</span>
+          <h2>Clubs and Leagues</h2>
+          <p class="slide-subtitle">Domestic Leagues, Nicknames, and Relegation Stakes</p>
+          <div class="card">
+            <h3><i class="fa-solid fa-shield-halved icon-accent"></i> Key Objectives</h3>
+            <ul>
+              <li>Differentiate between club matches and national team schedules.</li>
+              <li>Compare the "Big Five" European leagues and their profiles.</li>
+              <li>Understand the drama of promotion and relegation.</li>
+            </ul>
+          </div>
+          <aside class="notes">
+            <p>This slide covers club football, which runs 10 months a year and holds 95% of a player's active time.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 8.2: The Big Five Leagues -->
+        <section>
+          <h2>The Big Five Leagues</h2>
+          <div class="grid-2">
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-primary);"><i class="fa-solid fa-sterling-sign"></i> Premier League (England)</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">The richest league in the world. High intensity, fast pace. Clubs: Man City, Arsenal, Liverpool, Man Utd.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-secondary);"><i class="fa-solid fa-euro-sign"></i> La Liga (Spain)</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">Technically refined, passing game. Dominant clubs: Real Madrid and Barcelona.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-accent);"><i class="fa-solid fa-users"></i> Bundesliga (Germany)</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">Highest fan attendance. High-pressing game. Dominant club: Bayern Munich.</p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-warning);"><i class="fa-solid fa-shield"></i> Serie A (Italy) & Ligue 1 (France)</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">Italy: defensive tactics, Juventus/Milan. France: PSG dominant force; intense derbies.</p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Mention that players migrate between these leagues through transfers (covered next lesson).</p>
+          </aside>
+        </section>
+
+        <!-- Slide 8.3: Club Nicknames -->
+        <section>
+          <h2>Famous Clubs & Nicknames</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Club</th>
+                <th>Country</th>
+                <th>Nickname</th>
+                <th>Origin / Kit color</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Real Madrid</strong></td>
+                <td>Spain</td>
+                <td>Los Blancos</td>
+                <td>White jersey.</td>
+              </tr>
+              <tr>
+                <td><strong>FC Barcelona</strong></td>
+                <td>Spain</td>
+                <td>Blaugrana / Barça</td>
+                <td>Blue and red stripes.</td>
+              </tr>
+              <tr>
+                <td><strong>Manchester United</strong></td>
+                <td>England</td>
+                <td>The Red Devils</td>
+                <td>Red jersey, devil on badge.</td>
+              </tr>
+              <tr>
+                <td><strong>Arsenal</strong></td>
+                <td>England</td>
+                <td>The Gunners</td>
+                <td>Founded by munitions factory workers.</td>
+              </tr>
+              <tr>
+                <td><strong>Juventus</strong></td>
+                <td>Italy</td>
+                <td>The Old Lady</td>
+                <td>Long tradition and history.</td>
+              </tr>
+              <tr>
+                <td><strong>Paris Saint-Germain</strong></td>
+                <td>France</td>
+                <td>PSG / Les Parisiens</td>
+                <td>Paris capital club.</td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="notes">
+            <p>Point out the Arsenal Gunners origin—shows how deeply tied clubs are to local histories.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 8.4: Relegation & Champions League -->
+        <section>
+          <h2>Relegation Drama & Champions League</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-arrows-up-down icon-accent"></i> Promotion / Relegation</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • Bottom 3 teams are **relegated** to the lower division next season.<br>
+                • Top teams from lower division are **promoted**.<br>
+                • Makes every match crucial. Non-existent in American franchise leagues (NFL/NBA).
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-trophy icon-accent"></i> Champions League (UCL)</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • Top clubs from all European leagues compete annually.<br>
+                • **The Double:** Winning league + UCL.<br>
+                • **The Treble:** Winning league + UCL + domestic cup (extremely rare).
+              </p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Discuss the pressure of relegation—losing a spot in the Premier League costs a club over £100 million in TV rights.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 8.5: Lesson 8 Review -->
+        <section>
+          <h2>Lesson 8 Review</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-circle-question icon-accent"></i> Socratic Scenarios</h3>
+            <ol style="font-size: 0.6em !important;">
+              <li>How does the domestic club season differ from national team tournaments? When do players represent their country?</li>
+              <li>What is the nickname of Arsenal, and what historical origin does it reflect?</li>
+              <li>Explain how the promotion and relegation system works. How does it compare to American sports?</li>
+              <li>**Lab:** Choose one club from the table. Research their home stadium name, capacity, and greatest historic rival.</li>
+            </ol>
+          </div>
+          <aside class="notes">
+            <p>Answers: 1) Clubs run August-May; national teams use international breaks. 2) The Gunners; munitions factory workers. 3) Bottom teams drop; top rise. American sports have no relegation. 4) Class exercises.</p>
+          </aside>
+        </section>
+      </section>
+
+      <!-- ================== LESSON 9: TRANSFERS AND THE MONEY ================== -->
+      <section>
+        <!-- Slide 9.1: Cover -->
+        <section>
+          <span class="badge badge-green">Lesson 9</span>
+          <h2>Transfers and the Money</h2>
+          <p class="slide-subtitle">Deals, Agent Commissions, Free Transfers, and FFP</p>
+          <div class="card">
+            <h3><i class="fa-solid fa-money-bill-transfer icon-accent"></i> Key Objectives</h3>
+            <ul>
+              <li>Explain how a club-to-club transfer works step-by-step.</li>
+              <li>Contrast transfer fees, loans, and free transfers (Bosman).</li>
+              <li>Understand revenue sources and Financial Fair Play (FFP) boundaries.</li>
+            </ul>
+          </div>
+          <aside class="notes">
+            <p>Explain that transfers are how squads are built. High-finance deals are now key parts of the sport's entertainment.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 9.2: Step-by-Step Transfer Deal -->
+        <section>
+          <h2>How a Transfer Works</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-file-invoice-dollar icon-accent"></i> 1. Bid & Terms</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **Bidding:** Club A submits a fee offer to Club B.<br>
+                • **Windows:** Deals can only register during Summer (June-Aug) and Winter (Jan) windows.<br>
+                • **Personal Terms:** Player and agent negotiate weekly wages and contract length.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-stethoscope icon-accent"></i> 2. Closing the Deal</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **Medical:** Player undergoes physical checkups. Injury risks can collapse deals.<br>
+                • **Signing:** Contract signed. Announcement videos are released.<br>
+                • **Agent Commission:** Agents take ~10% cut of transfer fees or player contract value.
+              </p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Discuss the medical check—explain how knee cartilage issues can halt a €50 million transfer.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 9.3: Loans & Free Transfers -->
+        <section>
+          <h2>Loans, Free Transfers & Records</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-handshake icon-accent"></i> Alternative Deals</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **Loan Deal:** Temporary move (6-12 months). Club B pays wages. Great for young players.<br>
+                • **Free Transfer:** Contract expired. No transfer fee is paid. Player gets a high signing bonus (e.g. Mbappé to Real Madrid, 2024).
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-dollar-sign icon-accent"></i> Record Fees</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **Highest Ever:** Neymar (€222m, Barca to PSG, 2017). Changed the market.<br>
+                • **Mbappé to PSG:** €180m (2018).<br>
+                • **FFP Rules:** Clubs cannot spend significantly more than they earn.
+              </p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Free transfers are named "Bosman transfers" after Jean-Marc Bosman, who fought for players' rights in court in 1995.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 9.4: Lesson 9 Review -->
+        <section>
+          <h2>Lesson 9 Review</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-circle-question icon-accent"></i> Socratic Scenarios</h3>
+            <ol style="font-size: 0.6em !important;">
+              <li>Explain the difference between a transfer fee and a player's wage. Who receives the transfer fee?</li>
+              <li>What is a "free transfer," and how does it benefit the signing player financially?</li>
+              <li>Why did Neymar's €222 million transfer in 2017 change the global transfer market?</li>
+              <li>**Lab:** You are a club director. You have a €50m budget. Do you buy one superstar striker for €50m, or three solid squad players for €15m each? Balance your squad.</li>
+            </ol>
+          </div>
+          <aside class="notes">
+            <p>Answers: 1) Transfer fee goes club-to-club; wage goes to the player. 2) No fee is paid; player negotiates higher wages/signing bonuses. 3) Doubled the previous record, causing inflation. 4) Class discussion.</p>
+          </aside>
+        </section>
+      </section>
+
+      <!-- ================== LESSON 10: LEGENDS, RECORDS, AND CULTURE ================== -->
+      <section>
+        <!-- Slide 10.1: Cover -->
+        <section>
+          <span class="badge badge-blue">Lesson 10</span>
+          <h2>Legends, Records, and Culture</h2>
+          <p class="slide-subtitle">Pelé, Maradona, Cruyff, R9, Derbies, and Ultras</p>
+          <div class="card">
+            <h3><i class="fa-solid fa-crown icon-accent"></i> Key Objectives</h3>
+            <ul>
+              <li>Identify the "Immortals" of football history and their achievements.</li>
+              <li>Learn about intense local derbies and ultra supporter cultures.</li>
+              <li>Explore the Ballon d'Or and historic World Cup trivia.</li>
+            </ul>
+          </div>
+          <aside class="notes">
+            <p>Wrap up the course by discussing the legendary stories and emotional culture that make football the beautiful game.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 10.2: The Immortals -->
+        <section>
+          <h2>The Legendary Immortals</h2>
+          <div class="grid-2">
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-primary);"><i class="fa-solid fa-award"></i> Pelé & Maradona</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">
+                • **Pelé (Brazil):** Only 3-time World Cup winner. Global icon.<br>
+                • **Maradona (Argentina):** 1986 hero. Scored "Hand of God" and "Goal of the Century" (dribbling past 5 players) vs England.
+              </p>
+            </div>
+            <div class="card" style="padding: 15px !important;">
+              <h4 style="margin: 0; font-size: 0.85em; color: var(--color-secondary);"><i class="fa-solid fa-arrows-spin"></i> Cruyff & Ronaldo (R9)</h4>
+              <p style="font-size: 0.55em; margin-top: 5px; line-height: 1.3;">
+                • **Johan Cruyff (Netherlands):** Architect of *Total Football* and the Cruyff turn.<br>
+                • **Ronaldo R9 (Brazil):** "The Phenomenon". Blistering striker who won 2002 World Cup.
+              </p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Tell the story of Maradona's Goal of the Century—a 60m sprint in 11 seconds. Show that he is a mythological figure in Naples and Buenos Aires.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 10.3: Fan Culture & Derbies -->
+        <section>
+          <h2>Derbies, Ultras & Ballon d'Or</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-fire icon-accent"></i> Fan Atmosphere</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **Derbies:** Matches between local rivals (e.g. *El Clásico*, *Le Classique*).<br>
+                • **Ultras:** Fanatical supporter sections leading non-stop chanting, flags, and choreographies (tifos).
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-crown icon-accent"></i> Individual Glory</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **Ballon d'Or:** Annual award for best player in the world. Organized by France Football.<br>
+                • **Dominance:** Messi (8) and Cristiano Ronaldo (5) dominated for 15 years.
+              </p>
+            </div>
+          </div>
+          <aside class="notes">
+            <p>Ultras are central to European stadiums. Discuss how scarves and chanting are traditions spanning generations.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 10.4: Lesson 10 Review -->
+        <section>
+          <h2>Final Course Review</h2>
+          <div class="card">
+            <h3><i class="fa-solid fa-circle-question icon-accent"></i> Socratic Scenarios</h3>
+            <ol style="font-size: 0.6em !important;">
+              <li>What two famous goals did Diego Maradona score in the 1986 World Cup quarter-final against England?</li>
+              <li>What is "Total Football," and which Dutch legend is associated with its creation?</li>
+              <li>Explain what a "derby" match is. Give an example of a famous derby in Spain or France.</li>
+              <li>**Lab:** Choose a football legend. Write a 3-sentence summary of why they are considered an immortal in football history.</li>
+            </ol>
+          </div>
+          <aside class="notes">
+            <p>Answers: 1) Hand of God (handball goal) and Goal of the Century (solo dribble). 2) A fluid system where any player can play any position; Johan Cruyff. 3) A match between local rivals. El Clásico (Madrid-Barca) or Le Classique (PSG-OM). 4) Class exercises. End of course.</p>
+          </aside>
+        </section>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js & Plugins JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js"></script>
+
+  <!-- Initialization Script -->
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      transition: 'slide',
+      plugins: [ RevealNotes ],
+      width: 1100,
+      height: 700,
+      margin: 0.05,
+      minScale: 0.2,
+      maxScale: 2.0
+    });
+  </script>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const icon = toggleBtn.querySelector('i');
+
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('theme-dark');
+      if (document.body.classList.contains('theme-dark')) {
+        icon.className = 'fa-solid fa-sun';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        icon.className = 'fa-solid fa-moon';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // Apply saved theme preference on load, default to light
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.classList.add('theme-dark');
+      icon.className = 'fa-solid fa-sun';
+    } else {
+      // default is light mode (no class added)
+      icon.className = 'fa-solid fa-moon';
+    }
+
+    // Help Modal Toggle
+    const helpBtn = document.getElementById('help-toggle');
+    const helpModal = document.getElementById('help-modal');
+    const helpClose = helpModal.querySelector('.help-close-btn');
+
+    helpBtn.addEventListener('click', () => {
+      helpModal.classList.add('active');
+    });
+
+    helpClose.addEventListener('click', () => {
+      helpModal.classList.remove('active');
+    });
+
+    helpModal.addEventListener('click', (e) => {
+      if (e.target === helpModal) {
+        helpModal.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
