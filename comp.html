@@ -577,7 +577,7 @@
               <h3><span>3</span>How the Internet Works</h3>
               <i class="fa-solid fa-network-wired card-icon"></i>
             </div>
-            <p class="card-summary">Deconstruct packet switching, TCP/IP, DNS routing, and global client-server hops.</p>
+            <p class="card-summary">Deconstruct packet switching, TCP/IP, DNS routing, fiber vs. wireless, and global client-server hops.</p>
             <div class="card-lab-tag"><i class="fa-solid fa-flask"></i> Trace Global Route</div>
           </a>
 
@@ -1290,7 +1290,109 @@
           </aside>
         </section>
 
-        <!-- Slide 3.5: Client-Server & HTTP -->
+        <!-- Slide 3.5: Fiber Optics -->
+        <section>
+          <span class="badge badge-green">Lesson 3</span>
+          <h2>Fiber Optics: The Light Pipeline</h2>
+          <p class="slide-subtitle">How glass strands carry the global internet</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-lightbulb icon-accent"></i> Total Internal Reflection</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Fiber optic cables consist of a core of ultra-pure silica glass surrounded by a cladding layer. Lasers pulse light down the glass core, bouncing off the boundary in a phenomenon called **Total Internal Reflection**—preventing light from escaping.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-bolt icon-accent"></i> Speed & Bandwidth</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **Speed of Light:** Data travels at ~200,000 km/s in glass (2/3 the speed in vacuum).<br>
+                • **Bandwidth:** A single strand of fiber can carry terabits per second (Tbps), using different wavelengths (colors) of light simultaneously (Wavelength Division Multiplexing).
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Fiber Optics Explanation</h3>
+            <p>Show how fiber optic works. It uses light rather than electricity (copper). Explain Total Internal Reflection: "Imagine shining a flashlight down a mirrored pipe; the light bounces off the walls and makes it to the other side regardless of curves."</p>
+            <p>Explain that light signals don't degrade as fast as electrical signals, allowing cables to stretch across oceans without constant boosters.</p>
+          </aside>
+        </section>
+
+        <!-- Slide 3.6: Wireless Communication -->
+        <section>
+          <span class="badge badge-green">Lesson 3</span>
+          <h2>Wireless: Waves in the Air</h2>
+          <p class="slide-subtitle">Connecting without physical plugs</p>
+          <div class="grid-2">
+            <div class="card">
+              <h3><i class="fa-solid fa-wifi icon-accent"></i> Radio & Microwave Bands</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                Wireless devices (Wi-Fi, LTE/5G cell towers, Satellite) use radio frequencies to send data packets. Modems translate digital bits into analog wave modulations, transmitting them through local air space.
+              </p>
+            </div>
+            <div class="card">
+              <h3><i class="fa-solid fa-signal icon-accent"></i> Wireless Challenges</h3>
+              <p style="font-size: 0.65em; line-height: 1.4; margin: 0;">
+                • **Signal Absorption:** Waves are absorbed or scattered by walls, buildings, and water (like rain).<br>
+                • **Congestion & Noise:** Multiple devices sharing the same frequencies (e.g., 2.4 GHz) can cause packets to collide, leading to drops and slowdowns.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <h3>Wireless Communication Notes</h3>
+            <p>Explain how wireless works: it's invisible radio light. Devices like phones and routers talk using specific frequencies.</p>
+            <p>Use the crowded room metaphor: "If 20 people in a small room all speak at the same volume on the same topic, it is hard to hear anyone. That is frequency congestion/interference."</p>
+          </aside>
+        </section>
+
+        <!-- Slide 3.7: Wired vs. Wireless Tradeoffs -->
+        <section>
+          <span class="badge badge-green">Lesson 3</span>
+          <h2>Wired vs. Wireless: The Tradeoffs</h2>
+          <p class="slide-subtitle">Speed, interference, reliability, and best uses</p>
+          <div class="card" style="margin: 0 !important; padding: 16px !important;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.55em; line-height: 1.4;">
+              <thead>
+                <tr style="border-bottom: 2px solid var(--color-card-border); color: var(--color-primary); font-weight: bold;">
+                  <th style="padding: 6px; text-align: left;">Feature</th>
+                  <th style="padding: 6px; text-align: left;">Fiber Optics / Wired (Ethernet)</th>
+                  <th style="padding: 6px; text-align: left;">Wireless (Wi-Fi / 5G / Satellite)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--color-card-border);">
+                  <td style="padding: 6px; font-weight: 600;">Speed</td>
+                  <td style="padding: 6px; color: var(--color-accent);">Ultra-Fast (100+ Gbps backbone, 1-10 Gbps home)</td>
+                  <td style="padding: 6px; color: var(--color-secondary);">Fast but Variable (50 Mbps - 1 Gbps max)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-card-border);">
+                  <td style="padding: 6px; font-weight: 600;">Interference</td>
+                  <td style="padding: 6px;">Zero (Glass doesn't conduct electrical noise)</td>
+                  <td style="padding: 6px; color: var(--color-warning);">High (Affected by walls, rain, microwave ovens)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-card-border);">
+                  <td style="padding: 6px; font-weight: 600;">Reliability</td>
+                  <td style="padding: 6px; color: var(--color-accent);">Extremely High (Doesn't drop packets unless physically cut)</td>
+                  <td style="padding: 6px; color: var(--color-secondary);">Medium (Drops packets based on distance and blockers)</td>
+                </tr>
+                <tr>
+                  <td style="padding: 6px; font-weight: 600;">Best Uses</td>
+                  <td style="padding: 6px;">Internet Backbones, Data Centers, Core Home Connections</td>
+                  <td style="padding: 6px;">Smartphones, Mobility (Laptops), Remote Areas (Starlink)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <aside class="notes">
+            <h3>Wired vs Wireless Tradeoffs Notes</h3>
+            <p>Walk through the comparison table. Highlight that wireless is a convenience layer, while wired is the core infrastructure layer.</p>
+            <p>Ask: "If you are downloading a huge 100GB game or playing a competitive reaction-time game, which connection should you use and why?" (Wired Ethernet/Fiber for speed and low latency/ping).</p>
+          </aside>
+        </section>
+
+        <!-- Slide 3.8: Client-Server & HTTP -->
         <section>
           <h2>Client-Server & HTTP</h2>
           <p class="slide-subtitle">How programs communicate</p>
@@ -1319,7 +1421,7 @@
           </aside>
         </section>
 
-        <!-- Slide 3.6: Discussion -->
+        <!-- Slide 3.9: Discussion -->
         <section>
           <h2>Lesson 3 Discussion</h2>
           <div class="card">
@@ -1327,6 +1429,7 @@
             <ol>
               <li>When you load a website, the images load one by one, sometimes appearing out of order. Why does this happen based on packet switching?</li>
               <li>A construction backhoe accidentally cuts a fiber cable underground in your city. Why doesn't the entire city's internet go down?</li>
+              <li>During a heavy thunderstorm, your home Wi-Fi signal drops or slows down, but your fiber internet connection is still perfectly stable. Explain this based on the physical properties of how each transmits data.</li>
             </ol>
           </div>
 
@@ -1335,11 +1438,12 @@
             <ol>
               <li><strong>Out of order packets:</strong> Images are composed of thousands of packets. Since packets travel different routing pathways dynamically, some arrive faster than others. The browser displays whatever packets it has assembled first, or waits until all are reordered.</li>
               <li><strong>Routing Redundancy:</strong> The internet is a mesh network. If one fiber path is severed, local routers instantly detect the link failure and reroute packets through other connections, keeping traffic flowing (though possibly slightly slower).</li>
+              <li><strong>Storm Wi-Fi slowdown:</strong> Wi-Fi uses radio waves in the air, which can be absorbed/scattered by water droplets (humidity/rain) and physical obstacles. On the other hand, fiber optic cables are buried underground and transmit light sealed inside glass, making them completely immune to weather conditions in the air.</li>
             </ol>
           </aside>
         </section>
 
-        <!-- Slide 3.7: Lab Activity -->
+        <!-- Slide 3.10: Lab Activity -->
         <section>
           <h2>Lab: Tracing the Global Route</h2>
           <span class="badge badge-yellow">Activity</span>
@@ -1363,7 +1467,7 @@
           </aside>
         </section>
 
-        <!-- Slide 3.8: Lesson 3 Quiz -->
+        <!-- Slide 3.11: Lesson 3 Quiz -->
         <section>
           <h2>Lesson 3 Quiz</h2>
           <div class="card">
@@ -1372,6 +1476,7 @@
               <li>Why does the internet split data into packets instead of sending a file in one solid stream?</li>
               <li>What protocol is responsible for requesting the resending of a lost packet?</li>
               <li>How fast does light travel in fiber optic cables?</li>
+              <li>Why is a wired fiber optic connection less prone to interference than a wireless 5G connection?</li>
             </ol>
           </div>
 
@@ -1381,6 +1486,7 @@
               <li>To allow multiple devices to share the same cables at once, and to avoid resending large files if a small glitch occurs.</li>
               <li><strong>TCP</strong> (Transmission Control Protocol).</li>
               <li>Roughly 200,000 kilometers per second (about 2/3 the speed of light in a vacuum, due to refraction index of silica glass).</li>
+              <li>Fiber optic cables keep light sealed inside physical glass strands, shielded from electromagnetic noise and physical blockers. Wireless waves must travel through open space, where they are blocked by walls, weather, and other radio signals.</li>
             </ol>
             <p>Swipe Right for Lesson 4.</p>
           </aside>

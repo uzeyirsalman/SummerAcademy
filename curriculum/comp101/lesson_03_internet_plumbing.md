@@ -3,7 +3,7 @@
 
 *   **Estimated Time**: 60–90 minutes
 *   **Ages**: 12 & 15
-*   **Key Vocabulary**: Packet, IP Address, DNS (Domain Name System), Router, Hop, Latency (Ping), Traceroute.
+*   **Key Vocabulary**: Packet, IP Address, DNS (Domain Name System), Router, Hop, Latency (Ping), Traceroute, Fiber Optics, Total Internal Reflection, Electromagnetic Waves, Signal Interference.
 *   **Prerequisites**: A computer with internet access and Windows PowerShell.
 
 ---
@@ -14,6 +14,8 @@
 *   **DNS (Domain Name System)**: The phonebook of the internet. Humans like names (e.g., `google.com`), but computers only understand numbers (IPs). When you type `google.com`, your computer asks a DNS server: *"What is the IP address for google.com?"* and the DNS server replies: *"It is 142.250.190.46"*.
 *   **Routers & Hops**: Routers are the traffic police of the internet. They inspect incoming packets and forward them along the fastest path toward their destination. Each transition from one router to another is called a **hop**.
 *   **Ping / Latency**: The time it takes for a packet to go from your computer to a server and back, measured in milliseconds (ms).
+*   **Fiber Optics**: Transmitting data as pulses of light through thin strands of glass. Relies on *Total Internal Reflection* to keep light inside the glass core. Immune to electrical noise and can carry terabits of data over thousands of miles.
+*   **Wireless Communication**: Transmitting data through the air using electromagnetic radio waves/microwaves (Wi-Fi, 5G, satellite). Highly mobile but susceptible to absorption (walls, rain) and congestion.
 
 ---
 
@@ -35,6 +37,8 @@
     *   **Answer**: You wouldn't be able to access websites by typing their names (e.g., `youtube.com` would show an error). However, if you knew YouTube's exact numerical IP address (like `142.250.190.46`), you could type that directly into your browser, and the website would load!
 2.  *“When you connect to a website in London from your home, how do the packets cross the Atlantic Ocean? Satellites?”*
     *   **Answer**: Mostly no! Over 95% of international internet traffic travels through massive, fiber-optic **submarine cables** laid on the ocean floor. They are about as thick as a garden hose and carry light pulses across thousands of miles of ocean.
+3.  *“During a heavy thunderstorm, your home Wi-Fi signal drops or slows down, but your fiber internet connection is still perfectly stable. Explain this based on the physical properties of how each transmits data.”*
+    *   **Answer**: Wi-Fi uses radio waves traveling through the open air, which can be absorbed/scattered by water droplets (humidity/rain) and blocked by physical obstacles like walls. Fiber optic signals travel as light pulses inside physical glass strands buried underground, completely shielded from weather conditions and radio interference.
 
 ---
 
@@ -98,3 +102,5 @@ Now, let's trace every single router (hop) your packet passes through. We will t
     *   *Answer*: Worse. Higher ping means higher latency (delay), meaning it takes a quarter of a second for your actions to reach the server. Lower ping (20ms) is much faster and smoother.
 4.  **What is a "hop" in computer networking?**
     *   *Answer*: The movement of a data packet from one router or network device to the next along its path.
+5.  **Why is a wired fiber optic connection less prone to interference than a wireless 5G/cellular connection?**
+    *   *Answer*: Fiber optic cables keep light signals sealed inside physical glass strands, completely shielded from electromagnetic noise and physical blockers. Wireless signals must travel through open space, where they are easily blocked by walls, weather (like rain fade), and other competing radio signals.
